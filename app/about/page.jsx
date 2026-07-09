@@ -1,5 +1,5 @@
-import { CTA } from '@/components/CTA';
-import { principles, site } from '@/data/site';
+import { CTA } from '../../components/CTA';
+import { principles, site } from '../../data/site';
 
 export const metadata = {
   title: 'About',

@@ -1,4 +1,4 @@
-import { services } from '@/data/site';
+import { services } from '../data/site';
 
 export function ServiceCards() {
   return (

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { navigation } from '@/data/site';
+import { navigation } from '../data/site';
 import { Logo } from './Logo';
 
 export function Header() {

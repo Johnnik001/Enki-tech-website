@@ -1,6 +1,6 @@
-import { CTA } from '@/components/CTA';
-import { SectionHeader } from '@/components/SectionHeader';
-import { ServiceCards } from '@/components/ServiceCards';
+import { CTA } from '../../components/CTA';
+import { SectionHeader } from '../../components/SectionHeader';
+import { ServiceCards } from '../../components/ServiceCards';
 
 export const metadata = {
   title: 'Services',

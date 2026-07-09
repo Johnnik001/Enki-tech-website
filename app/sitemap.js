@@ -1,4 +1,4 @@
-import { site } from '@/data/site';
+import { site } from '../data/site';
 
 const routes = ['', '/services', '/experience', '/about', '/insights', '/contact', '/legal/privacy'];
 

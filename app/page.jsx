@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import { CTA } from '@/components/CTA';
-import { SectionHeader } from '@/components/SectionHeader';
-import { ServiceCards } from '@/components/ServiceCards';
-import { experience, principles } from '@/data/site';
+import { CTA } from '../components/CTA';
+import { SectionHeader } from '../components/SectionHeader';
+import { ServiceCards } from '../components/ServiceCards';
+import { experience, principles } from '../data/site';
 
 export default function HomePage() {
   return (

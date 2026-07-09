@@ -1,7 +1,7 @@
 import './globals.css';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { site } from '@/data/site';
+import { Header } from '../components/Header';
+import { Footer } from '../components/Footer';
+import { site } from '../data/site';
 
 export const metadata = {
   metadataBase: new URL(site.url),
