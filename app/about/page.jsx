@@ -3,7 +3,7 @@ import { principles, site } from '../../data/site';
 
 export const metadata = {
   title: 'About',
-  description: 'About Enki Tech EOOD, an independent European IT consulting company based in Bulgaria and operating across Belgium and Europe.'
+  description: 'About Enki Tech, an independent European IT consulting company based in Bulgaria and operating across Belgium and Europe.'
 };
 
 export default function AboutPage() {
@@ -23,7 +23,7 @@ export default function AboutPage() {
         <div className="container splitGrid">
           <div>
             <p className="eyebrow">Founder-led delivery</p>
-            <h2>Led by {site.founder}, Senior Infrastructure Engineer.</h2>
+            <h2>Led by {site.founder}, an enterprise Microsoft 365 and Cloud Infrastructure Expert and IT Leader</h2>
             <p>
               Enki Tech is built on more than a decade of hands-on experience in workplace services, hybrid infrastructure, Microsoft 365, Azure, identity, endpoint management, service improvement and enterprise support.
             </p>
