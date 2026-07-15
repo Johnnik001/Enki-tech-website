@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 130" role="img" aria-labelledby="title desc">
+<title id="title">Enki Tech logo white</title>
+<desc id="desc">White Enki Tech horizontal logo with geometric ET mark</desc>
+<g transform="translate(8,9) scale(.9)" fill="#FFFFFF">
+  <path d="M16 24 L98 24 L84 40 L28 40 Z"/>
+  <path d="M16 50 L78 50 L64 66 L16 66 Z"/>
+  <path d="M16 76 L58 76 L72 92 L30 92 Z"/>
+  <path d="M80 42 L104 24 L104 96 L88 112 L88 58 L72 74 L60 74 Z"/>
+</g>
+<text x="140" y="84" font-family="Inter, Arial, Helvetica, sans-serif" font-size="58" font-weight="700" letter-spacing="-1.8" fill="#FFFFFF">Enki</text>
+<text x="286" y="84" font-family="Inter, Arial, Helvetica, sans-serif" font-size="58" font-weight="400" letter-spacing="-1.8" fill="#FFFFFF">Tech</text>
+</svg>

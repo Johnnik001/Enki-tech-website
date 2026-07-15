@@ -6,9 +6,9 @@ const routes = ['', '/services', '/experience', '/about', '/insights', '/contact
 
 export default function sitemap() {
   return routes.map((route) => ({
-    url: `${site.url}${route}`,
+    url: `${site.url}${route}/`,
     lastModified: new Date(),
-    changeFrequency: 'monthly',
+    changeFrequency: route === '' ? 'weekly' : 'monthly',
     priority: route === '' ? 1 : 0.7
   }));
 }
