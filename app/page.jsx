@@ -21,9 +21,9 @@ export default function HomePage() {
             </div>
           </div>
           <aside className="heroPanel" aria-label="Enki Tech capability highlights">
-            <div className="metric"><strong>14+ years</strong><span>Cloud, workplace and hybrid infrastructure experience</span></div>
+            <div className="metric"><strong>15+ years</strong><span>Cloud, workplace and hybrid infrastructure experience</span></div>
             <div className="metric"><strong>12,000+ users</strong><span>Windows 365 Cloud PC migration experience</span></div>
-            <div className="metric"><strong>L2/L3</strong><span>Collaboration service support and secure operations</span></div>
+            <div className="metric"><strong>High Level</strong><span>Collaboration service support and secure operations</span></div>
             <div className="metric"><strong>Microsoft Cloud</strong><span>M365 · Azure · Entra ID · Intune · Teams · Exchange</span></div>
           </aside>
         </div>
