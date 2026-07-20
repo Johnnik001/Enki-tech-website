@@ -2,7 +2,7 @@ export const site = {
   name: 'Enki Tech',
   legalName: 'Enki Tech EOOD',
   url: 'https://enki-tech.eu',
-  email: 'contact@enki-tech.eu',
+  email: 'ytsvetov@hotmail.com',
   linkedin: 'https://www.linkedin.com/company/enki-tech-eood/',
   founderLinkedin: 'https://www.linkedin.com/in/eugene-tsvetov-93741a142/',
   location: 'Bulgaria · Belgium · Europe',
