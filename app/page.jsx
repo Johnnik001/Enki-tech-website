@@ -11,9 +11,9 @@ export default function HomePage() {
         <div className="container heroGrid">
           <div>
             <p className="eyebrow">Independent European IT Consulting · Bulgaria · Belgium · Europe</p>
-            <h1>Secure Microsoft Cloud, Digital Collaboration and automation-driven IT operations.</h1>
+            <h1>Make your Microsoft Cloud operations more secure, reliable and easier to run.</h1>
             <p className="heroText">
-              Enki Tech helps European organizations design, modernize and operate Microsoft 365, Azure, identity, endpoint and collaboration environments with senior-level expertise, clear documentation and a security-first mindset.
+              Enki Tech gives European IT teams and delivery partners senior-level support for complex Microsoft 365, Azure, identity, endpoint and collaboration environments — from transformation projects to operational improvement.
             </p>
             <div className="heroActions">
               <Link href="/contact/" className="button">Discuss a project</Link>
@@ -26,6 +26,36 @@ export default function HomePage() {
             <div className="metric"><strong>High Level</strong><span>Collaboration service support and secure operations</span></div>
             <div className="metric"><strong>Microsoft Cloud</strong><span>M365 · Azure · Entra ID · Intune · Teams · Exchange</span></div>
           </aside>
+        </div>
+      </section>
+
+      <section className="section audienceSection">
+        <div className="container">
+          <SectionHeader
+            eyebrow="Who we help"
+            title="The right expertise for a critical delivery gap"
+            text="Choose the engagement that best matches your immediate need."
+          />
+          <div className="audienceGrid">
+            <article className="audienceCard">
+              <p className="tag">IT leaders</p>
+              <h3>Improve a Microsoft environment that has become hard to run.</h3>
+              <p>Bring structure to operations, security, documentation and modernization without adding a permanent specialist team.</p>
+              <Link href="/services/" className="textLink">Explore operational improvement <span aria-hidden="true">→</span></Link>
+            </article>
+            <article className="audienceCard">
+              <p className="tag">Partners & integrators</p>
+              <h3>Add senior Microsoft delivery capacity when a project needs it.</h3>
+              <p>Strengthen migrations, transitions and complex workstreams with experienced, dependable technical delivery.</p>
+              <Link href="/contact/" className="textLink">Discuss partner delivery <span aria-hidden="true">→</span></Link>
+            </article>
+            <article className="audienceCard">
+              <p className="tag">Transformation teams</p>
+              <h3>Reduce delivery and operational risk in a high-change environment.</h3>
+              <p>Use practical expertise across Microsoft 365, Azure, identity, endpoint and automation to move change forward safely.</p>
+              <Link href="/experience/" className="textLink">View relevant experience <span aria-hidden="true">→</span></Link>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -70,11 +100,15 @@ export default function HomePage() {
                 <p className="tag">{item.label}</p>
                 <h3>{item.title}</h3>
                 <p>{item.detail}</p>
+                <p className="caseRole"><strong>Enki Tech contribution:</strong> {item.role}</p>
                 <ul>
                   {item.impact.map((impact) => <li key={impact}>{impact}</li>)}
                 </ul>
               </article>
             ))}
+          </div>
+          <div className="sectionAction">
+            <Link href="/experience/" className="button buttonGhost dark">See selected experience</Link>
           </div>
         </div>
       </section>
