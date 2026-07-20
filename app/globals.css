@@ -36,6 +36,13 @@ a {
   text-decoration: none;
 }
 
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--white);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px var(--blue);
+}
+
 p {
   margin: 0 0 1rem;
   color: var(--text-soft);
@@ -381,6 +388,72 @@ li {
   font-size: 1rem;
 }
 
+.founderGrid {
+  display: grid;
+  grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
+  gap: 64px;
+  align-items: center;
+}
+
+.founderCard {
+  overflow: hidden;
+  border: 1px solid var(--line-dark);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.founderPortrait {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.founderCardBody {
+  padding: 26px;
+}
+
+.founderName {
+  font-size: 1.75rem;
+  letter-spacing: -0.03em;
+}
+
+.founderTitle {
+  margin: 8px 0 14px;
+  color: var(--text-soft);
+  font-weight: 700;
+}
+
+.founderStory > p:not(.eyebrow) {
+  margin-top: 20px;
+}
+
+.founderQuote {
+  margin: 30px 0 0;
+  padding: 26px 28px;
+  border-left: 4px solid var(--blue);
+  border-radius: 0 18px 18px 0;
+  background: var(--bg-alt);
+}
+
+.founderQuote p {
+  margin: 0;
+  color: var(--text);
+  font-size: 1.08rem;
+  font-weight: 650;
+}
+
+.founderQuote cite {
+  display: block;
+  margin-top: 16px;
+  color: var(--blue-dark);
+  font-size: 0.88rem;
+  font-style: normal;
+  font-weight: 800;
+}
+
 .listPanel {
   display: grid;
   gap: 12px;
@@ -664,14 +737,20 @@ li {
 
   .heroGrid,
   .splitGrid,
+  .founderGrid,
   .footerGrid,
   .ctaInner {
     grid-template-columns: 1fr;
   }
 
   .heroGrid,
-  .splitGrid {
+  .splitGrid,
+  .founderGrid {
     gap: 36px;
+  }
+
+  .founderCard {
+    width: min(100%, 420px);
   }
 
   .heroPanel {
@@ -732,5 +811,24 @@ li {
   .quoteCard,
   .heroPanel {
     padding: 22px;
+  }
+
+  .founderCardBody,
+  .founderQuote {
+    padding: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

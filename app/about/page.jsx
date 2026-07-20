@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { CTA } from '../../components/CTA';
 import { principles, site } from '../../data/site';
 
@@ -20,22 +21,41 @@ export default function AboutPage() {
       </section>
 
       <section className="section">
-        <div className="container splitGrid">
-          <div>
+        <div className="container founderGrid">
+          <article className="founderCard">
+            <Image
+              className="founderPortrait"
+              src="/images/eugene-tsvetov.jpg"
+              alt={`${site.founder}, founder of Enki Tech`}
+              width={800}
+              height={800}
+              sizes="(max-width: 980px) 420px, 360px"
+            />
+            <div className="founderCardBody">
+              <p className="tag">Founder-led consulting</p>
+              <h2 className="founderName">{site.founder}</h2>
+              <p className="founderTitle">{site.founderRole}</p>
+              <a className="textLink" href={site.founderLinkedin} aria-label={`View ${site.founder}'s LinkedIn profile`}>
+                View LinkedIn profile <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <div className="founderStory">
             <p className="eyebrow">Founder-led delivery</p>
-            <h2>Led by {site.founder}, an enterprise Microsoft 365 and Cloud Infrastructure Expert and IT Leader</h2>
+            <h2>Senior Microsoft Cloud delivery with direct founder accountability.</h2>
             <p>
-              Enki Tech is built on more than a decade of hands-on experience in workplace services, hybrid infrastructure, Microsoft 365, Azure, identity, endpoint management, service improvement and enterprise support.
+              Enki Tech is led by {site.founder} and built on 15+ years of hands-on experience across workplace services, hybrid infrastructure, Microsoft 365, Azure, identity, endpoint management, service improvement and enterprise support.
             </p>
             <p>
               The company is designed as a long-term consulting asset: reliable delivery, clear documentation, client trust and repeatable processes rather than one-off contracting only.
             </p>
-          </div>
-          <div className="quoteCard">
-            <p>
+            <blockquote className="founderQuote">
+              <p>
               “Our role is to make complex Microsoft environments more reliable, secure and manageable — with clear communication, practical engineering and automation where it creates real value.”
-            </p>
-            <span>Enki Tech operating principle</span>
+              </p>
+              <cite>Enki Tech operating principle</cite>
+            </blockquote>
           </div>
         </div>
       </section>

@@ -4,11 +4,13 @@ export const site = {
   url: 'https://enki-tech.eu',
   email: 'ytsvetov@hotmail.com',
   linkedin: 'https://www.linkedin.com/company/enki-tech-eood/',
+  founderLinkedin: 'https://www.linkedin.com/in/eugene-tsvetov-93741a142/',
   location: 'Bulgaria · Belgium · Europe',
   tagline: 'Secure Microsoft Cloud, Digital Collaboration and automation-driven IT operations.',
   description:
     'Enki Tech is an independent European IT consulting company helping organizations modernize Microsoft 365, Azure, Digital Collaboration, identity, endpoint and IT operations environments.',
-  founder: 'Evgeniy Tsvetov'
+  founder: 'Evgeniy Tsvetov',
+  founderRole: 'Founder & Lead Microsoft Cloud Consultant'
 };
 
 export const navigation = [
