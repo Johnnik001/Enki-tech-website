@@ -4,6 +4,10 @@ import { SectionHeader } from '../components/SectionHeader';
 import { ServiceCards } from '../components/ServiceCards';
 import { experience, principles } from '../data/site';
 
+export const metadata = {
+  alternates: { canonical: '/' }
+};
+
 export default function HomePage() {
   return (
     <>
@@ -23,7 +27,7 @@ export default function HomePage() {
           <aside className="heroPanel" aria-label="Enki Tech capability highlights">
             <div className="metric"><strong>15+ years</strong><span>Cloud, workplace and hybrid infrastructure experience</span></div>
             <div className="metric"><strong>12,000+ users</strong><span>Windows 365 Cloud PC migration experience</span></div>
-            <div className="metric"><strong>High Level</strong><span>Collaboration service support and secure operations</span></div>
+            <div className="metric"><strong>L2/L3 support</strong><span>Collaboration operations, troubleshooting and escalation ownership</span></div>
             <div className="metric"><strong>Microsoft Cloud</strong><span>M365 · Azure · Entra ID · Intune · Teams · Exchange</span></div>
           </aside>
         </div>
@@ -98,6 +102,7 @@ export default function HomePage() {
             {experience.map((item) => (
               <article className="experienceCard" key={item.title}>
                 <p className="tag">{item.label}</p>
+                <p className="caseProof">{item.proof}</p>
                 <h3>{item.title}</h3>
                 <p>{item.detail}</p>
                 <p className="caseRole"><strong>Enki Tech contribution:</strong> {item.role}</p>

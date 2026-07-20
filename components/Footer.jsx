@@ -29,7 +29,7 @@ export function Footer() {
         </div>
       </div>
       <div className="container footerBottom">
-        <span>© {new Date().getFullYear()} {site.legalName}. All rights reserved.</span>
+        <span>© {new Date().getFullYear()} {site.legalName}, registered in Bulgaria. All rights reserved.</span>
         <span>Independent consulting company. No implied endorsement by any client or institution.</span>
       </div>
     </footer>

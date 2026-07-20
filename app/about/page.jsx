@@ -1,10 +1,11 @@
 import Image from 'next/image';
 import { CTA } from '../../components/CTA';
-import { principles, site } from '../../data/site';
+import { certifications, principles, site } from '../../data/site';
 
 export const metadata = {
   title: 'About',
-  description: 'About Enki Tech, an independent European IT consulting company based in Bulgaria and operating across Belgium and Europe.'
+  description: 'About Enki Tech, an independent European IT consulting company based in Bulgaria and operating across Belgium and Europe.',
+  alternates: { canonical: '/about/' }
 };
 
 export default function AboutPage() {
@@ -73,6 +74,25 @@ export default function AboutPage() {
       <section className="section">
         <div className="container splitGrid">
           <div>
+            <p className="eyebrow">Credentials</p>
+            <h2>Verified Microsoft and cloud professional development.</h2>
+            <p>Selected credentials are linked to their issuing platforms for independent verification.</p>
+          </div>
+          <div className="credentialList">
+            {certifications.map((certification) => (
+              <a className="credentialCard" href={certification.href} key={certification.title}>
+                <span>{certification.issuer} · Issued {certification.issued}</span>
+                <strong>{certification.title}</strong>
+                <span className="textLink">View credential <span aria-hidden="true">→</span></span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section sectionAlt">
+        <div className="container splitGrid">
+          <div>
             <p className="eyebrow">European positioning</p>
             <h2>Structured for B2B work across Europe.</h2>
           </div>
@@ -80,6 +100,12 @@ export default function AboutPage() {
             <p>
               Enki Tech is suitable for direct client projects, subcontracting, partner delivery and short-term senior consulting engagements. The company is especially relevant for organizations working with Microsoft 365, Azure, collaboration platforms and secure operational environments.
             </p>
+            <dl className="companyFacts">
+              <div><dt>Contracting entity</dt><dd>{site.legalName}</dd></div>
+              <div><dt>Registered country</dt><dd>Bulgaria</dd></div>
+              <div><dt>Business contact</dt><dd><a href={`mailto:${site.email}`}>{site.email}</a></dd></div>
+              <div><dt>Operating area</dt><dd>{site.location}</dd></div>
+            </dl>
           </div>
         </div>
       </section>

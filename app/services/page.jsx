@@ -4,7 +4,8 @@ import { ServiceCards } from '../../components/ServiceCards';
 
 export const metadata = {
   title: 'Services',
-  description: 'Microsoft 365, Azure, Digital Collaboration, Entra ID, Intune, Security, Automation and AI-enhanced IT Operations consulting services.'
+  description: 'Microsoft 365, Azure, Digital Collaboration, Entra ID, Intune, Security, Automation and AI-enhanced IT Operations consulting services.',
+  alternates: { canonical: '/services/' }
 };
 
 const engagementModels = [
@@ -37,7 +38,7 @@ export default function ServicesPage() {
 
       <section className="section">
         <div className="container">
-          <ServiceCards />
+          <ServiceCards headingLevel="h2" />
         </div>
       </section>
 

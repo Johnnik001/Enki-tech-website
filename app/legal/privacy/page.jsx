@@ -2,7 +2,8 @@ import { site } from '../../../data/site';
 
 export const metadata = {
   title: 'Privacy',
-  description: 'Privacy information for Enki Tech website visitors.'
+  description: 'Privacy information for Enki Tech website visitors.',
+  alternates: { canonical: '/legal/privacy/' }
 };
 
 export default function PrivacyPage() {

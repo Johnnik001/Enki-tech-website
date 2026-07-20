@@ -2,7 +2,7 @@ export const site = {
   name: 'Enki Tech',
   legalName: 'Enki Tech EOOD',
   url: 'https://enki-tech.eu',
-  email: 'ytsvetov@hotmail.com',
+  email: 'contact@enki-tech.eu',
   linkedin: 'https://www.linkedin.com/company/enki-tech-eood/',
   founderLinkedin: 'https://www.linkedin.com/in/eugene-tsvetov-93741a142/',
   location: 'Bulgaria · Belgium · Europe',
@@ -12,6 +12,27 @@ export const site = {
   founder: 'Evgeniy Tsvetov',
   founderRole: 'Founder & Lead Microsoft Cloud Consultant'
 };
+
+export const certifications = [
+  {
+    title: 'Microsoft Certified: Azure AI Fundamentals',
+    issuer: 'Microsoft',
+    issued: 'June 2024',
+    href: 'https://learn.microsoft.com/api/credentials/share/en-us/EvgeniyTsvetov-7841/F8C7B175333EAC8A'
+  },
+  {
+    title: 'Azure Infrastructure as Code with ARM, Bicep, Terraform, and Pulumi',
+    issuer: 'LinkedIn Learning',
+    issued: 'December 2024',
+    href: 'https://www.linkedin.com/learning/certificates/2db855f9e1303650b582355a56fc922cbcbe7b54c75b7b57df62b794a5b70292/'
+  },
+  {
+    title: 'Introduction to Terraform on Azure',
+    issuer: 'LinkedIn Learning',
+    issued: 'November 2024',
+    href: 'https://www.linkedin.com/learning/certificates/b558b91b219abfa925d8d69f61c1463bcff974d9463b5065a07206c8af7e2e47/'
+  }
+];
 
 export const navigation = [
   { label: 'Services', href: '/services/' },
@@ -56,6 +77,7 @@ export const services = [
 export const experience = [
   {
     label: 'Enterprise transformation',
+    proof: '12,000+ users',
     title: 'Large-scale Windows 365 Cloud PC migration',
     detail:
       'Technical leadership in a migration from Citrix to Windows 365 Cloud PC for 12,000+ users across hybrid production and development environments.',
@@ -65,6 +87,7 @@ export const experience = [
   },
   {
     label: 'Secure collaboration',
+    proof: 'L2/L3 operations',
     title: 'Digital collaboration operations in secure environments',
     detail:
       'Support for collaboration services across on-premise and cloud environments, including Exchange, Teams and Exchange Online, with L2/L3 operational responsibility.',
@@ -74,6 +97,7 @@ export const experience = [
   },
   {
     label: 'Automation',
+    proof: 'Provisioning · mailbox · backup · compliance',
     title: 'PowerShell automation for IT operations',
     detail:
       'Automation of administrative and operational tasks including account provisioning, mailbox configuration, backup routines and compliance reporting.',

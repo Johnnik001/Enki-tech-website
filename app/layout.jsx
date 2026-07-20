@@ -41,29 +41,52 @@ export const metadata = {
 
 const structuredData = {
   '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  name: site.name,
-  legalName: site.legalName,
-  url: site.url,
-  email: site.email,
-  description: site.description,
-  logo: `${site.url}/logo/linkedin-company-logo.png`,
-  sameAs: [site.linkedin],
-  areaServed: ['Bulgaria', 'Belgium', 'Europe'],
-  founder: {
-    '@type': 'Person',
-    name: site.founder,
-    jobTitle: site.founderRole,
-    url: `${site.url}/about/`,
-    sameAs: [site.founderLinkedin],
-    image: `${site.url}/images/eugene-tsvetov-enhanced.jpg`
-  },
-  serviceType: [
-    'Microsoft 365 consulting',
-    'Azure and hybrid infrastructure consulting',
-    'Digital collaboration consulting',
-    'Identity, endpoint and security consulting',
-    'IT operations automation'
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${site.url}/#organization`,
+      name: site.name,
+      legalName: site.legalName,
+      url: site.url,
+      email: site.email,
+      description: site.description,
+      logo: `${site.url}/logo/linkedin-company-logo.png`,
+      sameAs: [site.linkedin],
+      address: { '@type': 'PostalAddress', addressCountry: 'BG' },
+      founder: { '@id': `${site.url}/#founder` },
+      contactPoint: {
+        '@type': 'ContactPoint',
+        email: site.email,
+        contactType: 'business inquiries',
+        areaServed: 'Europe',
+        availableLanguage: ['English']
+      }
+    },
+    {
+      '@type': 'ProfessionalService',
+      '@id': `${site.url}/#professional-service`,
+      name: site.name,
+      url: site.url,
+      parentOrganization: { '@id': `${site.url}/#organization` },
+      areaServed: ['Bulgaria', 'Belgium', 'Europe'],
+      serviceType: [
+        'Microsoft 365 consulting',
+        'Azure and hybrid infrastructure consulting',
+        'Digital collaboration consulting',
+        'Identity, endpoint and security consulting',
+        'IT operations automation'
+      ]
+    },
+    {
+      '@type': 'Person',
+      '@id': `${site.url}/#founder`,
+      name: site.founder,
+      jobTitle: site.founderRole,
+      url: `${site.url}/about/`,
+      worksFor: { '@id': `${site.url}/#organization` },
+      sameAs: [site.founderLinkedin],
+      image: `${site.url}/images/eugene-tsvetov-enhanced.jpg`
+    }
   ]
 };
 
