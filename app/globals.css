@@ -122,8 +122,7 @@ li {
   font-size: 0.95rem;
 }
 
-.menuToggle,
-.navCta {
+.menuToggle {
   display: none;
 }
 
@@ -155,6 +154,10 @@ li {
   min-height: 40px;
   padding: 0 16px;
   font-size: 0.9rem;
+}
+
+.navCta {
+  display: none;
 }
 
 .buttonGhost {

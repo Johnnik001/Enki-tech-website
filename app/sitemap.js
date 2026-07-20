@@ -2,7 +2,7 @@ import { site } from '../data/site';
 
 export const dynamic = 'force-static';
 
-const routes = ['', '/services', '/experience', '/about', '/insights', '/contact', '/legal/privacy'];
+const routes = ['', '/services', '/experience', '/about', '/contact', '/legal/privacy'];
 
 export default function sitemap() {
   return routes.map((route) => ({

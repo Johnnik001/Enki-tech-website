@@ -15,7 +15,6 @@ export const navigation = [
   { label: 'Services', href: '/services/' },
   { label: 'Experience', href: '/experience/' },
   { label: 'About', href: '/about/' },
-  { label: 'Insights', href: '/insights/' },
   { label: 'Contact', href: '/contact/' }
 ];
 
@@ -88,14 +87,4 @@ export const principles = [
   'Automation where it creates measurable business value.',
   'Clear communication with technical and business stakeholders.',
   'Long-term partnership over short-term transactional delivery.'
-];
-
-export const insightIdeas = [
-  'How to modernize Microsoft 365 operations without disrupting users',
-  'Windows 365 Cloud PC vs traditional VDI: when it makes business sense',
-  'Why Microsoft 365 governance fails in growing organizations',
-  'Practical automation opportunities in IT operations',
-  'Using AI to improve IT documentation and incident management',
-  'Exchange Online and Teams operational risks to watch',
-  'From reactive support to service improvement: an ITIL-based approach'
 ];
