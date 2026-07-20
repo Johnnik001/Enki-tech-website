@@ -58,6 +58,8 @@ export const experience = [
     title: 'Large-scale Windows 365 Cloud PC migration',
     detail:
       'Technical leadership in a migration from Citrix to Windows 365 Cloud PC for 12,000+ users across hybrid production and development environments.',
+    challenge: 'Move a large, business-critical user base to a modern Cloud PC platform while maintaining operational control across hybrid environments.',
+    role: 'Technical leadership and senior delivery support across migration, operations and stakeholder-facing workstreams.',
     impact: ['Improved endpoint manageability', 'Greater operational flexibility', 'Enhanced user experience', 'Cost-optimization support']
   },
   {
@@ -65,6 +67,8 @@ export const experience = [
     title: 'Digital collaboration operations in secure environments',
     detail:
       'Support for collaboration services across on-premise and cloud environments, including Exchange, Teams and Exchange Online, with L2/L3 operational responsibility.',
+    challenge: 'Keep collaboration services dependable and supportable in a security-conscious environment with high operational expectations.',
+    role: 'L2/L3 operational responsibility, troubleshooting, risk-assessment input and subject-matter expertise.',
     impact: ['Service reliability', 'Incident and request management', 'Risk assessment input', 'Security-related SME support']
   },
   {
@@ -72,6 +76,8 @@ export const experience = [
     title: 'PowerShell automation for IT operations',
     detail:
       'Automation of administrative and operational tasks including account provisioning, mailbox configuration, backup routines and compliance reporting.',
+    challenge: 'Reduce repeatable manual work without compromising consistency, traceability or audit readiness.',
+    role: 'Automation design and implementation for operational teams and recurring service workflows.',
     impact: ['Lower manual workload', 'Better consistency', 'Faster execution', 'Improved audit readiness']
   }
 ];

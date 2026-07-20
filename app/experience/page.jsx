@@ -35,6 +35,11 @@ export default function ExperiencePage() {
               <p className="tag">{item.label}</p>
               <h2>{item.title}</h2>
               <p>{item.detail}</p>
+              <dl className="caseDetails">
+                <div><dt>Challenge</dt><dd>{item.challenge}</dd></div>
+                <div><dt>Contribution</dt><dd>{item.role}</dd></div>
+              </dl>
+              <p className="caseOutcome">Selected outcomes</p>
               <ul>
                 {item.impact.map((impact) => <li key={impact}>{impact}</li>)}
               </ul>

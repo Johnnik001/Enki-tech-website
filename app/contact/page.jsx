@@ -16,7 +16,7 @@ export default function ContactPage() {
           <p className="eyebrow">Contact</p>
           <h1>Start a conversation about a project, partnership or subcontracting opportunity.</h1>
           <p>
-            Use email or LinkedIn to discuss Microsoft Cloud, Digital Collaboration, secure operations, automation and AI-enhanced IT operations support.
+            Share a few practical details and receive a considered response on fit, possible engagement model and next steps.
           </p>
         </div>
       </section>
@@ -24,10 +24,10 @@ export default function ContactPage() {
       <section className="section">
         <div className="container contactGrid">
           <div className="contactCard">
-            <h2>Email</h2>
-            <p>Best for project inquiries, partner introductions and capability statement requests.</p>
+            <h2>Send a project brief</h2>
+            <p>Use the prepared email template for project inquiries, partner introductions and capability statement requests.</p>
             <a className="button" href={`mailto:${site.email}?subject=${mailSubject}&body=${mailBody}`}>Email Enki Tech</a>
-            <p className="contactDetail">{site.email}</p>
+            <p className="contactDetail">Typical details: company, service area, timeline and the delivery challenge.</p>
           </div>
           <div className="contactCard">
             <h2>LinkedIn</h2>
