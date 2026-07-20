@@ -56,7 +56,7 @@ const structuredData = {
     jobTitle: site.founderRole,
     url: `${site.url}/about/`,
     sameAs: [site.founderLinkedin],
-    image: `${site.url}/images/eugene-tsvetov.jpg`
+    image: `${site.url}/images/eugene-tsvetov-enhanced.jpg`
   },
   serviceType: [
     'Microsoft 365 consulting',

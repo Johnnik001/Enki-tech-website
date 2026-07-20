@@ -25,10 +25,10 @@ export default function AboutPage() {
           <article className="founderCard">
             <Image
               className="founderPortrait"
-              src="/images/eugene-tsvetov.jpg"
+              src="/images/eugene-tsvetov-enhanced.jpg"
               alt={`${site.founder}, founder of Enki Tech`}
-              width={800}
-              height={800}
+              width={1024}
+              height={1024}
               sizes="(max-width: 980px) 420px, 360px"
             />
             <div className="founderCardBody">
