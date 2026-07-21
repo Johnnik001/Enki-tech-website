@@ -15,10 +15,13 @@ export default function PrivacyPage() {
         <p>
           This website is operated by {site.legalName}. This notice explains how information is handled when you visit the website or contact Enki Tech about a business inquiry.
         </p>
-        <p>Last updated: 20 July 2026.</p>
+        <p>Last updated: 21 July 2026.</p>
         <h2>Business inquiries</h2>
         <p>
-          If you contact Enki Tech by email or LinkedIn, the information you provide is used to respond to your inquiry and manage the business relationship. This may include your name, company, email address, project context and communication history.
+          If you contact Enki Tech through the website form, by email or through LinkedIn, the information you provide is used to respond to your inquiry and manage the business relationship. This may include your name, company, country, email address, project context, expected timeline and communication history.
+        </p>
+        <p>
+          Website form submissions are processed by FormSubmit solely to forward the inquiry to Enki Tech by email. FormSubmit states that submissions may be retained for up to 30 days. See the <a href="https://formsubmit.co/privacy">FormSubmit privacy information</a> for details.
         </p>
         <h2>Website analytics</h2>
         <p>
@@ -29,7 +32,7 @@ export default function PrivacyPage() {
         </p>
         <h2>Data sharing and retention</h2>
         <p>
-          Information is shared only with service providers needed to operate the website and business communications, or where disclosure is required by law. Inquiry information is retained only for as long as reasonably necessary to respond, maintain the business relationship and meet applicable legal obligations.
+          Information is shared only with service providers needed to operate the website, deliver form submissions and support business communications, or where disclosure is required by law. Inquiry information is retained by Enki Tech only for as long as reasonably necessary to respond, maintain the business relationship and meet applicable legal obligations.
         </p>
         <h2>Your choices</h2>
         <p>

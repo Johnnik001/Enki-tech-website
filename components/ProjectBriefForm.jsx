@@ -1,7 +1,10 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import Link from 'next/link';
+import { useState } from 'react';
 import { site } from '../data/site';
+
+const formEndpoint = `https://formsubmit.co/ajax/${site.email}`;
 
 const initialForm = {
   name: '',
@@ -11,48 +14,83 @@ const initialForm = {
   area: 'Microsoft 365 & Digital Collaboration',
   timeline: '',
   engagement: 'Direct project',
-  challenge: ''
+  challenge: '',
+  _honey: '',
+  consent: false
 };
-
-function createBrief(form) {
-  return `Hello Enki Tech,
-
-I would like to discuss a potential project or partnership.
-
-Name: ${form.name}
-Email: ${form.email}
-Company: ${form.company}
-Country: ${form.country}
-Area of interest: ${form.area}
-Expected timeline: ${form.timeline}
-Engagement model: ${form.engagement}
-Delivery challenge / message:
-${form.challenge}`;
-}
 
 export function ProjectBriefForm() {
   const [form, setForm] = useState(initialForm);
   const [status, setStatus] = useState('');
-  const brief = useMemo(() => createBrief(form), [form]);
-  const mailto = `mailto:${site.email}?subject=${encodeURIComponent(`Project inquiry from ${form.company || form.name || 'website visitor'}`)}&body=${encodeURIComponent(brief)}`;
+  const [statusType, setStatusType] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   function updateField(event) {
-    setForm((current) => ({ ...current, [event.target.name]: event.target.value }));
+    const value = event.target.type === 'checkbox' ? event.target.checked : event.target.value;
+    setForm((current) => ({ ...current, [event.target.name]: value }));
     setStatus('');
+    setStatusType('');
   }
 
-  async function copyBrief(event) {
+  async function submitBrief(event) {
     event.preventDefault();
+
+    setIsSubmitting(true);
+    setStatus('Sending your project brief…');
+    setStatusType('pending');
+
     try {
-      await navigator.clipboard.writeText(brief);
-      setStatus(`Project brief copied. Paste it into your preferred email service and send it to ${site.email}.`);
+      const response = await fetch(formEndpoint, {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          _subject: `New Enki Tech project inquiry — ${form.company || form.name}`,
+          _template: 'table',
+          _url: `${site.url}/contact/`,
+          _honey: form._honey,
+          Name: form.name,
+          Email: form.email,
+          _replyto: form.email,
+          Company: form.company,
+          Country: form.country,
+          'Area of interest': form.area,
+          'Expected timeline': form.timeline,
+          'Engagement model': form.engagement,
+          'Delivery challenge or message': form.challenge,
+          'Privacy consent': form.consent ? 'Confirmed' : 'Not confirmed'
+        })
+      });
+
+      const result = await response.json().catch(() => null);
+      const wasAccepted = response.ok && result?.success !== false && result?.success !== 'false';
+
+      if (!wasAccepted) {
+        throw new Error('The form service did not accept the submission.');
+      }
+
+      setForm(initialForm);
+      setStatus('Thank you. Your project brief has been sent to Enki Tech. You can expect a considered response shortly.');
+      setStatusType('success');
     } catch {
-      setStatus('Copying was blocked by the browser. Select the preview below and copy it manually.');
+      setStatus(`The form could not be sent. Please try again or email ${site.email} directly.`);
+      setStatusType('error');
+    } finally {
+      setIsSubmitting(false);
     }
   }
 
   return (
-    <form className="projectBriefForm" onSubmit={copyBrief}>
+    <form className="projectBriefForm" action={formEndpoint} method="POST" onSubmit={submitBrief}>
+      <input type="hidden" name="_subject" value="New Enki Tech project inquiry" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_url" value={`${site.url}/contact/`} />
+      <label className="formHoney" aria-hidden="true">
+        Leave this field empty
+        <input name="_honey" value={form._honey} onChange={updateField} tabIndex="-1" autoComplete="off" />
+      </label>
       <div className="formGrid">
         <label>
           Your name
@@ -99,16 +137,18 @@ export function ProjectBriefForm() {
           <textarea name="challenge" value={form.challenge} onChange={updateField} rows="5" required />
         </label>
       </div>
-      <div className="briefPreviewBlock">
-        <label htmlFor="brief-preview">Project brief preview</label>
-        <textarea id="brief-preview" className="briefPreview" value={brief} readOnly rows="11" />
-      </div>
+      <label className="formConsent">
+        <input type="checkbox" name="consent" checked={form.consent} onChange={updateField} required />
+        <span>I agree that Enki Tech may use these details to respond to my inquiry, as described in the <Link href="/legal/privacy/">privacy notice</Link>.</span>
+      </label>
       <div className="formActions">
-        <button className="button" type="submit">Copy project brief</button>
-        <a className="button buttonGhost dark" href={mailto}>Open completed email</a>
+        <button className="button" type="submit" disabled={isSubmitting}>
+          {isSubmitting ? 'Sending…' : 'Send project brief'}
+        </button>
+        <a className="button buttonGhost dark" href={`mailto:${site.email}`}>Email instead</a>
       </div>
-      <p className="formPrivacy">Nothing is sent or stored by this website. Copy the brief into any webmail service, or open it in your configured email app.</p>
-      <p className="formStatus" aria-live="polite">{status}</p>
+      <p className="formPrivacy">Your details are securely forwarded to Enki Tech by FormSubmit and used only to respond to your inquiry.</p>
+      <p className="formStatus" data-state={statusType} role="status" aria-live="polite">{status}</p>
     </form>
   );
 }

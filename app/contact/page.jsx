@@ -25,7 +25,7 @@ export default function ContactPage() {
           <div>
             <p className="eyebrow">Project brief</p>
             <h2>Share the context needed for a useful first response.</h2>
-            <p>Complete the short brief, then copy it into any webmail service or open a pre-filled email. This avoids relying on a configured desktop mail app.</p>
+            <p>Complete the short brief and send it directly from this page. No configured desktop mail app is required.</p>
             <p className="directEmail">Direct email: <a href={`mailto:${site.email}`}>{site.email}</a></p>
           </div>
           <ProjectBriefForm />
