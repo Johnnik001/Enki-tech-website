@@ -13,6 +13,9 @@ export const metadata = {
   description: site.description,
   creator: site.name,
   publisher: site.legalName,
+  verification: {
+    google: 'zO2AJWR6kd2XPKiO79HsnSQrGEUISEW-1yqcgWlJANc'
+  },
   icons: {
     icon: [
       { url: '/favicon.ico?v=2', type: 'image/x-icon' },
