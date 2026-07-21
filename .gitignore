@@ -1,0 +1,7 @@
+.next/
+out/
+node_modules/
+.pnpm-store/
+pnpm-lock.yaml
+pnpm-workspace.yaml
+*.log

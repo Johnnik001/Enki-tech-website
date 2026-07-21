@@ -3,7 +3,8 @@ import { experience } from '../../data/site';
 
 export const metadata = {
   title: 'Experience',
-  description: 'Selected enterprise infrastructure and Microsoft Cloud experience behind Enki Tech.'
+  description: 'Selected enterprise infrastructure and Microsoft Cloud experience behind Enki Tech.',
+  alternates: { canonical: '/experience/' }
 };
 
 const capabilities = [
@@ -33,6 +34,7 @@ export default function ExperiencePage() {
           {experience.map((item) => (
             <article className="experienceCard large" key={item.title}>
               <p className="tag">{item.label}</p>
+              <p className="caseProof">{item.proof}</p>
               <h2>{item.title}</h2>
               <p>{item.detail}</p>
               <dl className="caseDetails">

@@ -1,12 +1,11 @@
+import { ProjectBriefForm } from '../../components/ProjectBriefForm';
 import { site } from '../../data/site';
 
 export const metadata = {
   title: 'Contact',
-  description: 'Contact Enki Tech for Microsoft Cloud, Digital Collaboration, Automation and European IT consulting engagements.'
+  description: 'Contact Enki Tech for Microsoft Cloud, Digital Collaboration, Automation and European IT consulting engagements.',
+  alternates: { canonical: '/contact/' }
 };
-
-const mailSubject = encodeURIComponent('Project inquiry for Enki Tech');
-const mailBody = encodeURIComponent('Hello Enki Tech,\n\nI would like to discuss a potential project or partnership.\n\nCompany:\nArea of interest:\nMessage:\n');
 
 export default function ContactPage() {
   return (
@@ -22,12 +21,24 @@ export default function ContactPage() {
       </section>
 
       <section className="section">
+        <div className="container briefLayout">
+          <div>
+            <p className="eyebrow">Project brief</p>
+            <h2>Share the context needed for a useful first response.</h2>
+            <p>Complete the short brief, then copy it into any webmail service or open a pre-filled email. This avoids relying on a configured desktop mail app.</p>
+            <p className="directEmail">Direct email: <a href={`mailto:${site.email}`}>{site.email}</a></p>
+          </div>
+          <ProjectBriefForm />
+        </div>
+      </section>
+
+      <section className="section sectionAlt">
         <div className="container contactGrid">
           <div className="contactCard">
-            <h2>Send a project brief</h2>
-            <p>Use the prepared email template for project inquiries, partner introductions and capability statement requests.</p>
-            <a className="button" href={`mailto:${site.email}?subject=${mailSubject}&body=${mailBody}`}>Email Enki Tech</a>
-            <p className="contactDetail">Typical details: company, service area, timeline and the delivery challenge.</p>
+            <h2>Email</h2>
+            <p>Use your preferred email service for project inquiries, partner introductions and capability statement requests.</p>
+            <a className="textLink" href={`mailto:${site.email}`}>{site.email} <span aria-hidden="true">→</span></a>
+            <p className="contactDetail">Domain-based business contact</p>
           </div>
           <div className="contactCard">
             <h2>LinkedIn</h2>
@@ -43,7 +54,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="section sectionAlt">
+      <section className="section">
         <div className="container splitGrid">
           <div>
             <p className="eyebrow">Useful context</p>
