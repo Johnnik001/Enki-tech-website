@@ -224,7 +224,8 @@ li {
 
 .hero .eyebrow,
 .pageHero .eyebrow,
-.ctaBand .eyebrow {
+.ctaBand .eyebrow,
+.quoteCard .eyebrow {
   color: var(--cyan);
 }
 
@@ -338,6 +339,16 @@ li {
 
 .cardsGrid.three {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.serviceCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.serviceCardLink {
+  margin-top: auto;
+  padding-top: 22px;
 }
 
 .card,
