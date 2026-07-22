@@ -51,7 +51,7 @@ export default function HomePage() {
               <p className="tag">Partners & integrators</p>
               <h3>Add senior Microsoft delivery capacity when a project needs it.</h3>
               <p>Strengthen migrations, transitions and complex workstreams with experienced, dependable technical delivery.</p>
-              <Link href="/contact/" className="textLink">Discuss partner delivery <span aria-hidden="true">→</span></Link>
+              <Link href="/partners/" className="textLink">Explore partner delivery <span aria-hidden="true">→</span></Link>
             </article>
             <article className="audienceCard">
               <p className="tag">Transformation teams</p>

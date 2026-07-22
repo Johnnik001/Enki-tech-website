@@ -8,6 +8,7 @@ const routes = [
   ...services.map((service) => `/services/${service.slug}`),
   '/experience',
   ...experience.map((item) => `/experience/${item.slug}`),
+  '/partners',
   '/about',
   '/contact',
   '/legal/privacy'
@@ -18,6 +19,6 @@ export default function sitemap() {
     url: `${site.url}${route}/`,
     lastModified: new Date(),
     changeFrequency: route === '' ? 'weekly' : 'monthly',
-    priority: route === '' ? 1 : route.startsWith('/services') || route.startsWith('/experience/') ? 0.8 : 0.7
+    priority: route === '' ? 1 : route.startsWith('/services') || route.startsWith('/experience/') || route === '/partners' ? 0.8 : 0.7
   }));
 }
