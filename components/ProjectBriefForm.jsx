@@ -4,7 +4,8 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { site } from '../data/site';
 
-const formEndpoint = `https://formsubmit.co/ajax/${site.email}`;
+const formEndpoint = `https://formsubmit.co/${site.email}`;
+const formAjaxEndpoint = `https://formsubmit.co/ajax/${site.email}`;
 
 const initialForm = {
   name: '',
@@ -40,7 +41,7 @@ export function ProjectBriefForm() {
     setStatusType('pending');
 
     try {
-      const response = await fetch(formEndpoint, {
+      const response = await fetch(formAjaxEndpoint, {
         method: 'POST',
         headers: {
           Accept: 'application/json',
@@ -50,6 +51,7 @@ export function ProjectBriefForm() {
           _subject: `New Enki Tech project inquiry — ${form.company || form.name}`,
           _template: 'table',
           _url: `${site.url}/contact/`,
+          _next: `${site.url}/contact/thank-you/`,
           _honey: form._honey,
           Name: form.name,
           Email: form.email,
@@ -71,9 +73,7 @@ export function ProjectBriefForm() {
         throw new Error('The form service did not accept the submission.');
       }
 
-      setForm(initialForm);
-      setStatus('Thank you. Your project brief has been sent to Enki Tech. You can expect a considered response shortly.');
-      setStatusType('success');
+      window.location.assign('/contact/thank-you/');
     } catch {
       setStatus(`The form could not be sent. Please try again or email ${site.email} directly.`);
       setStatusType('error');
@@ -87,6 +87,7 @@ export function ProjectBriefForm() {
       <input type="hidden" name="_subject" value="New Enki Tech project inquiry" />
       <input type="hidden" name="_template" value="table" />
       <input type="hidden" name="_url" value={`${site.url}/contact/`} />
+      <input type="hidden" name="_next" value={`${site.url}/contact/thank-you/`} />
       <label className="formHoney" aria-hidden="true">
         Leave this field empty
         <input name="_honey" value={form._honey} onChange={updateField} tabIndex="-1" autoComplete="off" />
