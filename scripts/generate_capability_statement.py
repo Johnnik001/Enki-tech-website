@@ -58,77 +58,85 @@ def draw_wrapped(pdf, text, x, y, max_width, font="Helvetica", size=9, color=TEX
 
 def draw_label(pdf, text, x, y, color=BLUE):
     pdf.setFillColor(color)
-    pdf.setFont("Helvetica-Bold", 7.2)
+    pdf.setFont("Helvetica-Bold", 7.4)
     pdf.drawString(x, y, text.upper())
 
 
 def draw_section_title(pdf, text, x, y, max_width):
-    return draw_wrapped(pdf, text, x, y, max_width, font="Helvetica-Bold", size=18, color=TEXT, leading=20)
+    return draw_wrapped(pdf, text, x, y, max_width, font="Helvetica-Bold", size=17.2, color=TEXT, leading=19)
 
 
 def draw_footer(pdf, page_number):
     pdf.setStrokeColor(SILVER)
     pdf.setLineWidth(0.6)
-    pdf.line(MARGIN, 45, PAGE_W - MARGIN, 45)
+    pdf.line(MARGIN, 44, PAGE_W - MARGIN, 44)
     pdf.setFillColor(TEXT_SOFT)
-    pdf.setFont("Helvetica", 7.2)
-    pdf.drawString(MARGIN, 30, "ENKI TECH EOOD - INDEPENDENT EUROPEAN IT CONSULTING")
-    pdf.drawRightString(PAGE_W - MARGIN, 30, f"CAPABILITY STATEMENT - {page_number}/2")
+    pdf.setFont("Helvetica", 7)
+    pdf.drawString(MARGIN, 29, "ENKI TECH EOOD - INDEPENDENT EUROPEAN IT CONSULTING")
+    pdf.drawRightString(PAGE_W - MARGIN, 29, f"CAPABILITY STATEMENT - {page_number}/2")
 
 
 def draw_metric(pdf, x, y, width, value, label):
-    pdf.setFillColor(WHITE)
-    pdf.roundRect(x, y, width, 70, 11, fill=1, stroke=0)
+    pdf.setFillColor(LIGHT)
+    pdf.roundRect(x, y, width, 60, 10, fill=1, stroke=0)
     pdf.setFillColor(NAVY)
-    pdf.setFont("Helvetica-Bold", 15)
-    pdf.drawString(x + 12, y + 43, value)
-    draw_wrapped(pdf, label, x + 12, y + 27, width - 24, size=7.4, color=TEXT_SOFT, leading=9)
+    pdf.setFont("Helvetica-Bold", 14)
+    pdf.drawString(x + 11, y + 37, value)
+    draw_wrapped(pdf, label, x + 11, y + 22, width - 22, size=7.6, color=TEXT_SOFT, leading=9)
 
 
 def draw_capability_card(pdf, x, y, width, title, text):
     pdf.setFillColor(LIGHT)
-    pdf.roundRect(x, y, width, 58, 10, fill=1, stroke=0)
+    pdf.roundRect(x, y, width, 56, 10, fill=1, stroke=0)
     pdf.setFillColor(BLUE)
-    pdf.circle(x + 13, y + 42, 3.3, fill=1, stroke=0)
+    pdf.circle(x + 13, y + 40, 3.2, fill=1, stroke=0)
     pdf.setFillColor(TEXT)
-    pdf.setFont("Helvetica-Bold", 9.2)
-    pdf.drawString(x + 23, y + 38, title)
-    draw_wrapped(pdf, text, x + 13, y + 23, width - 26, size=7.4, color=TEXT_SOFT, leading=9)
+    pdf.setFont("Helvetica-Bold", 9.3)
+    pdf.drawString(x + 23, y + 36, title)
+    draw_wrapped(pdf, text, x + 13, y + 21, width - 26, size=7.7, color=TEXT_SOFT, leading=9.2)
 
 
 def draw_value_item(pdf, x, y, width, text):
     pdf.setFillColor(BLUE)
-    pdf.roundRect(x, y - 2, 4, 22, 2, fill=1, stroke=0)
-    draw_wrapped(pdf, text, x + 12, y + 10, width - 12, font="Helvetica-Bold", size=8.2, color=TEXT, leading=10)
+    pdf.roundRect(x, y - 1, 4, 20, 2, fill=1, stroke=0)
+    draw_wrapped(pdf, text, x + 12, y + 9, width - 12, font="Helvetica-Bold", size=8.3, color=TEXT, leading=10)
 
 
 def draw_case_card(pdf, x, y, width, proof, title, detail, outcomes):
-    height = 112
+    height = 94
     pdf.setFillColor(LIGHT)
-    pdf.roundRect(x, y, width, height, 12, fill=1, stroke=0)
+    pdf.roundRect(x, y, width, height, 11, fill=1, stroke=0)
 
     pdf.setFillColor(BLUE)
-    pdf.roundRect(x + 14, y + height - 28, 88, 16, 8, fill=1, stroke=0)
+    pdf.roundRect(x + 14, y + height - 28, 92, 16, 8, fill=1, stroke=0)
     pdf.setFillColor(WHITE)
-    pdf.setFont("Helvetica-Bold", 7.2)
-    pdf.drawCentredString(x + 58, y + height - 22.5, proof)
+    pdf.setFont("Helvetica-Bold", 7.3)
+    pdf.drawCentredString(x + 60, y + height - 22.5, proof)
 
     left_x = x + 14
-    left_w = width - 176
+    divider_x = x + width - 154
+    left_w = divider_x - left_x - 16
     title_y = y + height - 43
-    title_end = draw_wrapped(pdf, title, left_x, title_y, left_w, font="Helvetica-Bold", size=11.5, color=TEXT, leading=13)
-    draw_wrapped(pdf, detail, left_x, title_end - 3, left_w, size=7.7, color=TEXT_SOFT, leading=9.4)
+    title_end = draw_wrapped(pdf, title, left_x, title_y, left_w, font="Helvetica-Bold", size=10.7, color=TEXT, leading=12)
+    draw_wrapped(pdf, detail, left_x, title_end - 3, left_w, size=8, color=TEXT_SOFT, leading=9.5)
 
-    divider_x = x + width - 150
     pdf.setStrokeColor(SILVER)
     pdf.setLineWidth(0.7)
-    pdf.line(divider_x, y + 14, divider_x, y + height - 14)
-    draw_label(pdf, "Selected outcomes", divider_x + 12, y + height - 23, color=NAVY_SOFT)
-    bullet_y = y + height - 42
+    pdf.line(divider_x, y + 12, divider_x, y + height - 12)
+    draw_label(pdf, "Selected outcomes", divider_x + 12, y + height - 24, color=NAVY_SOFT)
+    bullet_y = y + height - 43
     for outcome in outcomes:
         pdf.setFillColor(BLUE)
         pdf.circle(divider_x + 15, bullet_y + 2, 2.2, fill=1, stroke=0)
-        bullet_y = draw_wrapped(pdf, outcome, divider_x + 23, bullet_y + 5, 120, size=7.4, color=TEXT, leading=9) - 6
+        pdf.setFillColor(TEXT)
+        pdf.setFont("Helvetica", 7.7)
+        pdf.drawString(divider_x + 23, bullet_y, outcome)
+        bullet_y -= 13
+
+
+def draw_panel(pdf, x, y, width, height):
+    pdf.setFillColor(LIGHT)
+    pdf.roundRect(x, y, width, height, 11, fill=1, stroke=0)
 
 
 def add_link(pdf, text, x, y, font_size, url, color=BLUE):
@@ -146,28 +154,28 @@ def page_one(pdf):
 
     pdf.setFillColor(NAVY)
     pdf.rect(0, 612, PAGE_W, PAGE_H - 612, fill=1, stroke=0)
-    pdf.drawImage(ImageReader(LOGO), MARGIN, 790, width=152, height=29, mask="auto", preserveAspectRatio=True)
-    draw_label(pdf, "Capability statement - 2026", MARGIN, 758, color=CYAN)
+    pdf.drawImage(ImageReader(LOGO), MARGIN, 790, width=138, height=26, mask="auto", preserveAspectRatio=True)
+    draw_label(pdf, "Capability statement - 2026", MARGIN, 756, color=CYAN)
     title_y = draw_wrapped(
         pdf,
         "Senior Microsoft Cloud delivery for complex European environments.",
         MARGIN,
-        728,
+        726,
         PAGE_W - (2 * MARGIN),
         font="Helvetica-Bold",
-        size=27,
+        size=25.5,
         color=WHITE,
-        leading=30,
+        leading=28,
     )
     draw_wrapped(
         pdf,
         "Enki Tech helps organizations and delivery partners improve Microsoft 365, Azure, identity, endpoint, collaboration and IT operations environments through senior consulting, operational support and automation.",
         MARGIN,
-        title_y - 8,
+        title_y - 5,
         PAGE_W - (2 * MARGIN),
-        size=9.2,
+        size=9,
         color=SILVER,
-        leading=12,
+        leading=11.5,
     )
 
     metrics = [
@@ -194,14 +202,14 @@ def page_one(pdf):
     ]
     col_gap = 10
     card_w = (PAGE_W - 2 * MARGIN - col_gap) / 2
-    card_y = 376
+    card_y = 380
     for index, (title, text) in enumerate(capabilities):
         col = index % 2
         row = index // 2
-        draw_capability_card(pdf, MARGIN + col * (card_w + col_gap), card_y - row * 68, card_w, title, text)
+        draw_capability_card(pdf, MARGIN + col * (card_w + col_gap), card_y - row * 64, card_w, title, text)
 
-    draw_label(pdf, "Where Enki Tech adds value", MARGIN, 192, color=NAVY_SOFT)
-    draw_section_title(pdf, "Senior contribution where delivery risk is highest", MARGIN, 170, PAGE_W - 2 * MARGIN)
+    draw_label(pdf, "Where Enki Tech adds value", MARGIN, 218, color=NAVY_SOFT)
+    draw_section_title(pdf, "Senior contribution where delivery risk is highest", MARGIN, 194, PAGE_W - 2 * MARGIN)
     values = [
         "Transformation and migration workstreams",
         "Complex Microsoft Cloud incidents and escalations",
@@ -212,16 +220,16 @@ def page_one(pdf):
     for index, value in enumerate(values):
         col = index % 2
         row = index // 2
-        draw_value_item(pdf, MARGIN + col * (value_w + col_gap), 133 - row * 34, value_w, value)
+        draw_value_item(pdf, MARGIN + col * (value_w + col_gap), 148 - row * 31, value_w, value)
 
     pdf.setFillColor(NAVY)
-    pdf.roundRect(MARGIN, 56, PAGE_W - 2 * MARGIN, 42, 10, fill=1, stroke=0)
+    pdf.roundRect(MARGIN, 58, PAGE_W - 2 * MARGIN, 43, 10, fill=1, stroke=0)
     pdf.setFillColor(WHITE)
-    pdf.setFont("Helvetica-Bold", 8.4)
-    pdf.drawString(MARGIN + 14, 80, "PROJECT DELIVERY - OPERATIONAL IMPROVEMENT - PARTNER SUPPORT")
+    pdf.setFont("Helvetica-Bold", 8.5)
+    pdf.drawString(MARGIN + 14, 82, "PROJECT DELIVERY - OPERATIONAL IMPROVEMENT - PARTNER SUPPORT")
     pdf.setFillColor(CYAN)
-    pdf.setFont("Helvetica", 7.6)
-    pdf.drawString(MARGIN + 14, 65, "Independent consulting for direct clients, integrators and technology partners across Europe")
+    pdf.setFont("Helvetica", 7.7)
+    pdf.drawString(MARGIN + 14, 67, "Independent consulting for direct clients, integrators and technology partners across Europe")
 
     draw_footer(pdf, 1)
     pdf.showPage()
@@ -232,15 +240,15 @@ def page_two(pdf):
     pdf.rect(0, 0, PAGE_W, PAGE_H, fill=1, stroke=0)
 
     pdf.setFillColor(NAVY)
-    pdf.rect(0, 736, PAGE_W, PAGE_H - 736, fill=1, stroke=0)
-    pdf.drawImage(ImageReader(LOGO), MARGIN, 786, width=130, height=25, mask="auto", preserveAspectRatio=True)
-    draw_label(pdf, "Selected experience & delivery model", MARGIN, 767, color=CYAN)
+    pdf.rect(0, 716, PAGE_W, PAGE_H - 716, fill=1, stroke=0)
+    pdf.drawImage(ImageReader(LOGO), MARGIN, 790, width=138, height=26, mask="auto", preserveAspectRatio=True)
+    draw_label(pdf, "Selected experience & delivery model", MARGIN, 766, color=CYAN)
     pdf.setFillColor(WHITE)
-    pdf.setFont("Helvetica-Bold", 18)
-    pdf.drawString(MARGIN, 748, "Evidence, engagement and trusted delivery")
+    pdf.setFont("Helvetica-Bold", 20)
+    pdf.drawString(MARGIN, 738, "Evidence, engagement and trusted delivery")
 
-    draw_label(pdf, "Selected experience", MARGIN, 714, color=NAVY_SOFT)
-    draw_section_title(pdf, "Sanitized enterprise delivery examples", MARGIN, 692, PAGE_W - 2 * MARGIN)
+    draw_label(pdf, "Selected experience", MARGIN, 687, color=NAVY_SOFT)
+    draw_section_title(pdf, "Sanitized enterprise delivery examples", MARGIN, 663, PAGE_W - 2 * MARGIN)
 
     cases = [
         (
@@ -262,54 +270,69 @@ def page_two(pdf):
             ["Lower manual workload", "Better consistency", "Improved audit readiness"],
         ),
     ]
-    case_y = 550
+    case_y = 526
     for proof, title, detail, outcomes in cases:
         draw_case_card(pdf, MARGIN, case_y, PAGE_W - 2 * MARGIN, proof, title, detail, outcomes)
-        case_y -= 124
+        case_y -= 104
 
-    lower_y = 284
-    left_w = 248
-    right_x = MARGIN + left_w + 18
+    panel_y = 126
+    panel_h = 162
+    panel_gap = 12
+    left_w = (PAGE_W - 2 * MARGIN - panel_gap) / 2
+    right_x = MARGIN + left_w + panel_gap
     right_w = PAGE_W - MARGIN - right_x
 
-    draw_label(pdf, "Engagement models", MARGIN, lower_y, color=NAVY_SOFT)
-    draw_section_title(pdf, "Flexible B2B cooperation", MARGIN, lower_y - 22, left_w)
+    draw_panel(pdf, MARGIN, panel_y, left_w, panel_h)
+    draw_label(pdf, "Engagement models", MARGIN + 14, panel_y + panel_h - 22, color=NAVY_SOFT)
+    draw_wrapped(
+        pdf,
+        "Flexible B2B cooperation",
+        MARGIN + 14,
+        panel_y + panel_h - 46,
+        left_w - 28,
+        font="Helvetica-Bold",
+        size=15.5,
+        color=TEXT,
+        leading=17,
+    )
     models = [
         "Defined project or technical workstream",
         "Flexible senior consulting capacity",
         "L2/L3 operational and escalation support",
         "Partner-led subcontracting engagement",
     ]
-    model_y = lower_y - 58
+    model_y = panel_y + 80
     for model in models:
         pdf.setFillColor(BLUE)
-        pdf.circle(MARGIN + 3, model_y + 2, 2.5, fill=1, stroke=0)
-        model_y = draw_wrapped(pdf, model, MARGIN + 12, model_y + 5, left_w - 12, font="Helvetica-Bold", size=8, color=TEXT, leading=10) - 7
+        pdf.circle(MARGIN + 17, model_y + 2, 2.4, fill=1, stroke=0)
+        pdf.setFillColor(TEXT)
+        pdf.setFont("Helvetica-Bold", 8.1)
+        pdf.drawString(MARGIN + 27, model_y, model)
+        model_y -= 17
 
-    draw_label(pdf, "Founder & credentials", right_x, lower_y, color=NAVY_SOFT)
-    pdf.setFillColor(LIGHT)
-    pdf.roundRect(right_x, 121, right_w, 139, 12, fill=1, stroke=0)
-    pdf.drawImage(ImageReader(PORTRAIT), right_x + 12, 174, width=70, height=70, mask="auto", preserveAspectRatio=True)
+    draw_panel(pdf, right_x, panel_y, right_w, panel_h)
+    draw_label(pdf, "Founder & credentials", right_x + 14, panel_y + panel_h - 22, color=NAVY_SOFT)
+    pdf.drawImage(ImageReader(PORTRAIT), right_x + 14, panel_y + 52, width=72, height=72, mask="auto", preserveAspectRatio=True)
     pdf.setFillColor(TEXT)
-    pdf.setFont("Helvetica-Bold", 11)
-    pdf.drawString(right_x + 92, 225, "Evgeniy Tsvetov")
-    draw_wrapped(pdf, "Founder & Lead Microsoft Cloud Consultant", right_x + 92, 208, right_w - 104, size=7.8, color=TEXT_SOFT, leading=10)
-    draw_wrapped(pdf, "15+ years across cloud, workplace, hybrid infrastructure and secure operations.", right_x + 92, 181, right_w - 104, size=7.5, color=TEXT_SOFT, leading=9)
+    pdf.setFont("Helvetica-Bold", 11.2)
+    pdf.drawString(right_x + 96, panel_y + 103, "Evgeniy Tsvetov")
+    draw_wrapped(pdf, "Founder & Lead Microsoft Cloud Consultant", right_x + 96, panel_y + 85, right_w - 110, size=7.8, color=TEXT_SOFT, leading=9.5)
+    draw_wrapped(pdf, "15+ years across cloud, workplace and secure operations.", right_x + 96, panel_y + 55, right_w - 110, size=7.6, color=TEXT_SOFT, leading=9)
     pdf.setStrokeColor(SILVER)
-    pdf.line(right_x + 12, 163, right_x + right_w - 12, 163)
-    draw_wrapped(pdf, "Microsoft Certified: Azure AI Fundamentals", right_x + 12, 149, right_w - 24, font="Helvetica-Bold", size=7.4, color=TEXT, leading=9)
-    draw_wrapped(pdf, "Azure Infrastructure as Code - Terraform on Azure", right_x + 12, 132, right_w - 24, size=7.2, color=TEXT_SOFT, leading=9)
+    pdf.line(right_x + 14, panel_y + 42, right_x + right_w - 14, panel_y + 42)
+    draw_wrapped(pdf, "Microsoft Certified: Azure AI Fundamentals", right_x + 14, panel_y + 28, right_w - 28, font="Helvetica-Bold", size=7.5, color=TEXT, leading=9)
+    draw_wrapped(pdf, "Azure Infrastructure as Code - Terraform on Azure", right_x + 14, panel_y + 14, right_w - 28, size=7.3, color=TEXT_SOFT, leading=9)
 
     pdf.setFillColor(BLUE)
-    pdf.roundRect(MARGIN, 58, PAGE_W - 2 * MARGIN, 49, 11, fill=1, stroke=0)
+    pdf.roundRect(MARGIN, 60, PAGE_W - 2 * MARGIN, 50, 11, fill=1, stroke=0)
     pdf.setFillColor(WHITE)
     pdf.setFont("Helvetica-Bold", 10.5)
-    pdf.drawString(MARGIN + 14, 87, "Discuss a Microsoft Cloud project or partner opportunity")
+    pdf.drawString(MARGIN + 14, 89, "Discuss a Microsoft Cloud project or partner opportunity")
     link_x = MARGIN + 14
     link_y = 70
-    link_x += add_link(pdf, "enki-tech.eu", link_x, link_y, 8, "https://enki-tech.eu", color=WHITE) + 18
-    link_x += add_link(pdf, "ytsvetov@hotmail.com", link_x, link_y, 8, "mailto:ytsvetov@hotmail.com", color=WHITE) + 18
-    add_link(pdf, "LinkedIn", link_x, link_y, 8, "https://www.linkedin.com/company/enki-tech-eood/", color=WHITE)
+    link_x += add_link(pdf, "enki-tech.eu", link_x, link_y, 8.1, "https://enki-tech.eu", color=WHITE) + 20
+    link_x += add_link(pdf, "ytsvetov@hotmail.com", link_x, link_y, 8.1, "mailto:ytsvetov@hotmail.com", color=WHITE) + 20
+    add_link(pdf, "LinkedIn", link_x, link_y, 8.1, "https://www.linkedin.com/company/enki-tech-eood/", color=WHITE)
 
     draw_footer(pdf, 2)
     pdf.showPage()
