@@ -36,9 +36,21 @@ export default function ContactPage() {
         <div className="container contactGrid">
           <div className="contactCard">
             <h2>Email</h2>
-            <p>Use your preferred email service for project inquiries, partner introductions and capability statement requests.</p>
+            <p>Use your preferred email service for project inquiries and partner introductions.</p>
             <a className="textLink" href={`mailto:${site.email}`}>{site.email} <span aria-hidden="true">→</span></a>
             <p className="contactDetail">Domain-based business contact</p>
+          </div>
+          <div className="contactCard">
+            <h2>Capability statement</h2>
+            <p>Download a concise two-page overview of Enki Tech capabilities, delivery models and selected experience.</p>
+            <a
+              className="button buttonGhost dark"
+              href="/downloads/enki-tech-capability-statement.pdf"
+              download
+            >
+              Download PDF
+            </a>
+            <p className="contactDetail">PDF · 2 pages · English</p>
           </div>
           <div className="contactCard">
             <h2>LinkedIn</h2>

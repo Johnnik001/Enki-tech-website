@@ -110,7 +110,13 @@ export default function PartnersPage() {
           </p>
           <div className="heroActions">
             <Link href="/contact/" className="button">Discuss partner delivery</Link>
-            <Link href="/experience/" className="button buttonGhost">Review experience</Link>
+            <a
+              href="/downloads/enki-tech-capability-statement.pdf"
+              className="button buttonGhost"
+              download
+            >
+              Download capability statement
+            </a>
           </div>
         </div>
       </section>
