@@ -236,34 +236,112 @@ export const services = [
 
 export const experience = [
   {
+    slug: 'windows-365-cloud-pc-migration',
     label: 'Enterprise transformation',
     proof: '12,000+ users',
     title: 'Large-scale Windows 365 Cloud PC migration',
+    metaTitle: 'Windows 365 Cloud PC Migration Case Study',
+    metaDescription:
+      'A sanitized case study of technical leadership for a 12,000+ user migration from Citrix to Windows 365 Cloud PC across hybrid environments.',
     detail:
       'Technical leadership in a migration from Citrix to Windows 365 Cloud PC for 12,000+ users across hybrid production and development environments.',
+    context:
+      'The programme involved a large business-critical user population and a transition between established virtual desktop services and a modern Cloud PC platform. Delivery had to account for hybrid infrastructure, production and development use cases, operational readiness and multiple stakeholder groups.',
     challenge: 'Move a large, business-critical user base to a modern Cloud PC platform while maintaining operational control across hybrid environments.',
     role: 'Technical leadership and senior delivery support across migration, operations and stakeholder-facing workstreams.',
-    impact: ['Improved endpoint manageability', 'Greater operational flexibility', 'Enhanced user experience', 'Cost-optimization support']
+    approach: [
+      {
+        title: 'Technical discovery and dependencies',
+        text: 'Support the identification of platform, identity, endpoint and operational dependencies that could affect migration readiness.'
+      },
+      {
+        title: 'Migration workstream leadership',
+        text: 'Provide senior technical direction across transition planning, issue resolution, validation and delivery coordination.'
+      },
+      {
+        title: 'Operational readiness',
+        text: 'Keep supportability, ownership, escalation paths and post-migration operations visible throughout the programme.'
+      },
+      {
+        title: 'Stakeholder communication',
+        text: 'Translate technical risks, decisions and progress into clear input for delivery teams and business stakeholders.'
+      }
+    ],
+    impact: ['Improved endpoint manageability', 'Greater operational flexibility', 'Enhanced user experience', 'Cost-optimization support'],
+    relatedServices: ['identity-endpoint-security', 'azure-hybrid-infrastructure'],
+    keywords: ['Windows 365', 'Cloud PC migration', 'Citrix migration', 'Microsoft Intune', 'hybrid infrastructure']
   },
   {
+    slug: 'secure-digital-collaboration-operations',
     label: 'Secure collaboration',
     proof: 'L2/L3 operations',
     title: 'Digital collaboration operations in secure environments',
+    metaTitle: 'Secure Microsoft 365 Collaboration Operations Case Study',
+    metaDescription:
+      'A sanitized case study of L2/L3 operational responsibility across Exchange, Exchange Online and Microsoft Teams in secure hybrid environments.',
     detail:
       'Support for collaboration services across on-premise and cloud environments, including Exchange, Teams and Exchange Online, with L2/L3 operational responsibility.',
+    context:
+      'Collaboration services operated across cloud and on-premise platforms with demanding security and reliability expectations. The work required senior troubleshooting, disciplined incident ownership and practical input into risk and service-improvement decisions.',
     challenge: 'Keep collaboration services dependable and supportable in a security-conscious environment with high operational expectations.',
     role: 'L2/L3 operational responsibility, troubleshooting, risk-assessment input and subject-matter expertise.',
-    impact: ['Service reliability', 'Incident and request management', 'Risk assessment input', 'Security-related SME support']
+    approach: [
+      {
+        title: 'L2/L3 incident ownership',
+        text: 'Investigate complex service issues, coordinate resolution and provide clear technical escalation when broader expertise is required.'
+      },
+      {
+        title: 'Hybrid service troubleshooting',
+        text: 'Work across Exchange, Exchange Online, Microsoft Teams and their supporting identity and infrastructure dependencies.'
+      },
+      {
+        title: 'Risk and change input',
+        text: 'Contribute operational evidence and subject-matter expertise to risk assessment, planned change and service decisions.'
+      },
+      {
+        title: 'Operational improvement',
+        text: 'Identify recurring friction, documentation gaps and support practices that can strengthen day-to-day service reliability.'
+      }
+    ],
+    impact: ['Service reliability', 'Incident and request management', 'Risk assessment input', 'Security-related SME support'],
+    relatedServices: ['microsoft-365-digital-collaboration', 'identity-endpoint-security'],
+    keywords: ['Microsoft 365 operations', 'Exchange Online', 'Microsoft Teams', 'L2/L3 support', 'secure collaboration']
   },
   {
+    slug: 'powershell-it-operations-automation',
     label: 'Automation',
     proof: 'Provisioning · mailbox · backup · compliance',
     title: 'PowerShell automation for IT operations',
+    metaTitle: 'PowerShell IT Operations Automation Case Study',
+    metaDescription:
+      'A sanitized case study of PowerShell automation for provisioning, mailbox administration, backup routines and compliance reporting.',
     detail:
       'Automation of administrative and operational tasks including account provisioning, mailbox configuration, backup routines and compliance reporting.',
+    context:
+      'Recurring administration created avoidable manual effort and variation between operators. The opportunity was to standardize repeatable tasks while preserving validation, traceability, documentation and appropriate human oversight.',
     challenge: 'Reduce repeatable manual work without compromising consistency, traceability or audit readiness.',
     role: 'Automation design and implementation for operational teams and recurring service workflows.',
-    impact: ['Lower manual workload', 'Better consistency', 'Faster execution', 'Improved audit readiness']
+    approach: [
+      {
+        title: 'Workflow discovery',
+        text: 'Identify repetitive tasks, decision points, inputs, exceptions and operational risks before selecting automation candidates.'
+      },
+      {
+        title: 'PowerShell implementation',
+        text: 'Build maintainable automation for provisioning, mailbox administration, backup workflows and compliance reporting.'
+      },
+      {
+        title: 'Validation and traceability',
+        text: 'Include predictable input checks, error handling and logging so operational teams can understand and support each workflow.'
+      },
+      {
+        title: 'Documentation and handover',
+        text: 'Provide operating guidance that makes automation usable beyond the original implementation and reduces single-person dependency.'
+      }
+    ],
+    impact: ['Lower manual workload', 'Better consistency', 'Faster execution', 'Improved audit readiness'],
+    relatedServices: ['automation-it-operations'],
+    keywords: ['PowerShell automation', 'IT operations', 'provisioning automation', 'compliance reporting', 'mailbox automation']
   }
 ];
 

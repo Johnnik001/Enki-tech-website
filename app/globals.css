@@ -513,6 +513,16 @@ li {
   min-height: 100%;
 }
 
+.caseStudyCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.caseStudyLink {
+  margin-top: auto;
+  padding-top: 24px;
+}
+
 .tag {
   display: inline-flex;
   align-items: center;
@@ -629,6 +639,10 @@ li {
   color: rgba(255, 255, 255, 0.78);
   font-size: 1.04rem;
   margin-top: 18px;
+}
+
+.pageHero .caseProof {
+  color: var(--cyan) !important;
 }
 
 .contactGrid {

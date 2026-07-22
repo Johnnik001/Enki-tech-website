@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { CTA } from '../../../components/CTA';
 import { SectionHeader } from '../../../components/SectionHeader';
-import { services, site } from '../../../data/site';
+import { experience, services, site } from '../../../data/site';
 
 export const dynamicParams = false;
 
@@ -46,6 +46,7 @@ export default async function ServiceDetailPage({ params }) {
   }
 
   const serviceUrl = `${site.url}/services/${service.slug}/`;
+  const relatedExperience = experience.filter((item) => item.relatedServices.includes(service.slug));
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Service',
@@ -143,6 +144,35 @@ export default async function ServiceDetailPage({ params }) {
           </ul>
         </div>
       </section>
+
+      {relatedExperience.length > 0 && (
+        <section className="section">
+          <div className="container">
+            <SectionHeader
+              eyebrow="Related experience"
+              title="See how this capability has been applied"
+              text="Sanitized case studies provide practical evidence while protecting client confidentiality and avoiding unsupported endorsements."
+            />
+            <div className="cardsGrid">
+              {relatedExperience.map((item) => (
+                <article className="card serviceCard" key={item.slug}>
+                  <p className="tag">{item.label}</p>
+                  <p className="caseProof">{item.proof}</p>
+                  <h3>{item.title}</h3>
+                  <p>{item.detail}</p>
+                  <Link
+                    href={`/experience/${item.slug}/`}
+                    className="textLink serviceCardLink"
+                    aria-label={`Read case study: ${item.title}`}
+                  >
+                    Read case study <span aria-hidden="true">→</span>
+                  </Link>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <CTA />
     </>
