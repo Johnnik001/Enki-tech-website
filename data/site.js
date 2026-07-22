@@ -43,34 +43,194 @@ export const navigation = [
 
 export const services = [
   {
+    slug: 'microsoft-365-digital-collaboration',
     title: 'Microsoft 365 & Digital Collaboration',
+    metaTitle: 'Microsoft 365 & Digital Collaboration Consulting',
+    metaDescription:
+      'Senior Microsoft 365 consulting for Exchange Online, Teams, SharePoint, OneDrive, hybrid collaboration, migrations and service improvement across Europe.',
     summary:
       'Operational consulting for Exchange Online, Microsoft Teams, SharePoint, OneDrive and hybrid collaboration environments.',
-    bullets: ['Exchange and mail flow operations', 'Microsoft Teams governance', 'Hybrid collaboration support', 'Migration and transition assistance']
+    intro:
+      'Improve the reliability, governance and day-to-day operation of Microsoft 365 collaboration services with senior support spanning cloud and hybrid environments.',
+    bullets: ['Exchange and mail flow operations', 'Microsoft Teams governance', 'Hybrid collaboration support', 'Migration and transition assistance'],
+    outcomes: ['More reliable collaboration services', 'Clearer governance and operational ownership', 'Lower support friction across hybrid environments', 'Safer migrations and service transitions'],
+    capabilities: [
+      {
+        title: 'Exchange Online and hybrid mail',
+        text: 'Troubleshooting, mail flow, coexistence, operational improvement and transition support across Exchange Online and hybrid Exchange environments.'
+      },
+      {
+        title: 'Microsoft Teams operations',
+        text: 'Governance, lifecycle considerations, service support and practical improvement of Teams-based collaboration.'
+      },
+      {
+        title: 'SharePoint and OneDrive collaboration',
+        text: 'Operational guidance for document collaboration, ownership, access patterns and supportability.'
+      },
+      {
+        title: 'Migration and transition support',
+        text: 'Senior technical capacity for discovery, planning, migration workstreams, validation, handover and post-transition stabilization.'
+      }
+    ],
+    engagementSignals: ['Recurring Exchange Online or Teams incidents', 'Unclear ownership or governance across collaboration services', 'Hybrid dependencies that make changes difficult', 'A migration or transition that needs senior delivery support'],
+    deliverables: ['Operational assessment and prioritized findings', 'Remediation or migration roadmap', 'Configuration and implementation support', 'Runbooks, handover notes and support documentation'],
+    proof: {
+      eyebrow: 'Relevant experience',
+      title: 'L2/L3 collaboration operations',
+      text: 'Senior operational responsibility across Exchange, Exchange Online and Microsoft Teams in security-conscious on-premise and cloud environments.'
+    }
   },
   {
+    slug: 'azure-hybrid-infrastructure',
     title: 'Azure & Hybrid Infrastructure',
+    metaTitle: 'Azure & Hybrid Infrastructure Consulting',
+    metaDescription:
+      'Azure and hybrid infrastructure consulting for cloud operations, Windows Server, Active Directory, Entra Connect, reliability and service improvement.',
     summary:
       'Design, administration and operational improvement for Azure, Windows Server and hybrid infrastructure platforms.',
-    bullets: ['Azure administration', 'Hybrid identity', 'Active Directory and Entra Connect', 'Cloud operations and reliability']
+    intro:
+      'Strengthen Azure and hybrid infrastructure operations with practical senior support across cloud administration, Windows platforms, identity dependencies and service reliability.',
+    bullets: ['Azure administration', 'Hybrid identity', 'Active Directory and Entra Connect', 'Cloud operations and reliability'],
+    outcomes: ['More dependable cloud and hybrid operations', 'Better visibility of technical dependencies', 'Clearer operational standards and ownership', 'Reduced risk during infrastructure change'],
+    capabilities: [
+      {
+        title: 'Azure administration and operations',
+        text: 'Operational support for Azure resources, access, monitoring, configuration review and recurring administration.'
+      },
+      {
+        title: 'Windows Server and hybrid platforms',
+        text: 'Support for infrastructure that spans Azure, Windows Server and on-premise services with interconnected operational dependencies.'
+      },
+      {
+        title: 'Active Directory and Entra Connect',
+        text: 'Review and troubleshooting of directory synchronization, hybrid identity flows and supporting infrastructure.'
+      },
+      {
+        title: 'Reliability and service improvement',
+        text: 'Assessment of operational gaps, monitoring, documentation, recurring incidents and improvement opportunities.'
+      }
+    ],
+    engagementSignals: ['Recurring cloud or hybrid infrastructure incidents', 'Limited documentation of dependencies and ownership', 'Identity synchronization or connectivity concerns', 'A transition that needs stronger operational readiness'],
+    deliverables: ['Infrastructure and operations assessment', 'Risk and dependency overview', 'Prioritized reliability improvement plan', 'Implementation support and operating documentation'],
+    proof: {
+      eyebrow: 'Operating model',
+      title: 'Cloud expertise grounded in operations',
+      text: 'The focus is not only architecture: recommendations are shaped around supportability, documentation, escalation paths and the realities of day-to-day service ownership.'
+    }
   },
   {
+    slug: 'identity-endpoint-security',
     title: 'Identity, Endpoint & Security',
+    metaTitle: 'Entra ID, Intune & Endpoint Security Consulting',
+    metaDescription:
+      'Practical Entra ID, Conditional Access, Intune, Windows 365 and Microsoft security consulting for secure identity and endpoint operations.',
     summary:
       'Practical implementation support for Entra ID, Conditional Access, Intune, Windows 365 Cloud PC and security baselines.',
-    bullets: ['Entra ID and Conditional Access', 'Intune endpoint management', 'Windows 365 Cloud PC', 'Microsoft Defender alignment']
+    intro:
+      'Build more secure and manageable identity and endpoint services with implementation-focused support across Entra ID, Intune, Windows 365 and Microsoft security controls.',
+    bullets: ['Entra ID and Conditional Access', 'Intune endpoint management', 'Windows 365 Cloud PC', 'Microsoft Defender alignment'],
+    outcomes: ['Stronger identity and access controls', 'More consistent endpoint management', 'Better operational readiness for Cloud PC environments', 'Security improvements that remain supportable'],
+    capabilities: [
+      {
+        title: 'Entra ID and Conditional Access',
+        text: 'Policy review, implementation support, access-control alignment and operational consideration of identity risks and exceptions.'
+      },
+      {
+        title: 'Microsoft Intune',
+        text: 'Endpoint enrollment, configuration, compliance, application deployment and operational improvement for managed devices.'
+      },
+      {
+        title: 'Windows 365 Cloud PC',
+        text: 'Migration, provisioning, operational support and service improvement for enterprise Cloud PC environments.'
+      },
+      {
+        title: 'Security baseline alignment',
+        text: 'Practical alignment of endpoint and identity controls with Microsoft security capabilities and operational requirements.'
+      }
+    ],
+    engagementSignals: ['Conditional Access policies have grown difficult to govern', 'Endpoint compliance or application delivery is inconsistent', 'Windows 365 requires migration or operational expertise', 'Security controls need implementation without disrupting operations'],
+    deliverables: ['Identity and endpoint configuration review', 'Prioritized security and manageability recommendations', 'Policy or platform implementation support', 'Operational handover and support guidance'],
+    proof: {
+      eyebrow: 'Relevant experience',
+      title: '12,000+ user Cloud PC migration',
+      text: 'Technical leadership and senior delivery support for a large-scale transition from Citrix to Windows 365 Cloud PC across hybrid production and development environments.'
+    }
   },
   {
+    slug: 'automation-it-operations',
     title: 'Automation & IT Operations',
+    metaTitle: 'PowerShell Automation & IT Operations Consulting',
+    metaDescription:
+      'PowerShell automation and IT operations consulting for provisioning, reporting, mailbox administration, compliance workflows and service improvement.',
     summary:
       'Automation-first service improvement for repetitive IT operations, reporting, provisioning and documentation workflows.',
-    bullets: ['PowerShell automation', 'Operational reporting', 'Provisioning workflows', 'ITIL-aligned service improvement']
+    intro:
+      'Reduce repetitive work and operational inconsistency with maintainable PowerShell automation, clearer workflows and documentation designed for real support teams.',
+    bullets: ['PowerShell automation', 'Operational reporting', 'Provisioning workflows', 'ITIL-aligned service improvement'],
+    outcomes: ['Less repetitive manual administration', 'Faster and more consistent execution', 'Improved traceability and audit readiness', 'Automation that support teams can operate and maintain'],
+    capabilities: [
+      {
+        title: 'PowerShell automation',
+        text: 'Maintainable scripts and tooling for Microsoft Cloud, identity, mailbox, endpoint and infrastructure administration.'
+      },
+      {
+        title: 'Provisioning workflows',
+        text: 'Standardized account, access, mailbox and service provisioning with validation and documented operating steps.'
+      },
+      {
+        title: 'Operational reporting',
+        text: 'Repeatable data collection and reporting for service health, configuration, compliance and management visibility.'
+      },
+      {
+        title: 'Service improvement',
+        text: 'Identification of recurring work, handoff gaps and opportunities to improve ITIL-aligned operational processes.'
+      }
+    ],
+    engagementSignals: ['Administrators repeat the same manual work every week', 'Provisioning results vary between operators', 'Reporting requires extensive manual consolidation', 'Existing scripts are undocumented or difficult to support'],
+    deliverables: ['Automation opportunity assessment', 'Prioritized automation backlog', 'Implemented and tested PowerShell workflows', 'Documentation, error handling and operational handover'],
+    proof: {
+      eyebrow: 'Relevant experience',
+      title: 'Provisioning, mailbox, backup and compliance automation',
+      text: 'Hands-on automation of recurring administrative workflows to reduce manual workload, improve consistency and strengthen audit readiness.'
+    }
   },
   {
+    slug: 'ai-enhanced-it-operations',
     title: 'AI-enhanced IT Operations',
+    metaTitle: 'AI-enhanced IT Operations Consulting',
+    metaDescription:
+      'Practical AI consulting for IT documentation, incident summaries, knowledge workflows and internal assistants with human review and operational governance.',
     summary:
       'Use AI where it creates measurable operational leverage: documentation, incident summaries, knowledge base workflows and proposal support.',
-    bullets: ['AI-assisted documentation', 'Incident summary automation', 'Knowledge base support', 'Internal IT assistant concepts']
+    intro:
+      'Apply AI to focused operational workflows where it can improve speed and consistency without removing human review, security controls or accountable service ownership.',
+    bullets: ['AI-assisted documentation', 'Incident summary automation', 'Knowledge base support', 'Internal IT assistant concepts'],
+    outcomes: ['Faster creation of useful operational documentation', 'More consistent incident and service summaries', 'Better reuse of existing technical knowledge', 'Controlled experimentation with clear human oversight'],
+    capabilities: [
+      {
+        title: 'AI-assisted documentation',
+        text: 'Structured workflows for drafting runbooks, technical summaries, handover notes and repeatable service documentation.'
+      },
+      {
+        title: 'Incident and change summaries',
+        text: 'Assisted transformation of operational inputs into concise summaries for review, communication and knowledge capture.'
+      },
+      {
+        title: 'Knowledge base workflows',
+        text: 'Improved discovery, drafting and maintenance of support knowledge while retaining validation by responsible specialists.'
+      },
+      {
+        title: 'Internal assistant concepts',
+        text: 'Focused prototypes and operating concepts for assistants grounded in approved internal IT information and defined use cases.'
+      }
+    ],
+    engagementSignals: ['Operational knowledge is scattered across tickets and documents', 'Incident summaries take too long to prepare', 'Teams want to test AI without exposing sensitive information', 'An AI idea needs a measurable use case and governance boundaries'],
+    deliverables: ['Use-case and data-flow assessment', 'Prioritized pilot recommendation', 'Workflow or prototype implementation', 'Human-review controls and operating guidance'],
+    proof: {
+      eyebrow: 'Delivery principle',
+      title: 'AI where it creates operational leverage',
+      text: 'The approach starts with a specific workflow, measurable value and clear review responsibility—not with AI adoption for its own sake.'
+    }
   }
 ];
 
