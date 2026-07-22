@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { CTA } from '../../components/CTA';
 import { experience } from '../../data/site';
 
@@ -32,7 +33,7 @@ export default function ExperiencePage() {
       <section className="section">
         <div className="container experienceGrid">
           {experience.map((item) => (
-            <article className="experienceCard large" key={item.title}>
+            <article className="experienceCard large caseStudyCard" key={item.slug}>
               <p className="tag">{item.label}</p>
               <p className="caseProof">{item.proof}</p>
               <h2>{item.title}</h2>
@@ -45,6 +46,13 @@ export default function ExperiencePage() {
               <ul>
                 {item.impact.map((impact) => <li key={impact}>{impact}</li>)}
               </ul>
+              <Link
+                href={`/experience/${item.slug}/`}
+                className="textLink caseStudyLink"
+                aria-label={`Read case study: ${item.title}`}
+              >
+                Read case study <span aria-hidden="true">→</span>
+              </Link>
             </article>
           ))}
         </div>
