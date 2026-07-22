@@ -17,13 +17,9 @@ export const metadata = {
     google: 'zO2AJWR6kd2XPKiO79HsnSQrGEUISEW-1yqcgWlJANc'
   },
   icons: {
-    icon: [
-      { url: '/favicon.ico?v=2', type: 'image/x-icon' },
-      { url: '/favicon.svg?v=2', type: 'image/svg+xml' },
-      { url: '/favicon.png?v=2', type: 'image/png', sizes: '1024x1024' }
-    ],
-    shortcut: '/favicon.ico?v=2',
-    apple: [{ url: '/favicon.png?v=2', sizes: '1024x1024', type: 'image/png' }]
+    icon: [{ url: '/logo/linkedin-company-logo.png', type: 'image/png', sizes: '1024x1024' }],
+    shortcut: '/logo/linkedin-company-logo.png',
+    apple: [{ url: '/logo/linkedin-company-logo.png', sizes: '1024x1024', type: 'image/png' }]
   },
   openGraph: {
     title: 'Enki Tech | European IT Consulting',
