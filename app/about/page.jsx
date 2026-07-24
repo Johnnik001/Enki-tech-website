@@ -4,7 +4,7 @@ import { certifications, principles, site } from '../../data/site';
 
 export const metadata = {
   title: 'About',
-  description: 'About Enki Tech, an independent European IT consulting company based in Bulgaria and operating across Belgium and Europe.',
+  description: 'About Enki Tech, an independent European IT consulting company based in Bulgaria and operating across Europe.',
   alternates: { canonical: '/about/' }
 };
 
@@ -16,7 +16,7 @@ export default function AboutPage() {
           <p className="eyebrow">About Enki Tech</p>
           <h1>Independent European IT consulting with senior Microsoft Cloud expertise.</h1>
           <p>
-            {site.legalName} is an independent IT consulting company based in Bulgaria and operating across Belgium and Europe. The company focuses on Microsoft Cloud, Digital Collaboration, secure operations and automation.
+            {site.legalName} is an independent IT consulting company based in Bulgaria and operating across Europe. The company focuses on Microsoft Cloud, Digital Collaboration, secure operations and automation.
           </p>
         </div>
       </section>
