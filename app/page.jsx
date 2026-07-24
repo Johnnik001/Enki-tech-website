@@ -117,11 +117,7 @@ export default function HomePage() {
                   className="textLink engagementCardLink"
                   aria-label={`Explore engagement: ${engagement.title}`}
                 >
-                  {engagement.id === 'partner-delivery'
-                    ? 'Explore partner delivery'
-                    : engagement.id === 'project-delivery'
-                      ? 'Explore relevant services'
-                      : 'Discuss this engagement'}
+                  View engagement details
                   <span aria-hidden="true">→</span>
                 </Link>
               </article>

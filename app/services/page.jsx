@@ -1,27 +1,14 @@
+import Link from 'next/link';
 import { CTA } from '../../components/CTA';
 import { SectionHeader } from '../../components/SectionHeader';
 import { ServiceCards } from '../../components/ServiceCards';
+import { engagements } from '../../data/site';
 
 export const metadata = {
   title: 'Services',
-  description: 'Microsoft 365, Azure, Digital Collaboration, Entra ID, Intune, Security, Automation and AI-enhanced IT Operations consulting services.',
+  description: 'Microsoft Cloud audits, Microsoft 365, Azure, Digital Collaboration, Entra ID, Intune, Security, Automation and AI-enhanced IT Operations consulting services.',
   alternates: { canonical: '/services/' }
 };
-
-const engagementModels = [
-  {
-    title: 'Project delivery support',
-    text: 'Senior technical capacity for migrations, transitions, integration builds, documentation and implementation workstreams.'
-  },
-  {
-    title: 'Operational improvement',
-    text: 'Assessment and improvement of Microsoft Cloud operations, support procedures, automation opportunities and service reliability.'
-  },
-  {
-    title: 'Subcontracting and partner delivery',
-    text: 'Flexible B2B collaboration with integrators, vendors and consulting firms that need experienced Microsoft infrastructure capability.'
-  }
-];
 
 export default function ServicesPage() {
   return (
@@ -45,15 +32,23 @@ export default function ServicesPage() {
       <section className="section sectionAlt">
         <div className="container">
           <SectionHeader
-            eyebrow="Engagement models"
-            title="Flexible cooperation for direct clients and partners"
-            text="The commercial model can be shaped around project milestones, senior consulting days, subcontracting capacity or ongoing advisory support."
+            eyebrow="Ways to engage"
+            title="Choose how the technical work should be structured"
+            text="Each engagement has a defined purpose, client result, deliverables and delivery path. Select the closest match or start with the situation."
           />
-          <div className="cardsGrid three">
-            {engagementModels.map((model) => (
-              <article className="card" key={model.title}>
-                <h3>{model.title}</h3>
-                <p>{model.text}</p>
+          <div className="cardsGrid">
+            {engagements.map((engagement) => (
+              <article className="card serviceCard" key={engagement.id}>
+                <p className="tag">{engagement.label}</p>
+                <h3>{engagement.title}</h3>
+                <p>{engagement.result}</p>
+                <Link
+                  href={engagement.href}
+                  className="textLink serviceCardLink"
+                  aria-label={`View engagement: ${engagement.title}`}
+                >
+                  View engagement details <span aria-hidden="true">→</span>
+                </Link>
               </article>
             ))}
           </div>
@@ -67,6 +62,7 @@ export default function ServicesPage() {
             <h2>Services are designed to be packaged into clear B2B offers.</h2>
           </div>
           <div className="listPanel">
+            <div className="principle">Microsoft Cloud audit and risk review</div>
             <div className="principle">Microsoft 365 operational assessment</div>
             <div className="principle">Teams and Exchange service improvement</div>
             <div className="principle">Entra ID and Conditional Access review</div>

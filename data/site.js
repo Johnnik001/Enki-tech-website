@@ -8,7 +8,7 @@ export const site = {
   location: 'Bulgaria · Belgium · Europe',
   tagline: 'Secure Microsoft Cloud, Digital Collaboration and automation-driven IT operations.',
   description:
-    'Enki Tech provides senior Microsoft Cloud consulting for assessments, project delivery, L2/L3 operational support, automation and partner-led engagements across Europe.',
+    'Enki Tech provides Microsoft Cloud audits, assessments, project delivery, L2/L3 operational support, automation and partner-led engagements across Europe.',
   founder: 'Evgeniy Tsvetov',
   founderRole: 'Founder & Lead Microsoft Cloud Consultant'
 };
@@ -45,75 +45,276 @@ export const navigation = [
 export const engagements = [
   {
     id: 'assessment',
+    slug: 'assessment-improvement-plan',
     label: 'Assess and prioritize',
     title: 'Microsoft Cloud assessment & improvement plan',
+    metaTitle: 'Microsoft Cloud Assessment & Improvement Plan',
+    metaDescription:
+      'A defined Microsoft Cloud assessment engagement that turns operational issues, technical risk and unclear ownership into prioritized findings and an actionable improvement plan.',
+    intro:
+      'Create a shared, evidence-based view of the current Microsoft Cloud environment before committing budget and delivery capacity to remediation or transformation.',
     bestFor:
       'An environment with recurring incidents, unclear ownership, inconsistent controls or limited documentation.',
     result:
       'A clear view of operational risk, immediate priorities and a practical roadmap for improvement.',
+    suitableFor: [
+      'IT leaders who need an independent view of recurring operational friction',
+      'Teams preparing a Microsoft 365, Azure, identity or endpoint improvement programme',
+      'Organizations that need to clarify ownership, dependencies and technical priorities',
+      'Partners that need senior discovery and planning capacity before delivery'
+    ],
     deliverables: [
       'Focused discovery and stakeholder input',
       'Configuration, operations and dependency review',
       'Prioritized findings and recommended actions',
       'Executive summary and technical improvement plan'
     ],
+    process: [
+      {
+        title: 'Confirm the decision to support',
+        text: 'Agree the environment, business concern, stakeholders, available evidence and the decisions the assessment must enable.'
+      },
+      {
+        title: 'Review the current state',
+        text: 'Examine relevant configuration, operational practices, dependencies, documentation and recurring service issues.'
+      },
+      {
+        title: 'Prioritize findings',
+        text: 'Separate immediate risks, structural improvements and longer-term opportunities by impact, urgency and delivery dependency.'
+      },
+      {
+        title: 'Present the improvement plan',
+        text: 'Provide a clear management summary, technical findings and a sequenced roadmap with practical next steps.'
+      }
+    ],
+    clientInputs: [
+      'Access to relevant technical owners and service stakeholders',
+      'Existing diagrams, procedures, incident themes and configuration evidence',
+      'Known constraints, planned changes and target outcomes',
+      'A responsible contact for scope decisions and findings review'
+    ],
+    relatedServices: ['microsoft-cloud-audit', 'microsoft-365-digital-collaboration', 'azure-hybrid-infrastructure', 'identity-endpoint-security'],
     format: 'Defined assessment',
-    href: '/contact/'
+    href: '/engagements/assessment-improvement-plan/'
   },
   {
     id: 'project-delivery',
+    slug: 'project-migration-remediation',
     label: 'Deliver a defined change',
     title: 'Project, migration or remediation delivery',
+    metaTitle: 'Microsoft Cloud Project, Migration & Remediation Delivery',
+    metaDescription:
+      'Senior Microsoft Cloud delivery for migrations, remediation and defined technical workstreams, including planning, implementation, validation, documentation and handover.',
+    intro:
+      'Move a defined Microsoft Cloud workstream from scope to a controlled outcome with senior technical ownership, clear dependencies and practical operational handover.',
     bestFor:
       'A Microsoft 365, Azure, identity, endpoint or collaboration initiative that needs senior technical ownership.',
     result:
       'A delivered workstream with controlled implementation, validation, documentation and handover.',
+    suitableFor: [
+      'A migration or transition with complex Microsoft platform dependencies',
+      'A remediation backlog that needs experienced technical ownership',
+      'An internal delivery team that needs senior implementation capacity',
+      'A partner that needs a dependable specialist for a defined workstream'
+    ],
     deliverables: [
       'Scope, dependencies and delivery plan',
       'Hands-on implementation or migration support',
       'Technical validation and risk management',
       'Runbooks, handover notes and next-step backlog'
     ],
+    process: [
+      {
+        title: 'Define the workstream',
+        text: 'Confirm scope, target result, responsibilities, dependencies, acceptance criteria and delivery constraints.'
+      },
+      {
+        title: 'Prepare controlled delivery',
+        text: 'Build the implementation plan, identify risks, confirm prerequisites and align technical and stakeholder communication.'
+      },
+      {
+        title: 'Implement and validate',
+        text: 'Deliver the agreed change with evidence, issue management, validation and clear progress communication.'
+      },
+      {
+        title: 'Handover and stabilize',
+        text: 'Complete documentation, knowledge transfer, outstanding-risk review and a practical post-delivery backlog.'
+      }
+    ],
+    clientInputs: [
+      'A named business or technical owner for the workstream',
+      'Access to relevant platforms, documentation and delivery teams',
+      'Defined change, security and approval processes',
+      'Availability for decisions, validation and acceptance'
+    ],
+    relatedServices: ['microsoft-365-digital-collaboration', 'azure-hybrid-infrastructure', 'identity-endpoint-security', 'automation-it-operations'],
     format: 'Project or workstream',
-    href: '/services/'
+    href: '/engagements/project-migration-remediation/'
   },
   {
     id: 'operational-support',
+    slug: 'l2-l3-operational-support',
     label: 'Stabilize and improve',
     title: 'L2/L3 operational support & service improvement',
+    metaTitle: 'Microsoft Cloud L2/L3 Operational Support',
+    metaDescription:
+      'Senior L2/L3 Microsoft Cloud support for complex incidents, changes, recurring problems, service improvement, documentation and knowledge transfer.',
+    intro:
+      'Add senior Microsoft expertise to complex operational work while improving the service practices, documentation and ownership that remain with the internal team.',
     bestFor:
       'An internal IT team that needs senior help with complex incidents, changes, backlog or service reliability.',
     result:
       'Faster resolution, clearer ownership and a more supportable Microsoft Cloud operating environment.',
+    suitableFor: [
+      'Internal teams facing recurring Microsoft Cloud incidents or escalations',
+      'Services with an unresolved technical or operational backlog',
+      'Teams that need senior change and risk input without a permanent hire',
+      'Operations that require stronger documentation and knowledge transfer'
+    ],
     deliverables: [
       'Complex troubleshooting and escalation ownership',
       'Change and risk input for Microsoft services',
       'Recurring problem and improvement backlog',
       'Operational documentation and knowledge transfer'
     ],
+    process: [
+      {
+        title: 'Establish service context',
+        text: 'Agree supported services, responsibilities, priorities, escalation interfaces, access and communication routines.'
+      },
+      {
+        title: 'Address complex work',
+        text: 'Investigate escalations, support planned change and work through the highest-value operational backlog.'
+      },
+      {
+        title: 'Identify recurring causes',
+        text: 'Convert incident evidence and operational friction into structured problem, documentation and improvement actions.'
+      },
+      {
+        title: 'Review and transfer knowledge',
+        text: 'Maintain visibility of work completed, unresolved risks, recommendations and knowledge transferred to the team.'
+      }
+    ],
+    clientInputs: [
+      'Defined service scope, escalation route and internal responsibilities',
+      'Access to platforms, monitoring, tickets and existing documentation',
+      'Named service owners and relevant engineering contacts',
+      'A shared method for prioritization, change control and progress review'
+    ],
+    relatedServices: ['microsoft-365-digital-collaboration', 'azure-hybrid-infrastructure', 'identity-endpoint-security', 'automation-it-operations'],
     format: 'Recurring or retained capacity',
-    href: '/contact/'
+    href: '/engagements/l2-l3-operational-support/'
   },
   {
     id: 'partner-delivery',
+    slug: 'partner-delivery-subcontracting',
     label: 'Add delivery capacity',
     title: 'Partner delivery & subcontracting',
+    metaTitle: 'Microsoft Cloud Partner Delivery & Subcontracting',
+    metaDescription:
+      'Flexible senior Microsoft Cloud subcontracting and partner delivery for consultancies, integrators and technology providers across Europe.',
+    intro:
+      'Add senior Microsoft capability to a partner-led engagement with clear delivery interfaces, discreet client communication and documentation by default.',
     bestFor:
       'A consultancy, integrator or technology partner with a specialist gap, peak workload or complex escalation.',
     result:
       'Dependable senior Microsoft capability integrated into the partner’s delivery structure.',
+    suitableFor: [
+      'Consultancies that need specialist Microsoft delivery capacity',
+      'Integrators covering a temporary workload or capability gap',
+      'Partners that need a senior resource for a complex escalation',
+      'Delivery teams requiring white-label or NDA-based technical contribution'
+    ],
     deliverables: [
       'Defined role, scope and delivery interfaces',
       'Senior technical contribution under NDA',
       'Direct stakeholder and delivery-team communication',
       'Documentation and practical handover by default'
     ],
+    process: [
+      {
+        title: 'Qualify fit and boundaries',
+        text: 'Confirm capability need, client context, confidentiality, commercial route, responsibilities and partner ownership.'
+      },
+      {
+        title: 'Agree delivery interfaces',
+        text: 'Define who communicates with whom, working cadence, required outputs, escalation paths and acceptance expectations.'
+      },
+      {
+        title: 'Integrate into delivery',
+        text: 'Contribute senior technical work under the partner’s delivery model with disciplined communication and documentation.'
+      },
+      {
+        title: 'Handover without friction',
+        text: 'Transfer technical context, evidence, documentation and outstanding actions back into the partner or client team.'
+      }
+    ],
+    clientInputs: [
+      'Clear partner ownership of the commercial and client relationship',
+      'Defined role, scope, confidentiality and communication expectations',
+      'Access to the relevant delivery context and technical stakeholders',
+      'A named contact for prioritization, escalation and acceptance'
+    ],
+    relatedServices: ['microsoft-365-digital-collaboration', 'azure-hybrid-infrastructure', 'identity-endpoint-security', 'automation-it-operations', 'ai-enhanced-it-operations'],
     format: 'Flexible European B2B engagement',
-    href: '/partners/'
+    href: '/engagements/partner-delivery-subcontracting/'
   }
 ];
 
 export const services = [
+  {
+    slug: 'microsoft-cloud-audit',
+    title: 'Microsoft Cloud Audit & Risk Review',
+    metaTitle: 'Microsoft Cloud Audit & Risk Review',
+    metaDescription:
+      'Independent Microsoft Cloud audit covering configuration risk, operational readiness, identity and security controls, dependencies, documentation and prioritized remediation.',
+    summary:
+      'An evidence-based review of Microsoft Cloud configuration, operational risk, ownership and support readiness with prioritized remediation actions.',
+    intro:
+      'Gain an independent senior view of Microsoft Cloud risk and supportability across relevant Microsoft 365, Azure, identity, endpoint and collaboration services.',
+    bullets: ['Configuration and control review', 'Operational readiness', 'Risk and dependency analysis', 'Prioritized remediation roadmap'],
+    outcomes: [
+      'Clear visibility of material technical and operational risks',
+      'Priorities separated by urgency, impact and delivery dependency',
+      'Better evidence for budget, remediation and governance decisions',
+      'A practical roadmap that internal teams or partners can execute'
+    ],
+    capabilities: [
+      {
+        title: 'Configuration and control review',
+        text: 'Targeted review of relevant Microsoft Cloud configuration, administrative controls, exceptions and operationally significant settings.'
+      },
+      {
+        title: 'Identity and security risk',
+        text: 'Assessment of identity dependencies, privileged access, Conditional Access, endpoint posture and control gaps within the agreed scope.'
+      },
+      {
+        title: 'Operational readiness',
+        text: 'Review of ownership, monitoring, incident patterns, change practices, documentation, escalation paths and support dependencies.'
+      },
+      {
+        title: 'Risk-based remediation planning',
+        text: 'Prioritized findings with business context, recommended actions, dependencies and a sequenced path from immediate risk reduction to structural improvement.'
+      }
+    ],
+    engagementSignals: [
+      'The environment has grown without a recent independent review',
+      'Recurring incidents suggest deeper configuration or ownership problems',
+      'A migration, acquisition or leadership change requires a reliable baseline',
+      'Security or compliance stakeholders need evidence and a remediation plan'
+    ],
+    deliverables: [
+      'Agreed audit scope and evidence request',
+      'Risk register with severity, context and recommended action',
+      'Executive summary for decision-makers',
+      'Technical findings and prioritized remediation roadmap'
+    ],
+    proof: {
+      eyebrow: 'Audit principle',
+      title: 'Actionable evidence, not a generic checklist',
+      text: 'The review connects technical findings to operational impact, ownership and practical remediation so the output can support real delivery decisions.'
+    }
+  },
   {
     slug: 'microsoft-365-digital-collaboration',
     title: 'Microsoft 365 & Digital Collaboration',

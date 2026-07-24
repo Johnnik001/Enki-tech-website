@@ -1,4 +1,4 @@
-import { experience, services, site } from '../data/site';
+import { engagements, experience, services, site } from '../data/site';
 
 export const dynamic = 'force-static';
 
@@ -6,6 +6,7 @@ const routes = [
   '',
   '/services',
   ...services.map((service) => `/services/${service.slug}`),
+  ...engagements.map((engagement) => `/engagements/${engagement.slug}`),
   '/experience',
   ...experience.map((item) => `/experience/${item.slug}`),
   '/partners',
