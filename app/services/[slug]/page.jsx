@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { CTA } from '../../../components/CTA';
 import { SectionHeader } from '../../../components/SectionHeader';
-import { experience, services, site } from '../../../data/site';
+import { engagements, experience, services, site } from '../../../data/site';
 
 export const dynamicParams = false;
 
@@ -47,6 +47,7 @@ export default async function ServiceDetailPage({ params }) {
 
   const serviceUrl = `${site.url}/services/${service.slug}/`;
   const relatedExperience = experience.filter((item) => item.relatedServices.includes(service.slug));
+  const relatedEngagements = engagements.filter((engagement) => engagement.relatedServices.includes(service.slug));
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Service',
@@ -145,8 +146,34 @@ export default async function ServiceDetailPage({ params }) {
         </div>
       </section>
 
+      <section className="section">
+        <div className="container">
+          <SectionHeader
+            eyebrow="Ways to engage"
+            title="Choose the delivery format for this service"
+            text="The technical scope is shaped around the service area. The engagement determines how the work starts, what is delivered and how responsibilities are organized."
+          />
+          <div className="cardsGrid">
+            {relatedEngagements.map((engagement) => (
+              <article className="card serviceCard" key={engagement.id}>
+                <p className="tag">{engagement.label}</p>
+                <h3>{engagement.title}</h3>
+                <p>{engagement.result}</p>
+                <Link
+                  href={engagement.href}
+                  className="textLink serviceCardLink"
+                  aria-label={`View engagement: ${engagement.title}`}
+                >
+                  View engagement details <span aria-hidden="true">→</span>
+                </Link>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {relatedExperience.length > 0 && (
-        <section className="section">
+        <section className="section sectionAlt">
           <div className="container">
             <SectionHeader
               eyebrow="Related experience"

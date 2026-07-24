@@ -74,7 +74,7 @@ export default function ContactPage() {
           </div>
           <div className="listPanel">
             <div className="principle">Your company and country</div>
-            <div className="principle">Service area: M365, Azure, Intune, Exchange, Teams, automation or AI operations</div>
+            <div className="principle">Service area: audit, M365, Azure, Intune, Exchange, Teams, automation or AI operations</div>
             <div className="principle">Expected timeline and engagement model</div>
             <div className="principle">Whether this is a direct client, partner or subcontracting opportunity</div>
           </div>

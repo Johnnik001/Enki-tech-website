@@ -112,6 +112,7 @@ export function ProjectBriefForm() {
         <label>
           Area of interest
           <select name="area" value={form.area} onChange={updateField}>
+            <option>Microsoft Cloud Audit & Risk Review</option>
             <option>Microsoft 365 & Digital Collaboration</option>
             <option>Azure & Hybrid Infrastructure</option>
             <option>Identity, Endpoint & Security</option>
@@ -127,7 +128,9 @@ export function ProjectBriefForm() {
         <label className="formWide">
           Engagement model
           <select name="engagement" value={form.engagement} onChange={updateField}>
+            <option>Assessment or audit</option>
             <option>Direct project</option>
+            <option>L2/L3 operational support</option>
             <option>Partner delivery</option>
             <option>Subcontracting</option>
             <option>Ongoing advisory support</option>
