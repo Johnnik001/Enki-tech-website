@@ -256,6 +256,10 @@ li {
   box-shadow: var(--shadow);
 }
 
+.heroPanel > .eyebrow {
+  margin-bottom: 4px;
+}
+
 .metric {
   padding: 22px 0;
   border-bottom: 1px solid var(--line);
@@ -295,6 +299,123 @@ li {
 .sectionHeader p:not(.eyebrow) {
   margin-top: 18px;
   font-size: 1.02rem;
+}
+
+.clientOutcomeBand {
+  border-bottom: 1px solid var(--line-dark);
+  background: var(--white);
+}
+
+.clientOutcomeGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.clientOutcome {
+  padding: 30px 24px;
+  border-right: 1px solid var(--line-dark);
+}
+
+.clientOutcome:first-child {
+  padding-left: 0;
+}
+
+.clientOutcome:last-child {
+  padding-right: 0;
+  border-right: 0;
+}
+
+.clientOutcome h2 {
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+}
+
+.clientOutcome p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.engagementGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+#engagements {
+  scroll-margin-top: 90px;
+}
+
+.engagementCard {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  border: 1px solid var(--line-dark);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: 0 14px 46px rgba(7, 17, 31, 0.07);
+}
+
+.engagementCard h3 {
+  max-width: 490px;
+  margin-bottom: 22px;
+  font-size: 1.45rem;
+}
+
+.engagementSituation {
+  padding-bottom: 20px;
+}
+
+.engagementSituation strong,
+.engagementResult strong,
+.engagementSubheading {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--blue-dark);
+  font-size: 0.76rem;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.engagementSituation p,
+.engagementResult p {
+  margin: 0;
+}
+
+.engagementResult {
+  margin-bottom: 22px;
+  padding: 18px 20px;
+  border-left: 4px solid var(--blue);
+  border-radius: 0 14px 14px 0;
+  background: var(--bg-alt);
+}
+
+.engagementResult p {
+  color: var(--text);
+  font-weight: 650;
+}
+
+.engagementSubheading {
+  margin: 0;
+}
+
+.engagementDeliverables {
+  margin-top: 14px;
+}
+
+.engagementFormat {
+  margin: 24px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--line-dark);
+  color: var(--text-soft);
+  font-size: 0.9rem;
+}
+
+.engagementCardLink {
+  margin-top: auto;
+  padding-top: 18px;
 }
 
 .audienceSection {
@@ -600,6 +721,35 @@ li {
   display: flex;
   justify-content: center;
   margin-top: 36px;
+}
+
+.deliveryProcessGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.deliveryStep {
+  padding: 30px;
+  border: 1px solid var(--line-dark);
+  border-radius: var(--radius);
+  background: var(--white);
+}
+
+.deliveryStepNumber {
+  margin-bottom: 34px;
+  color: var(--blue) !important;
+  font-size: 0.82rem;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+}
+
+.deliveryStep h3 {
+  margin-bottom: 12px;
+}
+
+.deliveryStep p:last-child {
+  margin: 0;
 }
 
 .ctaBand {
@@ -1005,9 +1155,33 @@ textarea:focus-visible {
   .cardsGrid.three,
   .audienceGrid,
   .experienceGrid,
+  .engagementGrid,
+  .deliveryProcessGrid,
   .contactGrid,
   .listPanel.wide {
     grid-template-columns: 1fr;
+  }
+
+  .clientOutcomeGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .clientOutcome {
+    padding: 26px;
+    border-bottom: 1px solid var(--line-dark);
+  }
+
+  .clientOutcome:nth-child(2) {
+    border-right: 0;
+  }
+
+  .clientOutcome:nth-child(3) {
+    padding-left: 0;
+    border-bottom: 0;
+  }
+
+  .clientOutcome:last-child {
+    border-bottom: 0;
   }
 
   .experienceGrid > .experienceCard:last-child:nth-child(odd) {
@@ -1055,10 +1229,28 @@ textarea:focus-visible {
 
   .card,
   .experienceCard,
+  .engagementCard,
   .contactCard,
   .quoteCard,
   .heroPanel {
     padding: 22px;
+  }
+
+  .clientOutcomeGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .clientOutcome,
+  .clientOutcome:first-child,
+  .clientOutcome:nth-child(3),
+  .clientOutcome:last-child {
+    padding: 22px 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--line-dark);
+  }
+
+  .clientOutcome:last-child {
+    border-bottom: 0;
   }
 
   .projectBriefForm {

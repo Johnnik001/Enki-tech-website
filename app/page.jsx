@@ -2,11 +2,51 @@ import Link from 'next/link';
 import { CTA } from '../components/CTA';
 import { SectionHeader } from '../components/SectionHeader';
 import { ServiceCards } from '../components/ServiceCards';
-import { experience, principles } from '../data/site';
+import { engagements, experience } from '../data/site';
 
 export const metadata = {
+  title: 'Microsoft Cloud Consulting for Projects, Operations & Partners',
+  description:
+    'Senior Microsoft Cloud consulting for assessments, project delivery, L2/L3 support, automation and partner engagements across Europe.',
   alternates: { canonical: '/' }
 };
+
+const clientOutcomes = [
+  {
+    title: 'Understand what to fix',
+    text: 'Turn recurring problems, technical risk and unclear ownership into a prioritized action plan.'
+  },
+  {
+    title: 'Deliver controlled change',
+    text: 'Move a migration, remediation or improvement workstream from scope through validation and handover.'
+  },
+  {
+    title: 'Run services more reliably',
+    text: 'Resolve complex issues, strengthen operations and reduce avoidable support friction.'
+  },
+  {
+    title: 'Add senior capacity',
+    text: 'Bring Microsoft expertise into an internal team or partner delivery model when it is needed.'
+  }
+];
+
+const deliverySteps = [
+  {
+    number: '01',
+    title: 'Share the situation',
+    text: 'Describe the environment, current problem, expected outcome, stakeholders and timing.'
+  },
+  {
+    number: '02',
+    title: 'Agree scope and outputs',
+    text: 'Enki Tech confirms fit, responsibilities, deliverables, engagement model and the next decision point.'
+  },
+  {
+    number: '03',
+    title: 'Deliver with handover',
+    text: 'Work is completed with clear communication, technical evidence, documentation and practical next steps.'
+  }
+];
 
 export default function HomePage() {
   return (
@@ -14,51 +54,78 @@ export default function HomePage() {
       <section className="hero">
         <div className="container heroGrid">
           <div>
-            <p className="eyebrow">Independent European IT Consulting · Bulgaria · Belgium · Europe</p>
-            <h1>Make your Microsoft Cloud operations more secure, reliable and easier to run.</h1>
+            <p className="eyebrow">Senior Microsoft Cloud consulting · Europe</p>
+            <h1>Solve a Microsoft Cloud delivery or operations challenge with senior expertise.</h1>
             <p className="heroText">
-              Enki Tech gives European IT teams and delivery partners senior-level support for complex Microsoft 365, Azure, identity, endpoint and collaboration environments — from transformation projects to operational improvement.
+              Enki Tech helps IT leaders, transformation teams and delivery partners assess complex environments, deliver defined change, stabilize operations and add specialist capacity across Microsoft 365, Azure, identity, endpoint, collaboration and automation.
             </p>
             <div className="heroActions">
-              <Link href="/contact/" className="button">Discuss a project</Link>
-              <Link href="/experience/" className="button buttonGhost">View experience</Link>
+              <a href="#engagements" className="button">Choose an engagement</a>
+              <Link href="/contact/" className="button buttonGhost">Discuss your situation</Link>
             </div>
           </div>
-          <aside className="heroPanel" aria-label="Enki Tech capability highlights">
+          <aside className="heroPanel" aria-label="Enki Tech proof points">
+            <p className="eyebrow">Delivery evidence</p>
             <div className="metric"><strong>15+ years</strong><span>Cloud, workplace and hybrid infrastructure experience</span></div>
             <div className="metric"><strong>12,000+ users</strong><span>Windows 365 Cloud PC migration experience</span></div>
-            <div className="metric"><strong>L2/L3 support</strong><span>Collaboration operations, troubleshooting and escalation ownership</span></div>
-            <div className="metric"><strong>Microsoft Cloud</strong><span>M365 · Azure · Entra ID · Intune · Teams · Exchange</span></div>
+            <div className="metric"><strong>L2/L3 ownership</strong><span>Complex troubleshooting, collaboration operations and escalations</span></div>
+            <div className="metric"><strong>European B2B</strong><span>Direct projects, retained support and partner-led delivery</span></div>
           </aside>
         </div>
       </section>
 
-      <section className="section audienceSection">
+      <section className="clientOutcomeBand" aria-label="Client outcomes">
+        <div className="container clientOutcomeGrid">
+          {clientOutcomes.map((outcome) => (
+            <article className="clientOutcome" key={outcome.title}>
+              <h2>{outcome.title}</h2>
+              <p>{outcome.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section sectionAlt" id="engagements">
         <div className="container">
           <SectionHeader
-            eyebrow="Who we help"
-            title="The right expertise for a critical delivery gap"
-            text="Choose the engagement that best matches your immediate need."
+            eyebrow="What clients can buy"
+            title="Choose the engagement that matches the result you need"
+            text="The technical scope can span Microsoft 365, Azure, identity, endpoint, collaboration and automation. The engagement model starts with the business situation and the output you need."
           />
-          <div className="audienceGrid">
-            <article className="audienceCard">
-              <p className="tag">IT leaders</p>
-              <h3>Improve a Microsoft environment that has become hard to run.</h3>
-              <p>Bring structure to operations, security, documentation and modernization without adding a permanent specialist team.</p>
-              <Link href="/services/" className="textLink">Explore operational improvement <span aria-hidden="true">→</span></Link>
-            </article>
-            <article className="audienceCard">
-              <p className="tag">Partners & integrators</p>
-              <h3>Add senior Microsoft delivery capacity when a project needs it.</h3>
-              <p>Strengthen migrations, transitions and complex workstreams with experienced, dependable technical delivery.</p>
-              <Link href="/partners/" className="textLink">Explore partner delivery <span aria-hidden="true">→</span></Link>
-            </article>
-            <article className="audienceCard">
-              <p className="tag">Transformation teams</p>
-              <h3>Reduce delivery and operational risk in a high-change environment.</h3>
-              <p>Use practical expertise across Microsoft 365, Azure, identity, endpoint and automation to move change forward safely.</p>
-              <Link href="/experience/" className="textLink">View relevant experience <span aria-hidden="true">→</span></Link>
-            </article>
+          <div className="engagementGrid">
+            {engagements.map((engagement) => (
+              <article className="engagementCard" key={engagement.id}>
+                <p className="tag">{engagement.label}</p>
+                <h3>{engagement.title}</h3>
+                <div className="engagementSituation">
+                  <strong>Use this when</strong>
+                  <p>{engagement.bestFor}</p>
+                </div>
+                <div className="engagementResult">
+                  <strong>Client result</strong>
+                  <p>{engagement.result}</p>
+                </div>
+                <p className="engagementSubheading">What is included</p>
+                <ul className="checkList engagementDeliverables">
+                  {engagement.deliverables.map((deliverable) => (
+                    <li key={deliverable}>{deliverable}</li>
+                  ))}
+                </ul>
+                <p className="engagementFormat"><strong>Engagement format:</strong> {engagement.format}</p>
+                <Link
+                  href={engagement.href}
+                  className="textLink engagementCardLink"
+                  aria-label={`Explore engagement: ${engagement.title}`}
+                >
+                  {engagement.id === 'partner-delivery'
+                    ? 'Explore partner delivery'
+                    : engagement.id === 'project-delivery'
+                      ? 'Explore relevant services'
+                      : 'Discuss this engagement'}
+                  <span aria-hidden="true">→</span>
+                </Link>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -66,26 +133,28 @@ export default function HomePage() {
       <section className="section">
         <div className="container">
           <SectionHeader
-            eyebrow="Services"
-            title="Senior consulting for complex Microsoft environments"
-            text="Enki Tech focuses on practical delivery areas where reliability, security, documentation and automation directly improve IT operations."
+            eyebrow="Technical capability areas"
+            title="Apply the engagement to the right technical area"
+            text="These are the Microsoft technology areas in which assessments, projects, operational support and partner delivery can be scoped."
           />
           <ServiceCards />
         </div>
       </section>
 
       <section className="section sectionAlt">
-        <div className="container splitGrid">
-          <div>
-            <p className="eyebrow">Positioning</p>
-            <h2>Built for enterprise teams, partners and subcontracting engagements.</h2>
-            <p>
-              The company is positioned for organizations that need senior Microsoft Cloud and collaboration expertise without building a large permanent team. Enki Tech can support delivery, operations, transformation and service improvement initiatives.
-            </p>
-          </div>
-          <div className="listPanel">
-            {principles.map((principle) => (
-              <div className="principle" key={principle}>{principle}</div>
+        <div className="container">
+          <SectionHeader
+            eyebrow="How an engagement starts"
+            title="A simple path from technical problem to agreed delivery"
+            text="Clients do not need to diagnose the exact service before making contact. Start with the situation, the required result and the constraints."
+          />
+          <div className="deliveryProcessGrid">
+            {deliverySteps.map((step) => (
+              <article className="deliveryStep" key={step.number}>
+                <p className="deliveryStepNumber">{step.number}</p>
+                <h3>{step.title}</h3>
+                <p>{step.text}</p>
+              </article>
             ))}
           </div>
         </div>
@@ -118,7 +187,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      <CTA />
+      <CTA
+        eyebrow="Start with the problem"
+        title="Not sure which engagement fits?"
+        text="Share what is not working, what must change, the expected timeline and whether this is a direct project or partner opportunity. Enki Tech will identify the most relevant next step."
+        buttonLabel="Describe your situation"
+      />
     </>
   );
 }

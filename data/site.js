@@ -8,7 +8,7 @@ export const site = {
   location: 'Bulgaria · Belgium · Europe',
   tagline: 'Secure Microsoft Cloud, Digital Collaboration and automation-driven IT operations.',
   description:
-    'Enki Tech is an independent European IT consulting company helping organizations modernize Microsoft 365, Azure, Digital Collaboration, identity, endpoint and IT operations environments.',
+    'Enki Tech provides senior Microsoft Cloud consulting for assessments, project delivery, L2/L3 operational support, automation and partner-led engagements across Europe.',
   founder: 'Evgeniy Tsvetov',
   founderRole: 'Founder & Lead Microsoft Cloud Consultant'
 };
@@ -40,6 +40,77 @@ export const navigation = [
   { label: 'Partners', href: '/partners/' },
   { label: 'About', href: '/about/' },
   { label: 'Contact', href: '/contact/' }
+];
+
+export const engagements = [
+  {
+    id: 'assessment',
+    label: 'Assess and prioritize',
+    title: 'Microsoft Cloud assessment & improvement plan',
+    bestFor:
+      'An environment with recurring incidents, unclear ownership, inconsistent controls or limited documentation.',
+    result:
+      'A clear view of operational risk, immediate priorities and a practical roadmap for improvement.',
+    deliverables: [
+      'Focused discovery and stakeholder input',
+      'Configuration, operations and dependency review',
+      'Prioritized findings and recommended actions',
+      'Executive summary and technical improvement plan'
+    ],
+    format: 'Defined assessment',
+    href: '/contact/'
+  },
+  {
+    id: 'project-delivery',
+    label: 'Deliver a defined change',
+    title: 'Project, migration or remediation delivery',
+    bestFor:
+      'A Microsoft 365, Azure, identity, endpoint or collaboration initiative that needs senior technical ownership.',
+    result:
+      'A delivered workstream with controlled implementation, validation, documentation and handover.',
+    deliverables: [
+      'Scope, dependencies and delivery plan',
+      'Hands-on implementation or migration support',
+      'Technical validation and risk management',
+      'Runbooks, handover notes and next-step backlog'
+    ],
+    format: 'Project or workstream',
+    href: '/services/'
+  },
+  {
+    id: 'operational-support',
+    label: 'Stabilize and improve',
+    title: 'L2/L3 operational support & service improvement',
+    bestFor:
+      'An internal IT team that needs senior help with complex incidents, changes, backlog or service reliability.',
+    result:
+      'Faster resolution, clearer ownership and a more supportable Microsoft Cloud operating environment.',
+    deliverables: [
+      'Complex troubleshooting and escalation ownership',
+      'Change and risk input for Microsoft services',
+      'Recurring problem and improvement backlog',
+      'Operational documentation and knowledge transfer'
+    ],
+    format: 'Recurring or retained capacity',
+    href: '/contact/'
+  },
+  {
+    id: 'partner-delivery',
+    label: 'Add delivery capacity',
+    title: 'Partner delivery & subcontracting',
+    bestFor:
+      'A consultancy, integrator or technology partner with a specialist gap, peak workload or complex escalation.',
+    result:
+      'Dependable senior Microsoft capability integrated into the partner’s delivery structure.',
+    deliverables: [
+      'Defined role, scope and delivery interfaces',
+      'Senior technical contribution under NDA',
+      'Direct stakeholder and delivery-team communication',
+      'Documentation and practical handover by default'
+    ],
+    format: 'Flexible European B2B engagement',
+    href: '/partners/'
+  }
 ];
 
 export const services = [
