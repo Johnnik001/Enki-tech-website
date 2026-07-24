@@ -60,7 +60,7 @@ export default function ContactPage() {
           </div>
           <div className="contactCard">
             <h2>Operating area</h2>
-            <p>Independent European IT consulting company based in Bulgaria and operating across Belgium and Europe.</p>
+            <p>Independent European IT consulting company.</p>
             <p className="contactDetail">{site.location}</p>
           </div>
         </div>
