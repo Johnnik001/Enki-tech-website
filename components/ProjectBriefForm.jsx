@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { site } from '../data/site';
+import { emptyInquiryAttribution, getOrCreateInquiryAttribution } from '../lib/inquiryAttribution';
 
 const formEndpoint = `https://formsubmit.co/${site.email}`;
 const formAjaxEndpoint = `https://formsubmit.co/ajax/${site.email}`;
@@ -41,12 +42,15 @@ const initialForm = {
 
 export function ProjectBriefForm() {
   const [form, setForm] = useState(initialForm);
+  const [attribution, setAttribution] = useState(emptyInquiryAttribution);
   const [hasPrefill, setHasPrefill] = useState(false);
   const [status, setStatus] = useState('');
   const [statusType, setStatusType] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
+    setAttribution(getOrCreateInquiryAttribution());
+
     const params = new URLSearchParams(window.location.search);
     const area = params.get('area');
     const engagement = params.get('engagement');
@@ -99,7 +103,12 @@ export function ProjectBriefForm() {
           'Expected timeline': form.timeline,
           'Engagement model': form.engagement,
           'Delivery challenge or message': form.challenge,
-          'Privacy consent': form.consent ? 'Confirmed' : 'Not confirmed'
+          'Privacy consent': form.consent ? 'Confirmed' : 'Not confirmed',
+          'First landing page': attribution.landingPath || 'Unavailable',
+          'Referrer domain': attribution.referrerHost || 'Direct / unavailable',
+          'UTM source': attribution.utmSource || 'Not provided',
+          'UTM medium': attribution.utmMedium || 'Not provided',
+          'UTM campaign': attribution.utmCampaign || 'Not provided'
         })
       });
 
@@ -180,7 +189,7 @@ export function ProjectBriefForm() {
         </button>
         <a className="button buttonGhost dark" href={`mailto:${site.email}`}>Email instead</a>
       </div>
-      <p className="formPrivacy">Your details are securely forwarded to Enki Tech by FormSubmit and used only to respond to your inquiry.</p>
+      <p className="formPrivacy">Your details and non-personal source context are securely forwarded to Enki Tech by FormSubmit and used only to respond to and understand your inquiry.</p>
       <p className="formStatus" data-state={statusType} role="status" aria-live="polite">{status}</p>
     </form>
   );
