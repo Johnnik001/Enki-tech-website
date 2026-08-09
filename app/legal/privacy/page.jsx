@@ -15,13 +15,16 @@ export default function PrivacyPage() {
         <p>
           This website is operated by {site.legalName}. This notice explains how information is handled when you visit the website or contact Enki Tech about a business inquiry.
         </p>
-        <p>Last updated: 21 July 2026.</p>
+        <p>Last updated: 9 August 2026.</p>
         <h2>Business inquiries</h2>
         <p>
           If you contact Enki Tech through the website form, by email or through LinkedIn, the information you provide is used to respond to your inquiry and manage the business relationship. This may include your name, company, country, email address, project context, expected timeline and communication history.
         </p>
         <p>
           Website form submissions are processed by FormSubmit solely to forward the inquiry to Enki Tech by email. FormSubmit states that submissions may be retained for up to 30 days. See the <a href="https://formsubmit.co/privacy">FormSubmit privacy information</a> for details.
+        </p>
+        <p>
+          To understand which website content or campaign led to an inquiry, the site temporarily stores the first landing path, referring domain and any UTM source, medium or campaign values in your browser session. It does not store your name, email address, message, full referring URL or other form details there. This source context is included with the inquiry and the browser removes the session copy when the session ends.
         </p>
         <h2>Website analytics</h2>
         <p>
