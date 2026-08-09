@@ -1,11 +1,30 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { site } from '../data/site';
 
 const formEndpoint = `https://formsubmit.co/${site.email}`;
 const formAjaxEndpoint = `https://formsubmit.co/ajax/${site.email}`;
+
+const areaOptions = [
+  'Microsoft Cloud Audit & Risk Review',
+  'Microsoft 365 & Digital Collaboration',
+  'Azure & Hybrid Infrastructure',
+  'Identity, Endpoint & Security',
+  'Automation & IT Operations',
+  'AI-enhanced IT Operations',
+  'Partner or subcontracting opportunity'
+];
+
+const engagementOptions = [
+  'Assessment or audit',
+  'Direct project',
+  'L2/L3 operational support',
+  'Partner delivery',
+  'Subcontracting',
+  'Ongoing advisory support'
+];
 
 const initialForm = {
   name: '',
@@ -22,9 +41,27 @@ const initialForm = {
 
 export function ProjectBriefForm() {
   const [form, setForm] = useState(initialForm);
+  const [hasPrefill, setHasPrefill] = useState(false);
   const [status, setStatus] = useState('');
   const [statusType, setStatusType] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const area = params.get('area');
+    const engagement = params.get('engagement');
+    const validArea = areaOptions.includes(area) ? area : null;
+    const validEngagement = engagementOptions.includes(engagement) ? engagement : null;
+
+    if (validArea || validEngagement) {
+      setForm((current) => ({
+        ...current,
+        ...(validArea ? { area: validArea } : {}),
+        ...(validEngagement ? { engagement: validEngagement } : {})
+      }));
+      setHasPrefill(true);
+    }
+  }, []);
 
   function updateField(event) {
     const value = event.target.type === 'checkbox' ? event.target.checked : event.target.value;
@@ -92,6 +129,9 @@ export function ProjectBriefForm() {
         Leave this field empty
         <input name="_honey" value={form._honey} onChange={updateField} tabIndex="-1" autoComplete="off" />
       </label>
+      {hasPrefill && (
+        <p className="formPrefillNotice">Your selected service or engagement has been pre-filled. You can change it below.</p>
+      )}
       <div className="formGrid">
         <label>
           Your name
@@ -112,13 +152,7 @@ export function ProjectBriefForm() {
         <label>
           Area of interest
           <select name="area" value={form.area} onChange={updateField}>
-            <option>Microsoft Cloud Audit & Risk Review</option>
-            <option>Microsoft 365 & Digital Collaboration</option>
-            <option>Azure & Hybrid Infrastructure</option>
-            <option>Identity, Endpoint & Security</option>
-            <option>Automation & IT Operations</option>
-            <option>AI-enhanced IT Operations</option>
-            <option>Partner or subcontracting opportunity</option>
+            {areaOptions.map((option) => <option key={option}>{option}</option>)}
           </select>
         </label>
         <label>
@@ -128,12 +162,7 @@ export function ProjectBriefForm() {
         <label className="formWide">
           Engagement model
           <select name="engagement" value={form.engagement} onChange={updateField}>
-            <option>Assessment or audit</option>
-            <option>Direct project</option>
-            <option>L2/L3 operational support</option>
-            <option>Partner delivery</option>
-            <option>Subcontracting</option>
-            <option>Ongoing advisory support</option>
+            {engagementOptions.map((option) => <option key={option}>{option}</option>)}
           </select>
         </label>
         <label className="formWide">

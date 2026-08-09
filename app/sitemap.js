@@ -6,6 +6,7 @@ const routes = [
   '',
   '/services',
   ...services.map((service) => `/services/${service.slug}`),
+  '/engagements',
   ...engagements.map((engagement) => `/engagements/${engagement.slug}`),
   '/experience',
   ...experience.map((item) => `/experience/${item.slug}`),

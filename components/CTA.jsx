@@ -4,7 +4,8 @@ export function CTA({
   eyebrow = 'Next step',
   title = 'Need senior Microsoft Cloud and collaboration expertise?',
   text = 'Enki Tech can support project delivery, operational improvement, secure collaboration platforms and subcontracting engagements across Europe.',
-  buttonLabel = 'Start a conversation'
+  buttonLabel = 'Start a conversation',
+  buttonHref = '/contact/'
 }) {
   return (
     <section className="ctaBand">
@@ -14,7 +15,7 @@ export function CTA({
           <h2>{title}</h2>
           <p>{text}</p>
         </div>
-        <Link href="/contact/" className="button buttonLight">{buttonLabel}</Link>
+        <Link href={buttonHref} className="button buttonLight">{buttonLabel}</Link>
       </div>
     </section>
   );

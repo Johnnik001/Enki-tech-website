@@ -347,6 +347,10 @@ li {
   scroll-margin-top: 90px;
 }
 
+#compare-engagements {
+  scroll-margin-top: 90px;
+}
+
 .engagementCard {
   display: flex;
   flex-direction: column;
@@ -863,6 +867,17 @@ li {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
+}
+
+.formPrefillNotice {
+  margin: 0 0 20px;
+  padding: 12px 14px;
+  border-left: 4px solid var(--blue);
+  border-radius: 0 10px 10px 0;
+  background: var(--bg-alt);
+  color: var(--text);
+  font-size: 0.88rem;
+  font-weight: 650;
 }
 
 .formGrid label {
