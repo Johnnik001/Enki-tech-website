@@ -1,6 +1,7 @@
 import './globals.css';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
+import { AttributionCapture } from '../components/AttributionCapture';
 import { site } from '../data/site';
 import { Analytics } from '@vercel/analytics/next';
 
@@ -111,6 +112,7 @@ export default function RootLayout({ children }) {
         <Header />
         <main>{children}</main>
         <Footer />
+        <AttributionCapture />
         <Analytics />
       </body>
     </html>
