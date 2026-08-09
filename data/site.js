@@ -36,6 +36,7 @@ export const certifications = [
 
 export const navigation = [
   { label: 'Services', href: '/services/' },
+  { label: 'Engagements', href: '/engagements/' },
   { label: 'Experience', href: '/experience/' },
   { label: 'Partners', href: '/partners/' },
   { label: 'About', href: '/about/' },
@@ -95,6 +96,7 @@ export const engagements = [
     ],
     relatedServices: ['microsoft-cloud-audit', 'microsoft-365-digital-collaboration', 'azure-hybrid-infrastructure', 'identity-endpoint-security'],
     format: 'Defined assessment',
+    contactEngagement: 'Assessment or audit',
     href: '/engagements/assessment-improvement-plan/'
   },
   {
@@ -149,6 +151,7 @@ export const engagements = [
     ],
     relatedServices: ['microsoft-365-digital-collaboration', 'azure-hybrid-infrastructure', 'identity-endpoint-security', 'automation-it-operations'],
     format: 'Project or workstream',
+    contactEngagement: 'Direct project',
     href: '/engagements/project-migration-remediation/'
   },
   {
@@ -203,6 +206,7 @@ export const engagements = [
     ],
     relatedServices: ['microsoft-365-digital-collaboration', 'azure-hybrid-infrastructure', 'identity-endpoint-security', 'automation-it-operations'],
     format: 'Recurring or retained capacity',
+    contactEngagement: 'L2/L3 operational support',
     href: '/engagements/l2-l3-operational-support/'
   },
   {
@@ -257,6 +261,7 @@ export const engagements = [
     ],
     relatedServices: ['microsoft-365-digital-collaboration', 'azure-hybrid-infrastructure', 'identity-endpoint-security', 'automation-it-operations', 'ai-enhanced-it-operations'],
     format: 'Flexible European B2B engagement',
+    contactEngagement: 'Partner delivery',
     href: '/engagements/partner-delivery-subcontracting/'
   }
 ];

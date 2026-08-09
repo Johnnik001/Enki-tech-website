@@ -46,6 +46,7 @@ export default async function EngagementDetailPage({ params }) {
   }
 
   const engagementUrl = `${site.url}/engagements/${engagement.slug}/`;
+  const contactHref = `/contact/?engagement=${encodeURIComponent(engagement.contactEngagement)}`;
   const relatedServices = services.filter((service) => engagement.relatedServices.includes(service.slug));
   const structuredData = {
     '@context': 'https://schema.org',
@@ -72,8 +73,8 @@ export default async function EngagementDetailPage({ params }) {
           <h1>{engagement.title}</h1>
           <p>{engagement.intro}</p>
           <div className="heroActions">
-            <Link href="/contact/" className="button">Discuss this engagement</Link>
-            <Link href="/#engagements" className="button buttonGhost">Compare engagements</Link>
+            <Link href={contactHref} className="button">Discuss this engagement</Link>
+            <Link href="/engagements/" className="button buttonGhost">Compare engagements</Link>
           </div>
         </div>
       </section>
@@ -178,6 +179,7 @@ export default async function EngagementDetailPage({ params }) {
         title={`Discuss ${engagement.title.toLowerCase()}`}
         text="Share the current situation, expected result, relevant Microsoft services and timeline. Enki Tech will confirm fit, scope boundaries and the most useful next step."
         buttonLabel="Share your situation"
+        buttonHref={contactHref}
       />
     </>
   );

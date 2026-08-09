@@ -46,6 +46,7 @@ export default async function ServiceDetailPage({ params }) {
   }
 
   const serviceUrl = `${site.url}/services/${service.slug}/`;
+  const serviceContactHref = `/contact/?area=${encodeURIComponent(service.title)}${service.slug === 'microsoft-cloud-audit' ? '&engagement=Assessment%20or%20audit' : ''}`;
   const relatedExperience = experience.filter((item) => item.relatedServices.includes(service.slug));
   const relatedEngagements = engagements.filter((engagement) => engagement.relatedServices.includes(service.slug));
   const structuredData = {
@@ -73,7 +74,7 @@ export default async function ServiceDetailPage({ params }) {
           <h1>{service.metaTitle}</h1>
           <p>{service.intro}</p>
           <div className="heroActions">
-            <Link href="/contact/" className="button">Discuss this service</Link>
+            <Link href={serviceContactHref} className="button">Discuss this service</Link>
             <Link href="/services/" className="button buttonGhost">View all services</Link>
           </div>
         </div>
@@ -201,7 +202,7 @@ export default async function ServiceDetailPage({ params }) {
         </section>
       )}
 
-      <CTA />
+      <CTA buttonHref={serviceContactHref} />
     </>
   );
 }
