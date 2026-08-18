@@ -46,7 +46,13 @@ export default async function ServiceDetailPage({ params }) {
   }
 
   const serviceUrl = `${site.url}/services/${service.slug}/`;
-  const serviceContactHref = `/contact/?area=${encodeURIComponent(service.title)}${service.slug === 'microsoft-cloud-audit' ? '&engagement=Assessment%20or%20audit' : ''}`;
+  const engagementByService = {
+    'microsoft-cloud-audit': 'Assessment or audit',
+    'secure-cloud-access-privileged-identity': 'Assessment or audit',
+    'continuous-secure-cloud-governance': 'Ongoing advisory support'
+  };
+  const contactEngagement = engagementByService[service.slug];
+  const serviceContactHref = `/contact/?area=${encodeURIComponent(service.title)}${contactEngagement ? `&engagement=${encodeURIComponent(contactEngagement)}` : ''}`;
   const relatedExperience = experience.filter((item) => item.relatedServices.includes(service.slug));
   const relatedEngagements = engagements.filter((engagement) => engagement.relatedServices.includes(service.slug));
   const structuredData = {
@@ -112,6 +118,31 @@ export default async function ServiceDetailPage({ params }) {
           </div>
         </div>
       </section>
+
+      {service.modules?.length > 0 && (
+        <section className="section" id="specialist-modules">
+          <div className="container">
+            <SectionHeader
+              eyebrow="Optional specialist modules"
+              title="Extend the audit around the risk that matters most"
+              text="Modules are added to the core evidence and risk review when the environment needs deeper analysis of a specific control domain."
+            />
+            <div className="cardsGrid">
+              {service.modules.map((module) => (
+                <article className="card serviceCard" key={module.title}>
+                  <h3>{module.title}</h3>
+                  <p>{module.text}</p>
+                  <ul className="checkList">
+                    {module.deliverables.map((deliverable) => (
+                      <li key={deliverable}>{deliverable}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="section">
         <div className="container splitGrid">

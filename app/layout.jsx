@@ -8,7 +8,7 @@ import { Analytics } from '@vercel/analytics/next';
 export const metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: 'Enki Tech | Microsoft Cloud & Digital Collaboration Consulting',
+    default: 'Enki Tech | Secure Microsoft Cloud Governance',
     template: '%s | Enki Tech'
   },
   description: site.description,
@@ -23,7 +23,7 @@ export const metadata = {
     apple: [{ url: '/logo/linkedin-company-logo.png', sizes: '1024x1024', type: 'image/png' }]
   },
   openGraph: {
-    title: 'Enki Tech | European IT Consulting',
+    title: 'Enki Tech | Secure Microsoft Cloud Governance',
     description: site.description,
     siteName: site.name,
     type: 'website',
@@ -38,7 +38,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary',
-    title: 'Enki Tech | European IT Consulting',
+    title: 'Enki Tech | Secure Microsoft Cloud Governance',
     description: site.description,
     images: ['/logo/linkedin-company-logo.png']
   },
@@ -79,6 +79,9 @@ const structuredData = {
       parentOrganization: { '@id': `${site.url}/#organization` },
       areaServed: ['Bulgaria', 'Belgium', 'Europe'],
       serviceType: [
+        'Secure Cloud Access and Privileged Identity Assessment',
+        'Continuous Secure Cloud Governance',
+        'Crypto Agility and Post-Quantum Readiness',
         'Microsoft 365 consulting',
         'Azure and hybrid infrastructure consulting',
         'Digital collaboration consulting',
