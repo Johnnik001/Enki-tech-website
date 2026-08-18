@@ -10,6 +10,9 @@ const formAjaxEndpoint = `https://formsubmit.co/ajax/${site.email}`;
 
 const areaOptions = [
   'Microsoft Cloud Audit & Risk Review',
+  'Secure Cloud Access & Privileged Identity',
+  'Continuous Secure Cloud Governance',
+  'Crypto Agility & PQC Readiness',
   'Microsoft 365 & Digital Collaboration',
   'Azure & Hybrid Infrastructure',
   'Identity, Endpoint & Security',

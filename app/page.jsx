@@ -2,33 +2,63 @@ import Link from 'next/link';
 import { CTA } from '../components/CTA';
 import { SectionHeader } from '../components/SectionHeader';
 import { ServiceCards } from '../components/ServiceCards';
-import { engagements, experience } from '../data/site';
+import { engagements, experience, insights } from '../data/site';
 
 export const metadata = {
-  title: 'Microsoft Cloud Consulting for Projects, Operations & Partners',
+  title: 'Secure Microsoft Cloud Access, Governance & Operations',
   description:
-    'Senior Microsoft Cloud consulting for assessments, project delivery, L2/L3 support, automation and partner engagements across Europe.',
+    'Secure Microsoft Cloud assessments, privileged identity review, remediation and continuous governance for European organisations and delivery partners.',
   alternates: { canonical: '/' }
 };
 
-const clientOutcomes = [
+const controlJourney = [
   {
-    title: 'Understand what to fix',
-    text: 'Turn recurring problems, technical risk and unclear ownership into a prioritized action plan.'
+    number: '01',
+    title: 'Map critical access',
+    text: 'Trace human, external and workload identity paths to the cloud resources that matter most.'
   },
   {
-    title: 'Deliver controlled change',
-    text: 'Move a migration, remediation or improvement workstream from scope through validation and handover.'
+    number: '02',
+    title: 'Validate the controls',
+    text: 'Test Conditional Access, PIM, permissions, evidence and operational ownership end to end.'
   },
   {
-    title: 'Run services more reliably',
-    text: 'Resolve complex issues, strengthen operations and reduce avoidable support friction.'
+    number: '03',
+    title: 'Remediate by risk',
+    text: 'Convert findings into sequenced actions with clear owners, dependencies and evidence.'
   },
   {
-    title: 'Add senior capacity',
-    text: 'Bring Microsoft expertise into an internal team or partner delivery model when it is needed.'
+    number: '04',
+    title: 'Keep proving it',
+    text: 'Review drift, privilege and control evidence as identities and configurations continue to change.'
   }
 ];
+
+const commercialOffers = [
+  {
+    tag: 'Fixed-scope assessment',
+    title: 'Secure Cloud Access & Privileged Identity',
+    text: 'Understand who and what can reach critical Microsoft Cloud resources, which controls govern each path and where remediation is required.',
+    result: 'Trust-path map · control evidence · prioritized remediation',
+    href: '/services/secure-cloud-access-privileged-identity/'
+  },
+  {
+    tag: 'Recurring governance',
+    title: 'Continuous Secure Cloud Governance',
+    text: 'Check whether agreed security controls remain effective as privileges, policies, workloads and exceptions change after project handover.',
+    result: 'Drift review · privileged access · monthly evidence · backlog',
+    href: '/services/continuous-secure-cloud-governance/'
+  },
+  {
+    tag: 'Specialist audit module',
+    title: 'Crypto Agility & PQC Readiness',
+    text: 'Create an initial inventory of cryptographic dependencies and identify where long-lived data, certificates, keys or legacy algorithms need earlier planning.',
+    result: 'Crypto inventory · agility score · 12–36 month roadmap',
+    href: '/services/microsoft-cloud-audit/#specialist-modules'
+  }
+];
+
+const trustPath = ['Identity', 'Device', 'Privilege', 'Workload', 'Data'];
 
 const deliverySteps = [
   {
@@ -52,43 +82,88 @@ export default function HomePage() {
   return (
     <>
       <section className="hero">
-        <div className="container heroGrid">
-          <div>
-            <p className="eyebrow">Senior Microsoft Cloud consulting · Europe</p>
-            <h1>Solve a Microsoft Cloud delivery or operations challenge with senior expertise.</h1>
+        <div className="container secureHeroGrid">
+          <div className="secureHeroCopy">
+            <p className="heroKicker"><span aria-hidden="true"></span> Secure Microsoft Cloud for high-trust environments</p>
+            <h1>Know who can access critical cloud resources—and prove the controls still work.</h1>
             <p className="heroText">
-              Enki Tech helps IT leaders, transformation teams and delivery partners assess complex environments, deliver defined change, stabilize operations and add specialist capacity across Microsoft 365, Azure, identity, endpoint, collaboration and automation.
+              Enki Tech helps European IT leaders and delivery partners map cloud access, govern privileged identity, remediate material risk and maintain evidence as Microsoft environments change.
             </p>
             <div className="heroActions">
-              <a href="#engagements" className="button">Choose an engagement</a>
-              <Link href="/contact/" className="button buttonGhost">Discuss your situation</Link>
+              <Link href="/services/secure-cloud-access-privileged-identity/" className="button">Explore the assessment</Link>
+              <Link href="/contact/?area=Secure%20Cloud%20Access%20%26%20Privileged%20Identity&engagement=Assessment%20or%20audit" className="button buttonGhost">Discuss your environment</Link>
             </div>
+            <p className="heroMicrocopy">Independent senior expertise · Microsoft 365 · Azure · Entra ID · Intune · hybrid infrastructure</p>
           </div>
-          <aside className="heroPanel" aria-label="Enki Tech proof points">
-            <p className="eyebrow">Delivery evidence</p>
-            <div className="metric"><strong>15+ years</strong><span>Cloud, workplace and hybrid infrastructure experience</span></div>
-            <div className="metric"><strong>12,000+ users</strong><span>Windows 365 Cloud PC migration experience</span></div>
-            <div className="metric"><strong>L2/L3 ownership</strong><span>Complex troubleshooting, collaboration operations and escalations</span></div>
-            <div className="metric"><strong>European B2B</strong><span>Direct projects, retained support and partner-led delivery</span></div>
+          <aside className="trustMap" aria-label="Secure cloud trust path">
+            <div className="trustMapHeader">
+              <div>
+                <p className="trustMapLabel">Critical access path</p>
+                <h2>Control the route to the resource</h2>
+              </div>
+              <span className="trustStatus"><i aria-hidden="true"></i> Evidence-led</span>
+            </div>
+            <ol className="trustPath">
+              {trustPath.map((node, index) => (
+                <li key={node}>
+                  <span>{String(index + 1).padStart(2, '0')}</span>
+                  <strong>{node}</strong>
+                </li>
+              ))}
+            </ol>
+            <div className="trustControlGrid">
+              <div><span>Access policy</span><strong>Conditional Access</strong></div>
+              <div><span>Elevation</span><strong>PIM & role governance</strong></div>
+              <div><span>Validation</span><strong>Drift & exception review</strong></div>
+              <div><span>Assurance</span><strong>Control evidence</strong></div>
+            </div>
+            <div className="trustOutcome">
+              <span>Client result</span>
+              <strong>Prioritized remediation and a repeatable governance baseline</strong>
+            </div>
           </aside>
         </div>
       </section>
 
-      <section className="clientOutcomeBand" aria-label="Client outcomes">
-        <div className="container clientOutcomeGrid">
-          {clientOutcomes.map((outcome) => (
-            <article className="clientOutcome" key={outcome.title}>
-              <h2>{outcome.title}</h2>
-              <p>{outcome.text}</p>
+      <section className="controlJourneyBand" aria-label="Secure cloud improvement path">
+        <div className="container controlJourneyGrid">
+          {controlJourney.map((step) => (
+            <article className="controlJourneyStep" key={step.number}>
+              <span>{step.number}</span>
+              <div>
+                <h2>{step.title}</h2>
+                <p>{step.text}</p>
+              </div>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="section commercialOffersSection">
+        <div className="container">
+          <SectionHeader
+            eyebrow="What clients can buy now"
+            title="Start with evidence, then move from remediation to recurring assurance"
+            text="Each offer produces a defined decision or operating result. Scope begins with the critical resources, access paths and controls that matter to the organisation."
+          />
+          <div className="commercialOfferGrid">
+            {commercialOffers.map((offer) => (
+              <article className="commercialOfferCard" key={offer.title}>
+                <p className="tag">{offer.tag}</p>
+                <h2>{offer.title}</h2>
+                <p>{offer.text}</p>
+                <div className="commercialOfferResult"><span>Output</span>{offer.result}</div>
+                <Link href={offer.href} className="textLink">View the offer <span aria-hidden="true">→</span></Link>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
       <section className="section sectionAlt" id="engagements">
         <div className="container">
           <SectionHeader
-            eyebrow="What clients can buy"
+            eyebrow="Delivery formats"
             title="Choose the engagement that matches the result you need"
             text="The technical scope can span Microsoft 365, Azure, identity, endpoint, collaboration and automation. The engagement model starts with the business situation and the output you need."
           />
@@ -134,6 +209,41 @@ export default function HomePage() {
             text="These are the Microsoft technology areas in which assessments, projects, operational support and partner delivery can be scoped."
           />
           <ServiceCards />
+        </div>
+      </section>
+
+      <section className="section sectionAlt insightFeatureSection">
+        <div className="container">
+          <div className="resourceFeature">
+            <div>
+              <p className="eyebrow">Practical resource</p>
+              <h2>Use the Secure Cloud Control Matrix to challenge your current operating model</h2>
+              <p>Twenty executive and technical questions covering identity, privileged access, workloads, evidence and recurring governance.</p>
+              <Link href="/resources/secure-cloud-control-matrix/" className="button">Open the control matrix</Link>
+            </div>
+            <div className="resourceMatrixPreview" aria-hidden="true">
+              <span>Requirement</span><span>Risk</span><span>Control</span>
+              <span>Test</span><span>Evidence</span><span>Owner</span>
+              <strong>20 decision questions</strong>
+            </div>
+          </div>
+          <div className="featuredInsightsHeader">
+            <div>
+              <p className="eyebrow">Market signals translated into action</p>
+              <h2>Insights for secure cloud decision-makers</h2>
+            </div>
+            <Link href="/insights/" className="textLink">View all insights <span aria-hidden="true">→</span></Link>
+          </div>
+          <div className="featuredInsightsGrid">
+            {insights.map((insight) => (
+              <article className="insightCard" key={insight.slug}>
+                <p className="tag">{insight.label}</p>
+                <h3>{insight.title}</h3>
+                <p>{insight.intro}</p>
+                <Link href={`/insights/${insight.slug}/`} className="textLink">Read the insight <span aria-hidden="true">→</span></Link>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -184,10 +294,10 @@ export default function HomePage() {
       </section>
 
       <CTA
-        eyebrow="Start with the problem"
-        title="Not sure which engagement fits?"
-        text="Share what is not working, what must change, the expected timeline and whether this is a direct project or partner opportunity. Enki Tech will identify the most relevant next step."
-        buttonLabel="Describe your situation"
+        eyebrow="Start with the critical path"
+        title="Which identities can reach the resources you cannot afford to lose control of?"
+        text="Share the environment, the critical resource or recurring governance concern. Enki Tech will identify whether an assessment, remediation workstream or recurring control review is the most useful next step."
+        buttonLabel="Request a readiness discussion"
       />
     </>
   );

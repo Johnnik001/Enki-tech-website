@@ -6,9 +6,9 @@ export const site = {
   linkedin: 'https://www.linkedin.com/company/enki-tech-eood/',
   founderLinkedin: 'https://www.linkedin.com/in/eugene-tsvetov-93741a142/',
   location: 'Bulgaria · Belgium · Europe',
-  tagline: 'Secure Microsoft Cloud, Digital Collaboration and automation-driven IT operations.',
+  tagline: 'Secure Microsoft Cloud access, privileged identity, continuous governance and automation-driven operations.',
   description:
-    'Enki Tech provides Microsoft Cloud audits, assessments, project delivery, L2/L3 operational support, automation and partner-led engagements across Europe.',
+    'Enki Tech provides secure Microsoft Cloud assessments, privileged identity review, remediation, continuous governance and senior operational delivery across Europe.',
   founder: 'Evgeniy Tsvetov',
   founderRole: 'Founder & Lead Microsoft Cloud Consultant'
 };
@@ -38,6 +38,7 @@ export const navigation = [
   { label: 'Services', href: '/services/' },
   { label: 'Engagements', href: '/engagements/' },
   { label: 'Experience', href: '/experience/' },
+  { label: 'Insights', href: '/insights/' },
   { label: 'Partners', href: '/partners/' },
   { label: 'About', href: '/about/' },
   { label: 'Contact', href: '/contact/' }
@@ -94,7 +95,7 @@ export const engagements = [
       'Known constraints, planned changes and target outcomes',
       'A responsible contact for scope decisions and findings review'
     ],
-    relatedServices: ['microsoft-cloud-audit', 'microsoft-365-digital-collaboration', 'azure-hybrid-infrastructure', 'identity-endpoint-security'],
+    relatedServices: ['microsoft-cloud-audit', 'secure-cloud-access-privileged-identity', 'continuous-secure-cloud-governance', 'microsoft-365-digital-collaboration', 'azure-hybrid-infrastructure', 'identity-endpoint-security'],
     format: 'Defined assessment',
     contactEngagement: 'Assessment or audit',
     href: '/engagements/assessment-improvement-plan/'
@@ -149,7 +150,7 @@ export const engagements = [
       'Defined change, security and approval processes',
       'Availability for decisions, validation and acceptance'
     ],
-    relatedServices: ['microsoft-365-digital-collaboration', 'azure-hybrid-infrastructure', 'identity-endpoint-security', 'automation-it-operations'],
+    relatedServices: ['secure-cloud-access-privileged-identity', 'continuous-secure-cloud-governance', 'microsoft-365-digital-collaboration', 'azure-hybrid-infrastructure', 'identity-endpoint-security', 'automation-it-operations'],
     format: 'Project or workstream',
     contactEngagement: 'Direct project',
     href: '/engagements/project-migration-remediation/'
@@ -204,7 +205,7 @@ export const engagements = [
       'Named service owners and relevant engineering contacts',
       'A shared method for prioritization, change control and progress review'
     ],
-    relatedServices: ['microsoft-365-digital-collaboration', 'azure-hybrid-infrastructure', 'identity-endpoint-security', 'automation-it-operations'],
+    relatedServices: ['continuous-secure-cloud-governance', 'microsoft-365-digital-collaboration', 'azure-hybrid-infrastructure', 'identity-endpoint-security', 'automation-it-operations'],
     format: 'Recurring or retained capacity',
     contactEngagement: 'L2/L3 operational support',
     href: '/engagements/l2-l3-operational-support/'
@@ -259,7 +260,7 @@ export const engagements = [
       'Access to the relevant delivery context and technical stakeholders',
       'A named contact for prioritization, escalation and acceptance'
     ],
-    relatedServices: ['microsoft-365-digital-collaboration', 'azure-hybrid-infrastructure', 'identity-endpoint-security', 'automation-it-operations', 'ai-enhanced-it-operations'],
+    relatedServices: ['secure-cloud-access-privileged-identity', 'continuous-secure-cloud-governance', 'microsoft-365-digital-collaboration', 'azure-hybrid-infrastructure', 'identity-endpoint-security', 'automation-it-operations', 'ai-enhanced-it-operations'],
     format: 'Flexible European B2B engagement',
     contactEngagement: 'Partner delivery',
     href: '/engagements/partner-delivery-subcontracting/'
@@ -314,10 +315,128 @@ export const services = [
       'Executive summary for decision-makers',
       'Technical findings and prioritized remediation roadmap'
     ],
+    modules: [
+      {
+        title: 'Secure Cloud Access & Privileged Identity',
+        text: 'Map the paths through which administrators, users, external identities and workloads can reach critical cloud resources, then assess the controls and evidence around those paths.',
+        deliverables: ['End-to-end trust-path map', 'Conditional Access and PIM findings', 'Privileged, workload and external identity review', 'Prioritized access-control remediation']
+      },
+      {
+        title: 'Crypto Agility & PQC Readiness',
+        text: 'Establish an initial inventory of cryptographic dependencies and identify where long-lived data, certificates, keys, signing or legacy algorithms require earlier transition planning.',
+        deliverables: ['Cryptographic asset inventory', 'PKI, certificate and key dependencies', 'Crypto-agility and long-lived data exposure review', '12–36 month PQC readiness roadmap']
+      }
+    ],
     proof: {
       eyebrow: 'Audit principle',
       title: 'Actionable evidence, not a generic checklist',
       text: 'The review connects technical findings to operational impact, ownership and practical remediation so the output can support real delivery decisions.'
+    }
+  },
+  {
+    slug: 'secure-cloud-access-privileged-identity',
+    title: 'Secure Cloud Access & Privileged Identity',
+    metaTitle: 'Secure Cloud Access & Privileged Identity Assessment',
+    metaDescription:
+      'Map and assess user, administrator, external and workload access paths to critical Microsoft Cloud resources, including Conditional Access, PIM and evidence-based remediation.',
+    summary:
+      'An end-to-end assessment of how identities reach critical cloud resources, which controls govern each path and where exposure or missing evidence requires remediation.',
+    intro:
+      'Understand who and what can reach critical Microsoft Cloud resources, how privileged access is granted and whether the controls can be demonstrated with reliable evidence.',
+    bullets: ['End-to-end trust-path mapping', 'Conditional Access and PIM review', 'Workload and external identities', 'Evidence-based remediation plan'],
+    outcomes: [
+      'A shared view of access paths to critical cloud resources',
+      'Clear visibility of standing privilege, exceptions and control gaps',
+      'Evidence that supports security, audit and management decisions',
+      'A prioritized remediation plan shaped around operational impact'
+    ],
+    capabilities: [
+      {
+        title: 'Trust-path discovery',
+        text: 'Trace the path from identity and device through authentication, Conditional Access, privilege elevation, workload access, data access and security logging.'
+      },
+      {
+        title: 'Privileged identity review',
+        text: 'Assess privileged roles, permanent assignments, PIM activation, emergency access, administrative separation and ownership of elevated access.'
+      },
+      {
+        title: 'Workload and external access',
+        text: 'Review service principals, managed identities, application permissions, guest access and other non-employee paths into the agreed cloud scope.'
+      },
+      {
+        title: 'Control evidence and remediation',
+        text: 'Connect each material risk to a technical control, validation evidence, responsible owner and sequenced remediation action.'
+      }
+    ],
+    engagementSignals: [
+      'Privileged assignments and exceptions have accumulated over time',
+      'Conditional Access policies are difficult to explain or validate end to end',
+      'Service principals, guests or workload identities lack clear ownership',
+      'Security stakeholders need evidence rather than a configuration export'
+    ],
+    deliverables: [
+      'Critical-resource and access-path scope',
+      'Trust-path architecture and identity inventory',
+      'Control and evidence matrix',
+      'Risk-ranked remediation roadmap and management summary'
+    ],
+    proof: {
+      eyebrow: 'Assessment method',
+      title: 'Follow the complete path, not isolated settings',
+      text: 'The assessment connects identity, device, authentication, privilege, workload, data and logging so control gaps can be understood in operational context.'
+    }
+  },
+  {
+    slug: 'continuous-secure-cloud-governance',
+    title: 'Continuous Secure Cloud Governance',
+    metaTitle: 'Continuous Secure Cloud Governance',
+    metaDescription:
+      'Recurring Microsoft Cloud governance for configuration drift, privileged access, control evidence and a prioritized remediation backlog without positioning as a full SOC.',
+    summary:
+      'A recurring governance service that checks whether agreed Microsoft Cloud security controls remain effective as identities, privileges, workloads and configurations change.',
+    intro:
+      'Move beyond the one-time security review with repeatable validation of cloud controls, privileged access, configuration drift and remediation progress.',
+    bullets: ['Configuration drift review', 'Privileged-access governance', 'Monthly control evidence', 'Remediation backlog'],
+    outcomes: [
+      'Earlier visibility of control drift and unmanaged exceptions',
+      'Stronger ownership of privileged access and remediation actions',
+      'Consistent evidence for management and assurance conversations',
+      'A practical recurring governance layer without claiming 24/7 SOC coverage'
+    ],
+    capabilities: [
+      {
+        title: 'Configuration drift validation',
+        text: 'Repeat agreed tests for material Microsoft Cloud controls and identify changes, exceptions or missing evidence that require review.'
+      },
+      {
+        title: 'Privileged-access governance',
+        text: 'Review privileged assignments, PIM usage, stale access, emergency accounts and ownership of elevated permissions on a recurring basis.'
+      },
+      {
+        title: 'Monthly evidence pack',
+        text: 'Maintain concise evidence of control status, changes, open risk, decisions and remediation progress for technical and management stakeholders.'
+      },
+      {
+        title: 'Remediation coordination',
+        text: 'Translate failed checks and material drift into an owned, prioritized backlog that internal teams, Enki Tech or a delivery partner can execute.'
+      }
+    ],
+    engagementSignals: [
+      'A recent cloud or security project has ended without ongoing control ownership',
+      'Privileged access and policy exceptions change faster than periodic audits',
+      'Evidence is recreated manually whenever management or auditors ask for it',
+      'The team needs governance and improvement without outsourcing a complete SOC'
+    ],
+    deliverables: [
+      'Agreed control baseline and validation schedule',
+      'Recurring drift and privileged-access review',
+      'Monthly control evidence and risk summary',
+      'Owned remediation backlog and governance meeting'
+    ],
+    proof: {
+      eyebrow: 'Operating principle',
+      title: 'Security is a maintained state, not a project milestone',
+      text: 'The service focuses on repeatable control validation, accountable remediation and usable evidence as the environment changes over time.'
     }
   },
   {
@@ -509,6 +628,172 @@ export const services = [
       title: 'AI where it creates operational leverage',
       text: 'The approach starts with a specific workflow, measurable value and clear review responsibility—not with AI adoption for its own sake.'
     }
+  }
+];
+
+export const insights = [
+  {
+    slug: 'continuous-secure-cloud-governance',
+    label: 'Secure cloud operations',
+    title: 'Why secure cloud controls need continuous validation after the project ends',
+    metaTitle: 'Continuous Secure Cloud Governance After Project Delivery',
+    metaDescription:
+      'Why Microsoft Cloud security controls require recurring validation as identities, privileges, workloads and configurations change after project handover.',
+    datePublished: '2026-08-18',
+    displayDate: '18 August 2026',
+    intro:
+      'A cloud project can deliver a secure baseline, but it cannot freeze the environment. Identities change, privileges accumulate, policies gain exceptions and workloads create new access paths.',
+    signal:
+      'Current secure-cloud programmes increasingly describe value as an operated outcome: the environment must remain secure, measurable and supportable over time—not only pass a handover review.',
+    sections: [
+      {
+        title: 'The control gap appears after handover',
+        paragraphs: [
+          'Conditional Access, PIM, workload identities and security logging can all be correctly designed at launch and still drift as administrators respond to incidents, projects and business exceptions.',
+          'The expensive problem is therefore not only implementing a control. It is maintaining ownership, validation evidence and a reliable path from a failed check to remediation.'
+        ]
+      },
+      {
+        title: 'A practical recurring governance layer',
+        paragraphs: [
+          'A focused governance service does not need to claim full SOC coverage. It can start with a small library of material controls and a disciplined monthly operating rhythm.'
+        ],
+        bullets: [
+          'configuration-drift validation',
+          'privileged-access and exception review',
+          'monthly evidence and risk summary',
+          'owned remediation backlog'
+        ]
+      },
+      {
+        title: 'The management question to ask',
+        paragraphs: [
+          'After the cloud or security project is complete, who is responsible for demonstrating each month that the original controls still work? If the answer depends on a future audit or an individual administrator, the operating model has a governance gap.'
+        ]
+      }
+    ],
+    relatedService: 'continuous-secure-cloud-governance',
+    relatedServiceLabel: 'Explore Continuous Secure Cloud Governance',
+    sources: [
+      {
+        label: 'NCIA — Operational Network Extension (ON-X)',
+        href: 'https://www.ncia.nato.int/business/procurement/current-opportunities/provision--operation-and-continuous-evolution-of-the-operational-network-extension-onx'
+      },
+      {
+        label: 'NCIA — Protected Business Network programme',
+        href: 'https://www.ncia.nato.int/newsroom/news/nato-advances-towards-more-agile-and-resilient-digital-infrastructure-through-200meur-contract-with-industry'
+      }
+    ]
+  },
+  {
+    slug: 'secure-cloud-access-privileged-identity',
+    label: 'Identity and access',
+    title: 'Map the complete trust path before calling a cloud resource secure',
+    metaTitle: 'Secure Cloud Access & Privileged Identity Trust Paths',
+    metaDescription:
+      'A practical method for tracing identity, device, authentication, privilege, workload, data and logging controls across Microsoft Cloud access paths.',
+    datePublished: '2026-08-18',
+    displayDate: '18 August 2026',
+    intro:
+      'Security reviews often inspect individual policies. Attackers and operational failures follow paths: from an identity and device, through authentication and privilege, to a workload and its data.',
+    signal:
+      'The shift to protected cloud-enabled workplaces makes end-to-end access control more valuable than a list of isolated Microsoft configuration recommendations.',
+    sections: [
+      {
+        title: 'Start with the resource and work backwards',
+        paragraphs: [
+          'Choose a critical resource and identify every human, external and workload identity that can reach it. Then trace the device, authentication, Conditional Access, PIM, application permission and logging dependencies for each route.'
+        ]
+      },
+      {
+        title: 'Record threat, control, evidence and failure',
+        paragraphs: [
+          'A useful trust-path review does not stop at the intended design. For every step, it records the threat, expected control, validation evidence, owner and failure scenario.'
+        ],
+        bullets: [
+          'standing administrative privilege',
+          'policy exclusions and emergency access',
+          'service principals and application permissions',
+          'guest and partner access',
+          'missing or unreviewed security evidence'
+        ]
+      },
+      {
+        title: 'Turn architecture into remediation',
+        paragraphs: [
+          'The output should help a CTO or CISO decide what to fix first, who owns it and which evidence will demonstrate improvement. A diagram without a risk-ranked action plan is documentation, not an assessment result.'
+        ]
+      }
+    ],
+    relatedService: 'secure-cloud-access-privileged-identity',
+    relatedServiceLabel: 'Explore the Secure Cloud Access Assessment',
+    sources: [
+      {
+        label: 'NCIA — Protected Business Network Wireless LAN',
+        href: 'https://www.ncia.nato.int/business/procurement/current-opportunities/424346'
+      },
+      {
+        label: 'NCIA — Current procurement opportunities',
+        href: 'https://www.ncia.nato.int/business/procurement/current-opportunities'
+      }
+    ]
+  },
+  {
+    slug: 'crypto-agility-pqc-readiness',
+    label: 'Crypto agility',
+    title: 'PQC readiness starts with finding cryptographic dependencies, not choosing algorithms',
+    metaTitle: 'Crypto Agility & Post-Quantum Cryptography Readiness',
+    metaDescription:
+      'How organisations can begin post-quantum readiness with a cryptographic asset inventory, dependency mapping and a risk-based migration roadmap.',
+    datePublished: '2026-08-18',
+    displayDate: '18 August 2026',
+    intro:
+      'Post-quantum migration becomes an operational problem long before an organisation replaces an algorithm. Teams first need to know where certificates, keys, signing, encryption and trust dependencies exist.',
+    signal:
+      'The EU roadmap asks Member States to begin the transition by the end of 2026 and prioritise quantum-resistant protection for critical infrastructure no later than the end of 2030.',
+    sections: [
+      {
+        title: 'Inventory before migration',
+        paragraphs: [
+          'The first useful deliverable is a cryptographic asset inventory. It should connect each dependency to an owner, business use, algorithm, key or certificate lifetime, data sensitivity, replaceability and migration priority.'
+        ],
+        bullets: [
+          'PKI and TLS certificates',
+          'VPN and service-to-service authentication',
+          'workload identities and application signing',
+          'Key Vault, secrets and storage encryption',
+          'legacy systems and long-lived encrypted data'
+        ]
+      },
+      {
+        title: 'Crypto agility is the immediate objective',
+        paragraphs: [
+          'Most organisations do not need a dramatic quantum programme today. They need to understand whether algorithms, certificates, keys and trust anchors can be replaced without redesigning every dependent service.'
+        ]
+      },
+      {
+        title: 'Keep the first engagement evidence-based',
+        paragraphs: [
+          'A readiness module should produce a dependency inventory, exposure view, crypto-agility score and sequenced 12–36 month roadmap. Implementation promises should follow only after the environment and vendor support are understood.'
+        ]
+      }
+    ],
+    relatedService: 'microsoft-cloud-audit',
+    relatedServiceLabel: 'Explore the Microsoft Cloud Audit modules',
+    sources: [
+      {
+        label: 'European Commission — coordinated PQC roadmap',
+        href: 'https://digital-strategy.ec.europa.eu/en/library/coordinated-implementation-roadmap-transition-post-quantum-cryptography'
+      },
+      {
+        label: 'European Commission — PQC transition timeline',
+        href: 'https://digital-strategy.ec.europa.eu/en/news/eu-reinforces-its-cybersecurity-post-quantum-cryptography'
+      },
+      {
+        label: 'ENISA — Secure by Design and Default Playbook',
+        href: 'https://www.enisa.europa.eu/publications/enisa-secure-by-design-and-default-playbook'
+      }
+    ]
   }
 ];
 
