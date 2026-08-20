@@ -103,6 +103,9 @@ export default async function InsightPage({ params }) {
             <h2>Apply this insight to your environment</h2>
             <p>Turn the signal into an evidence-based scope, decision and remediation path.</p>
             <Link href={`/services/${insight.relatedService}/`} className="button">{insight.relatedServiceLabel}</Link>
+            {insight.resourceHref && (
+              <Link href={insight.resourceHref} className="articleResourceLink">{insight.resourceLabel} <span aria-hidden="true">→</span></Link>
+            )}
           </aside>
         </div>
       </article>
