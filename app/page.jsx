@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { CTA } from '../components/CTA';
 import { SectionHeader } from '../components/SectionHeader';
-import { ServiceCards } from '../components/ServiceCards';
 import { engagements, experience, insights } from '../data/site';
 
 export const metadata = {
@@ -60,6 +59,45 @@ const commercialOffers = [
 
 const trustPath = ['Identity', 'Device', 'Privilege', 'Workload', 'Data'];
 
+const capabilityAreas = [
+  {
+    number: '01',
+    title: 'Assess and secure',
+    text: 'Establish the current risk, access paths and evidence before committing delivery budget.',
+    services: [
+      { label: 'Cloud audit & risk review', href: '/services/microsoft-cloud-audit/' },
+      { label: 'Secure access & privileged identity', href: '/services/secure-cloud-access-privileged-identity/' }
+    ]
+  },
+  {
+    number: '02',
+    title: 'Govern and improve',
+    text: 'Keep material controls, remediation ownership and operational evidence current after handover.',
+    services: [
+      { label: 'Continuous secure governance', href: '/services/continuous-secure-cloud-governance/' },
+      { label: 'Automation & IT operations', href: '/services/automation-it-operations/' }
+    ]
+  },
+  {
+    number: '03',
+    title: 'Modernize the platform',
+    text: 'Deliver reliable change across collaboration, cloud, identity, endpoint and hybrid dependencies.',
+    services: [
+      { label: 'Microsoft 365 & collaboration', href: '/services/microsoft-365-digital-collaboration/' },
+      { label: 'Azure & hybrid infrastructure', href: '/services/azure-hybrid-infrastructure/' }
+    ]
+  },
+  {
+    number: '04',
+    title: 'Extend operations',
+    text: 'Add focused senior capability where internal teams or delivery partners need leverage.',
+    services: [
+      { label: 'Identity, endpoint & security', href: '/services/identity-endpoint-security/' },
+      { label: 'AI-enhanced IT operations', href: '/services/ai-enhanced-it-operations/' }
+    ]
+  }
+];
+
 const deliverySteps = [
   {
     number: '01',
@@ -93,7 +131,11 @@ export default function HomePage() {
               <Link href="/services/secure-cloud-access-privileged-identity/" className="button">Explore the assessment</Link>
               <Link href="/contact/?area=Secure%20Cloud%20Access%20%26%20Privileged%20Identity&engagement=Assessment%20or%20audit" className="button buttonGhost">Discuss your environment</Link>
             </div>
-            <p className="heroMicrocopy">Independent senior expertise · Microsoft 365 · Azure · Entra ID · Intune · hybrid infrastructure</p>
+            <ul className="heroCredentials" aria-label="Delivery credentials">
+              <li>Independent senior delivery</li>
+              <li>Microsoft Cloud & hybrid</li>
+              <li>Europe-based</li>
+            </ul>
           </div>
           <aside className="trustMap" aria-label="Secure cloud trust path">
             <div className="trustMapHeader">
@@ -160,75 +202,91 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section sectionAlt" id="engagements">
+      <section className="section sectionAlt engagementChoiceSection" id="engagements">
         <div className="container">
           <SectionHeader
-            eyebrow="Delivery formats"
-            title="Choose the engagement that matches the result you need"
-            text="The technical scope can span Microsoft 365, Azure, identity, endpoint, collaboration and automation. The engagement model starts with the business situation and the output you need."
+            eyebrow="How clients engage"
+            title="Choose the route by the result you need—not by a technology label"
+            text="Start with the decision, change or operating result. The technical scope is confirmed after the situation and constraints are understood."
           />
-          <div className="engagementGrid">
-            {engagements.map((engagement) => (
-              <article className="engagementCard" key={engagement.id}>
-                <p className="tag">{engagement.label}</p>
-                <h3>{engagement.title}</h3>
-                <div className="engagementSituation">
-                  <strong>Use this when</strong>
-                  <p>{engagement.bestFor}</p>
-                </div>
-                <div className="engagementResult">
-                  <strong>Client result</strong>
+          <div className="engagementCompactGrid">
+            {engagements.map((engagement, index) => (
+              <Link className="engagementCompactCard" href={engagement.href} key={engagement.id}>
+                <span className="engagementCompactNumber">{String(index + 1).padStart(2, '0')}</span>
+                <div>
+                  <p className="engagementCompactLabel">{engagement.label}</p>
+                  <h3>{engagement.title}</h3>
                   <p>{engagement.result}</p>
                 </div>
-                <p className="engagementSubheading">What is included</p>
-                <ul className="checkList engagementDeliverables">
-                  {engagement.deliverables.map((deliverable) => (
-                    <li key={deliverable}>{deliverable}</li>
-                  ))}
-                </ul>
-                <p className="engagementFormat"><strong>Engagement format:</strong> {engagement.format}</p>
-                <Link
-                  href={engagement.href}
-                  className="textLink engagementCardLink"
-                  aria-label={`Explore engagement: ${engagement.title}`}
-                >
-                  View engagement details
-                  <span aria-hidden="true">→</span>
-                </Link>
+                <span className="engagementCompactArrow" aria-hidden="true">→</span>
+              </Link>
+            ))}
+          </div>
+          <div className="sectionAction sectionActionLeft">
+            <Link href="/engagements/" className="textLink">Compare all engagement formats <span aria-hidden="true">→</span></Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section capabilityOverviewSection">
+        <div className="container capabilityOverviewGrid">
+          <div className="capabilityOverviewIntro">
+            <p className="eyebrow">Technical coverage</p>
+            <h2>One senior delivery layer across the Microsoft environment</h2>
+            <p>Capabilities are grouped around the work clients need to complete, while every specialist service remains available for detailed scope and evidence.</p>
+            <Link href="/services/" className="button buttonLight">Explore all services</Link>
+          </div>
+          <div className="capabilityGroupGrid">
+            {capabilityAreas.map((area) => (
+              <article className="capabilityGroup" key={area.number}>
+                <span>{area.number}</span>
+                <div>
+                  <h3>{area.title}</h3>
+                  <p>{area.text}</p>
+                  <div className="capabilityLinks">
+                    {area.services.map((service) => (
+                      <Link href={service.href} key={service.href}>{service.label}<span aria-hidden="true">↗</span></Link>
+                    ))}
+                  </div>
+                </div>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="section">
-        <div className="container">
-          <SectionHeader
-            eyebrow="Technical capability areas"
-            title="Apply the engagement to the right technical area"
-            text="These are the Microsoft technology areas in which assessments, projects, operational support and partner delivery can be scoped."
-          />
-          <ServiceCards />
-        </div>
-      </section>
-
       <section className="section sectionAlt insightFeatureSection">
         <div className="container">
-          <div className="resourceFeature">
-            <div>
-              <p className="eyebrow">Practical resource</p>
-              <h2>Use the Secure Cloud Control Matrix to challenge your current operating model</h2>
-              <p>Twenty executive and technical questions covering identity, privileged access, workloads, evidence and recurring governance.</p>
-              <div className="heroActions resourceFeatureActions">
-                <Link href="/resources/secure-cloud-control-matrix/" className="button">Open the control matrix</Link>
-                <Link href="/resources/high-assurance-cloud-access-architecture/" className="button buttonGhost">View reference architecture</Link>
+          <SectionHeader
+            eyebrow="Decision tools"
+            title="Use the architecture and control questions before choosing a workstream"
+            text="Two practical resources help teams clarify the target operating model and identify where evidence, ownership or control design is still incomplete."
+          />
+          <div className="resourceSpotlightGrid">
+            <article className="resourceSpotlight resourceSpotlightPrimary">
+              <div className="resourceSpotlightTopline">
+                <span>01</span>
+                <p>Control review</p>
               </div>
-            </div>
-            <div className="resourceMatrixPreview" aria-hidden="true">
-              <span>Requirement</span><span>Risk</span><span>Control</span>
-              <span>Test</span><span>Evidence</span><span>Owner</span>
-              <strong>20 decision questions</strong>
-            </div>
+              <h3>Secure Cloud Control Matrix</h3>
+              <p>Twenty executive and technical questions covering identity, privileged access, workloads, evidence and recurring governance.</p>
+              <div className="resourceMatrixMini" aria-hidden="true">
+                <span>Risk</span><span>Control</span><span>Test</span><span>Evidence</span><span>Owner</span>
+              </div>
+              <Link href="/resources/secure-cloud-control-matrix/" className="textLink">Open the control matrix <span aria-hidden="true">→</span></Link>
+            </article>
+            <article className="resourceSpotlight">
+              <div className="resourceSpotlightTopline">
+                <span>02</span>
+                <p>Reference architecture</p>
+              </div>
+              <h3>High-Assurance Cloud Access Architecture</h3>
+              <p>See how identity, device, privileged access, workload controls, telemetry and evidence form one defensible path to a critical resource.</p>
+              <div className="architecturePathMini" aria-hidden="true">
+                <span>Identity</span><i></i><span>Privilege</span><i></i><span>Resource</span>
+              </div>
+              <Link href="/resources/high-assurance-cloud-access-architecture/" className="textLink">View reference architecture <span aria-hidden="true">→</span></Link>
+            </article>
           </div>
           <div className="featuredInsightsHeader">
             <div>
@@ -250,7 +308,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section sectionAlt">
+      <section className="section deliverySection">
         <div className="container">
           <SectionHeader
             eyebrow="How an engagement starts"
@@ -269,24 +327,21 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section proofSection">
         <div className="container">
           <SectionHeader
             eyebrow="Experience"
             title="Credibility based on enterprise infrastructure delivery"
             text="Selected experience themes are presented in sanitized form to protect client confidentiality while showing relevant delivery capability."
           />
-          <div className="experienceGrid">
+          <div className="homepageProofGrid">
             {experience.map((item) => (
-              <article className="experienceCard" key={item.title}>
-                <p className="tag">{item.label}</p>
+              <article className="homepageProofCard" key={item.title}>
                 <p className="caseProof">{item.proof}</p>
+                <p className="tag">{item.label}</p>
                 <h3>{item.title}</h3>
                 <p>{item.detail}</p>
-                <p className="caseRole"><strong>Enki Tech contribution:</strong> {item.role}</p>
-                <ul>
-                  {item.impact.map((impact) => <li key={impact}>{impact}</li>)}
-                </ul>
+                <Link href={`/experience/${item.slug}/`} className="textLink">View case study <span aria-hidden="true">→</span></Link>
               </article>
             ))}
           </div>
