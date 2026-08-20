@@ -219,7 +219,10 @@ export default function HomePage() {
               <p className="eyebrow">Practical resource</p>
               <h2>Use the Secure Cloud Control Matrix to challenge your current operating model</h2>
               <p>Twenty executive and technical questions covering identity, privileged access, workloads, evidence and recurring governance.</p>
-              <Link href="/resources/secure-cloud-control-matrix/" className="button">Open the control matrix</Link>
+              <div className="heroActions resourceFeatureActions">
+                <Link href="/resources/secure-cloud-control-matrix/" className="button">Open the control matrix</Link>
+                <Link href="/resources/high-assurance-cloud-access-architecture/" className="button buttonGhost">View reference architecture</Link>
+              </div>
             </div>
             <div className="resourceMatrixPreview" aria-hidden="true">
               <span>Requirement</span><span>Risk</span><span>Control</span>
@@ -235,7 +238,7 @@ export default function HomePage() {
             <Link href="/insights/" className="textLink">View all insights <span aria-hidden="true">→</span></Link>
           </div>
           <div className="featuredInsightsGrid">
-            {insights.map((insight) => (
+            {insights.slice(0, 3).map((insight) => (
               <article className="insightCard" key={insight.slug}>
                 <p className="tag">{insight.label}</p>
                 <h3>{insight.title}</h3>

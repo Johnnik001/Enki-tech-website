@@ -633,6 +633,84 @@ export const services = [
 
 export const insights = [
   {
+    slug: 'eu-defence-cyber-funding-delivery-partners',
+    label: 'European cyber market',
+    title: 'Defence funding is moving into delivery—what this means for secure cloud partners',
+    metaTitle: 'EU Defence Cyber Funding & Secure Cloud Delivery Partners',
+    metaDescription:
+      'What SAFE funding and the NCIA Cybersecurity Dynamic Marketplace signal for secure cloud, privileged identity and assurance specialists entering partner supply chains.',
+    datePublished: '2026-08-20',
+    displayDate: '20 August 2026',
+    intro:
+      'European defence and cyber programmes are moving from policy into funded procurement. The realistic opportunity for a specialist consultancy is not to chase headline budgets directly, but to become a repeatable capability inside qualified delivery chains.',
+    signal:
+      'SAFE provides up to €150 billion in loans for joint defence procurement and explicitly includes cyber and critical-infrastructure protection. Separately, NCIA has launched a €500 million Cybersecurity Dynamic Marketplace whose first lot includes identity, endpoint, cloud security, detection and professional services.',
+    sections: [
+      {
+        title: 'The capital signal is real—but the headline is not a cyber budget',
+        paragraphs: [
+          'The Council made SAFE assistance available to Belgium up to €8.34 billion and Bulgaria up to €3.26 billion, with pre-financing identified in the first wave. These amounts cover broad national defence investment plans; they must not be presented as money reserved for cloud security or as directly accessible funding for Enki Tech.',
+          'The useful conclusion is narrower: cyber and critical-infrastructure protection are recognised procurement categories, and participating states are moving into multi-year implementation. That expands the delivery ecosystem in which specialised suppliers may be needed.'
+        ]
+      },
+      {
+        title: 'The likely entry route is through qualified delivery chains',
+        paragraphs: [
+          'The NCIA marketplace demonstrates the structure of the opportunity. More than 90 industry partners were selected for the first lot, and work is issued through individual task orders. A boutique consultancy outside such a framework should assume that its near-term route is through primes, systems integrators, cyber specialists and existing framework members—not a direct claim on the total envelope.'
+        ],
+        bullets: [
+          'provide a narrow capability that a larger supplier can scope and reuse',
+          'show delivery evidence, boundaries and handover outputs',
+          'support NDA, partner-led and white-label delivery models',
+          'avoid unsupported claims of accreditation, clearance or NATO affiliation'
+        ]
+      },
+      {
+        title: 'A credible specialist capability: privileged identity and secure cloud assurance',
+        paragraphs: [
+          'Identity, Credential and Access Management and Cloud Security are both named capability areas in the NCIA marketplace. This aligns with Enki Tech’s existing Microsoft Cloud experience without requiring a speculative new practice.',
+          'The commercial unit should be a defined assurance package: trace privileged access to critical resources, identify threats and preventive controls, specify detective checks, collect evidence and maintain an owned remediation backlog.'
+        ],
+        bullets: [
+          'high-assurance cloud access reference architecture',
+          'control and evidence matrix',
+          'privileged identity assessment methodology',
+          'remediation and continuous-validation patterns',
+          'partner-ready statement of work and handover structure'
+        ]
+      },
+      {
+        title: 'The strategic decision: build reusable IP before expanding the claim',
+        paragraphs: [
+          'Enki Tech can begin building a capability pack now because the underlying controls are applicable to regulated enterprises as well as defence supply chains. Market validation should come from partner conversations and paid assessments before investment in a larger defence-specific practice.',
+          'The first public component is the High-Assurance Cloud Access Reference Architecture. It demonstrates the method while making clear that the pattern is not a certification, accreditation or claim of compliance for a specific environment.'
+        ]
+      }
+    ],
+    relatedService: 'secure-cloud-access-privileged-identity',
+    relatedServiceLabel: 'Explore the Secure Cloud Access Assessment',
+    resourceHref: '/resources/high-assurance-cloud-access-architecture/',
+    resourceLabel: 'Open the reference architecture',
+    sources: [
+      {
+        label: 'European Commission — SAFE programme, allocations and disbursements',
+        href: 'https://defence-industry-space.ec.europa.eu/eu-defence-industry/safe-security-action-europe_en'
+      },
+      {
+        label: 'Council of the EU — first wave of SAFE financial assistance',
+        href: 'https://www.consilium.europa.eu/en/press/press-releases/2026/02/11/safe-council-clears-path-for-financial-assistance-to-eight-member-states-and-concluding-the-canada-agreement/'
+      },
+      {
+        label: 'EUR-Lex — Council Regulation (EU) 2025/1106',
+        href: 'https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32025R1106'
+      },
+      {
+        label: 'NCIA — Cybersecurity Dynamic Marketplace',
+        href: 'https://www.ncia.nato.int/newsroom/news/ncia-boosts-cyber-delivery-through-industry-marketplace'
+      }
+    ]
+  },
+  {
     slug: 'continuous-secure-cloud-governance',
     label: 'Secure cloud operations',
     title: 'Why secure cloud controls need continuous validation after the project ends',

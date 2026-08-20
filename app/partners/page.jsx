@@ -6,7 +6,7 @@ import { experience, services, site } from '../../data/site';
 export const metadata = {
   title: 'Microsoft Cloud Partner Delivery & Subcontracting',
   description:
-    'Senior Microsoft 365, Azure, identity, endpoint and automation delivery capacity for European IT consultancies, integrators and technology partners.',
+    'Senior secure Microsoft Cloud, privileged identity, assurance and delivery capacity for European consultancies, integrators and technology partners.',
   alternates: { canonical: '/partners/' },
   openGraph: {
     title: 'Microsoft Cloud Partner Delivery & Subcontracting | Enki Tech',
@@ -52,6 +52,8 @@ const deliveryPrinciples = [
 ];
 
 const partnerServiceSlugs = [
+  'secure-cloud-access-privileged-identity',
+  'continuous-secure-cloud-governance',
   'microsoft-365-digital-collaboration',
   'azure-hybrid-infrastructure',
   'identity-endpoint-security',
@@ -73,6 +75,7 @@ const structuredData = {
       areaServed: ['Bulgaria', 'Belgium', 'Europe'],
       serviceType: [
         'Microsoft Cloud subcontracting',
+        'Privileged identity and secure cloud assurance',
         'Microsoft 365 partner delivery',
         'Azure delivery support',
         'L2/L3 operational support'
@@ -158,6 +161,33 @@ export default function PartnersPage() {
               {deliveryPrinciples.map((principle) => <div className="principle" key={principle}>{principle}</div>)}
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="section partnerAssuranceSection">
+        <div className="container partnerAssuranceGrid">
+          <div>
+            <p className="eyebrow">Partner-ready capability</p>
+            <h2>Privileged Identity & Secure Cloud Assurance</h2>
+            <p className="partnerAssuranceLead">A bounded technical work package for integrators and cyber delivery partners that need to connect access architecture, control validation and evidence.</p>
+            <div className="heroActions">
+              <Link href="/resources/high-assurance-cloud-access-architecture/" className="button">View reference architecture</Link>
+              <Link href="/contact/?area=Secure%20Cloud%20Access%20%26%20Privileged%20Identity&engagement=Partner%20delivery" className="button buttonGhost dark">Discuss subcontracting</Link>
+            </div>
+          </div>
+          <div className="partnerCapabilityPack">
+            <p className="tag">Reusable delivery package</p>
+            <ul>
+              <li><strong>Architecture</strong><span>Critical-resource and privileged access-path model</span></li>
+              <li><strong>Controls</strong><span>Threat, prevention, detection and evidence mapping</span></li>
+              <li><strong>Assessment</strong><span>Findings, ownership and prioritized remediation</span></li>
+              <li><strong>Assurance</strong><span>Repeatable validation and evidence cadence</span></li>
+              <li><strong>Handover</strong><span>Partner-aligned outputs, documentation and boundaries</span></li>
+            </ul>
+          </div>
+        </div>
+        <div className="container partnerAssuranceNote">
+          <strong>Positioning boundary:</strong> Enki Tech does not claim NATO affiliation, defence accreditation, security clearance or compliance for an environment unless independently established for the specific engagement.
         </div>
       </section>
 

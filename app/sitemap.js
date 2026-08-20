@@ -13,6 +13,7 @@ const routes = [
   '/insights',
   ...insights.map((insight) => `/insights/${insight.slug}`),
   '/resources/secure-cloud-control-matrix',
+  '/resources/high-assurance-cloud-access-architecture',
   '/partners',
   '/about',
   '/contact',

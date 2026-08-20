@@ -1549,6 +1549,16 @@ textarea:focus-visible {
   text-align: center;
 }
 
+.articleResourceLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  color: var(--blue-dark);
+  font-size: 0.88rem;
+  font-weight: 850;
+}
+
 .resourcePageHero .resourceActions {
   align-items: center;
 }
@@ -1679,6 +1689,245 @@ textarea:focus-visible {
 
 .matrixNextStep .button {
   flex: 0 0 auto;
+}
+
+.assuranceHero {
+  background:
+    linear-gradient(rgba(130, 207, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(130, 207, 255, 0.04) 1px, transparent 1px),
+    radial-gradient(circle at 80% 10%, rgba(37, 99, 235, 0.28), transparent 28%),
+    linear-gradient(135deg, #0b1d3a, #0a1729 62%, #12345d);
+  background-size: 44px 44px, 44px 44px, auto, auto;
+}
+
+.assurancePathBand {
+  overflow-x: auto;
+  border-bottom: 1px solid var(--line-dark);
+  background: var(--white);
+}
+
+.assurancePath {
+  display: grid;
+  grid-template-columns: repeat(9, minmax(105px, 1fr));
+  min-width: 960px;
+}
+
+.assurancePath li {
+  position: relative;
+  display: grid;
+  gap: 8px;
+  padding: 24px 12px;
+  border-right: 1px solid var(--line-dark);
+}
+
+.assurancePath li:first-child {
+  padding-left: 0;
+}
+
+.assurancePath li:last-child {
+  padding-right: 0;
+  border-right: 0;
+}
+
+.assurancePath li:not(:last-child)::after {
+  content: '→';
+  position: absolute;
+  z-index: 1;
+  top: 22px;
+  right: -7px;
+  color: var(--blue);
+  background: var(--white);
+  font-size: 0.75rem;
+  font-weight: 900;
+}
+
+.assurancePath span,
+.assuranceStage span {
+  color: var(--blue);
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.assurancePath strong {
+  font-size: 0.78rem;
+  line-height: 1.3;
+}
+
+.assuranceIntroGrid,
+.assuranceBoundary,
+.partnerAssuranceGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 70px;
+  align-items: start;
+}
+
+.assuranceIntroGrid > p,
+.assuranceBoundary > div:last-child > p,
+.partnerAssuranceLead {
+  font-size: 1.04rem;
+  line-height: 1.75;
+}
+
+.assurancePrincipleGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 48px;
+}
+
+.assurancePrincipleGrid article {
+  padding: 26px;
+  border: 1px solid var(--line-dark);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: 0 12px 44px rgba(7, 17, 31, 0.05);
+}
+
+.assurancePrincipleGrid span {
+  display: block;
+  margin-bottom: 22px;
+  color: var(--blue);
+  font-size: 0.72rem;
+  font-weight: 900;
+}
+
+.assurancePrincipleGrid h3 {
+  margin-bottom: 12px;
+}
+
+.assurancePrincipleGrid p {
+  margin: 0;
+}
+
+.assuranceTableHeader {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  gap: 60px;
+  align-items: end;
+  margin-bottom: 32px;
+}
+
+.assuranceTableHeader > p {
+  margin: 0;
+}
+
+.assuranceTable {
+  overflow: hidden;
+  border: 1px solid var(--line-dark);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: 0 14px 46px rgba(7, 17, 31, 0.06);
+}
+
+.assuranceTableRow {
+  display: grid;
+  grid-template-columns: 0.82fr repeat(4, 1fr);
+}
+
+.assuranceTableRow > div {
+  min-width: 0;
+  padding: 18px;
+  border-right: 1px solid var(--line-dark);
+  border-top: 1px solid var(--line-dark);
+  color: var(--text-soft);
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+.assuranceTableRow > div:last-child {
+  border-right: 0;
+}
+
+.assuranceTableLabels > div {
+  border-top: 0;
+  color: var(--white);
+  background: var(--bg);
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.assuranceStage {
+  display: grid;
+  gap: 7px;
+  color: var(--text) !important;
+}
+
+.assuranceStage strong {
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.assuranceBoundary {
+  padding: 38px;
+  border: 1px solid rgba(37, 99, 235, 0.18);
+  border-radius: calc(var(--radius) + 4px);
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.06), rgba(130, 207, 255, 0.08));
+}
+
+.partnerAssuranceSection {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background: var(--white);
+}
+
+.partnerAssuranceGrid {
+  align-items: center;
+}
+
+.partnerCapabilityPack {
+  padding: 30px;
+  border: 1px solid var(--line-dark);
+  border-radius: var(--radius);
+  background: var(--bg-alt);
+  box-shadow: 0 14px 46px rgba(7, 17, 31, 0.06);
+}
+
+.partnerCapabilityPack ul {
+  display: grid;
+  gap: 0;
+}
+
+.partnerCapabilityPack li {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 16px;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--line-dark);
+}
+
+.partnerCapabilityPack li:last-child {
+  border-bottom: 0;
+}
+
+.partnerCapabilityPack strong {
+  color: var(--blue-dark);
+  font-size: 0.82rem;
+}
+
+.partnerCapabilityPack span {
+  color: var(--text-soft);
+  font-size: 0.86rem;
+}
+
+.partnerAssuranceNote {
+  margin-top: 28px;
+  padding: 18px 20px;
+  border-left: 4px solid var(--blue);
+  color: var(--text-soft);
+  background: var(--bg-alt);
+  font-size: 0.82rem;
+}
+
+.partnerAssuranceNote strong {
+  color: var(--text);
+}
+
+.resourceFeatureActions {
+  margin-top: 0;
 }
 
 .footer {
@@ -1866,7 +2115,11 @@ textarea:focus-visible {
 
   .insightIndexCard,
   .articleLayout,
-  .matrixGroup > header {
+  .matrixGroup > header,
+  .assuranceIntroGrid,
+  .assuranceTableHeader,
+  .assuranceBoundary,
+  .partnerAssuranceGrid {
     grid-template-columns: 1fr;
   }
 
@@ -1887,6 +2140,56 @@ textarea:focus-visible {
   .matrixNextStep {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .assurancePrincipleGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .assuranceTable {
+    display: grid;
+    gap: 16px;
+    overflow: visible;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .assuranceTableLabels {
+    display: none;
+  }
+
+  .assuranceTableRow:not(.assuranceTableLabels) {
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow: hidden;
+    border: 1px solid var(--line-dark);
+    border-radius: 16px;
+    background: var(--white);
+  }
+
+  .assuranceTableRow > div {
+    border-right: 0;
+  }
+
+  .assuranceTableRow > div:not(.assuranceStage)::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 5px;
+    color: var(--blue-dark);
+    font-size: 0.66rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .assuranceStage {
+    color: var(--white) !important;
+    background: var(--bg);
+  }
+
+  .assuranceStage span {
+    color: var(--cyan);
   }
 
   .experienceGrid > .experienceCard:last-child:nth-child(odd) {
@@ -2000,6 +2303,16 @@ textarea:focus-visible {
     padding: 22px;
   }
 
+  .assuranceBoundary,
+  .partnerCapabilityPack {
+    padding: 24px;
+  }
+
+  .partnerCapabilityPack li {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
   .projectBriefForm {
     padding: 22px;
   }
@@ -2016,6 +2329,63 @@ textarea:focus-visible {
   .founderCardBody,
   .founderQuote {
     padding: 22px;
+  }
+}
+
+@media print {
+  .siteHeader,
+  .footer,
+  .printButton,
+  .resourceActions,
+  .articleAside {
+    display: none !important;
+  }
+
+  body,
+  .pageHero,
+  .section,
+  .sectionAlt,
+  .assuranceHero {
+    color: #000;
+    background: #fff !important;
+  }
+
+  .pageHero {
+    padding: 24px 0;
+  }
+
+  .pageHero .eyebrow,
+  .pageHero p,
+  .assurancePath span {
+    color: #143a6b !important;
+  }
+
+  .section {
+    padding: 28px 0;
+  }
+
+  .assurancePathBand {
+    overflow: visible;
+  }
+
+  .assurancePath {
+    min-width: 0;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .assurancePath li {
+    break-inside: avoid;
+  }
+
+  .assuranceTableRow,
+  .matrixGroup,
+  .matrixQuestion {
+    break-inside: avoid;
+  }
+
+  .assuranceTableRow > div {
+    padding: 10px;
+    font-size: 0.68rem;
   }
 }
 
