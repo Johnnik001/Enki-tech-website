@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { PrintButton } from '../../../../components/PrintButton';
+import { PrintButton } from '../../../components/PrintButton';
 
 export const metadata = {
   title: 'Procurement Capability Sheet — Privileged Identity & Secure Cloud Assurance',
