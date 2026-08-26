@@ -9,14 +9,24 @@ export const metadata = {
   alternates: { canonical: '/insights/' }
 };
 
-const featuredProcurementSignal = {
-  slug: 'ncia-simplified-procurement-specialist-capabilities',
-  label: 'Procurement readiness',
-  displayDate: '26 August 2026',
-  title: 'NCIA simplified procurement creates a more accessible route for specialist capabilities',
-  intro:
-    'Neo eProcurement and the simplified-procurement range create a practical middle step between individual consulting and very large institutional programmes—but only for suppliers that package a narrow capability with measurable acceptance criteria.'
-};
+const featuredItems = [
+  {
+    slug: 'standing-privileged-access-microsoft-entra-id',
+    label: 'Privileged identity',
+    displayDate: '26 August 2026',
+    title: 'Standing privileged access in Microsoft Entra ID: detect it, classify it and prove the result',
+    intro:
+      'A production-oriented IAM control must separate unnecessary permanent privilege from PIM eligibility, emergency access and legitimate exceptions—and verify what changed after remediation.'
+  },
+  {
+    slug: 'ncia-simplified-procurement-specialist-capabilities',
+    label: 'Procurement readiness',
+    displayDate: '26 August 2026',
+    title: 'NCIA simplified procurement creates a more accessible route for specialist capabilities',
+    intro:
+      'Neo eProcurement and the simplified-procurement range create a practical middle step between individual consulting and very large institutional programmes—but only for suppliers that package a narrow capability with measurable acceptance criteria.'
+  }
+];
 
 export default function InsightsPage() {
   return (
@@ -31,15 +41,17 @@ export default function InsightsPage() {
 
       <section className="section">
         <div className="container insightIndexGrid">
-          <article className="insightIndexCard" key={featuredProcurementSignal.slug}>
-            <div>
-              <p className="tag">{featuredProcurementSignal.label}</p>
-              <p className="insightDate">{featuredProcurementSignal.displayDate}</p>
-            </div>
-            <h2>{featuredProcurementSignal.title}</h2>
-            <p>{featuredProcurementSignal.intro}</p>
-            <Link href={`/insights/${featuredProcurementSignal.slug}/`} className="textLink">Read the analysis <span aria-hidden="true">→</span></Link>
-          </article>
+          {featuredItems.map((item) => (
+            <article className="insightIndexCard" key={item.slug}>
+              <div>
+                <p className="tag">{item.label}</p>
+                <p className="insightDate">{item.displayDate}</p>
+              </div>
+              <h2>{item.title}</h2>
+              <p>{item.intro}</p>
+              <Link href={`/insights/${item.slug}/`} className="textLink">Read the analysis <span aria-hidden="true">→</span></Link>
+            </article>
+          ))}
 
           {insights.map((insight) => (
             <article className="insightIndexCard" key={insight.slug}>
