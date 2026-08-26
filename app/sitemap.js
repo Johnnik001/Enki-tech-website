@@ -12,6 +12,7 @@ const routes = [
   ...experience.map((item) => `/experience/${item.slug}`),
   '/insights',
   ...insights.map((insight) => `/insights/${insight.slug}`),
+  '/insights/standing-privileged-access-microsoft-entra-id',
   '/insights/ncia-simplified-procurement-specialist-capabilities',
   '/resources/secure-cloud-control-matrix',
   '/resources/high-assurance-cloud-access-architecture',
