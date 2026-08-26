@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { PrintButton } from '../../../../components/PrintButton';
+import { PrintButton } from '../../../components/PrintButton';
 
 export const metadata = {
   title: 'Privileged Identity Assurance Acceptance Specification',
