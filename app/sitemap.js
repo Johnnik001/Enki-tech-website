@@ -4,6 +4,7 @@ export const dynamic = 'force-static';
 
 const routes = [
   '',
+  '/privileged-identity-assurance',
   '/services',
   ...services.map((service) => `/services/${service.slug}`),
   '/engagements',
@@ -29,6 +30,6 @@ export default function sitemap() {
     url: `${site.url}${route}/`,
     lastModified: new Date(),
     changeFrequency: route === '' ? 'weekly' : 'monthly',
-    priority: route === '' ? 1 : route.startsWith('/services') || route.startsWith('/experience/') || route.startsWith('/resources/') || route === '/partners' ? 0.8 : 0.7
+    priority: route === '' ? 1 : route === '/privileged-identity-assurance' || route.startsWith('/services') || route.startsWith('/experience/') || route.startsWith('/resources/') || route === '/partners' ? 0.8 : 0.7
   }));
 }
