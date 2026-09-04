@@ -5,6 +5,7 @@ export const dynamic = 'force-static';
 const routes = [
   '',
   '/privileged-identity-assurance',
+  '/cra-incident-readiness',
   '/services',
   ...services.map((service) => `/services/${service.slug}`),
   '/engagements',
@@ -19,6 +20,7 @@ const routes = [
   '/resources/high-assurance-cloud-access-architecture',
   '/resources/privileged-identity-assurance-acceptance-specification',
   '/resources/procurement-capability-sheet',
+  '/resources/cra-incident-dry-run-playbook',
   '/partners',
   '/about',
   '/contact',
@@ -30,6 +32,6 @@ export default function sitemap() {
     url: `${site.url}${route}/`,
     lastModified: new Date(),
     changeFrequency: route === '' ? 'weekly' : 'monthly',
-    priority: route === '' ? 1 : route === '/privileged-identity-assurance' || route.startsWith('/services') || route.startsWith('/experience/') || route.startsWith('/resources/') || route === '/partners' ? 0.8 : 0.7
+    priority: route === '' ? 1 : route === '/privileged-identity-assurance' || route === '/cra-incident-readiness' || route.startsWith('/services') || route.startsWith('/experience/') || route.startsWith('/resources/') || route === '/partners' ? 0.8 : 0.7
   }));
 }
