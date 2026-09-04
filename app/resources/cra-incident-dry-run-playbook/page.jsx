@@ -12,6 +12,12 @@ export const metadata = {
       'Test whether product, security, engineering and compliance teams can assemble the right technical facts and evidence under a 24/72-hour reporting clock.',
     url: '/resources/cra-incident-dry-run-playbook/',
     type: 'article'
+  },
+  twitter: {
+    card: 'summary',
+    title: 'CRA 24/72h Incident Dry-Run Checklist | Enki Tech',
+    description:
+      'Test whether product, security, engineering and compliance teams can assemble the right technical facts and evidence under a 24/72-hour reporting clock.'
   }
 };
 

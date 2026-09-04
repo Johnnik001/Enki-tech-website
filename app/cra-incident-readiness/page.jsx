@@ -12,6 +12,12 @@ export const metadata = {
       'Test the operational path from security event to product impact, ownership, 24/72-hour reporting data, remediation and audit-ready evidence before the first real CRA reporting event.',
     url: '/cra-incident-readiness/',
     type: 'website'
+  },
+  twitter: {
+    card: 'summary',
+    title: 'CRA Incident Reporting Readiness Sprint | Enki Tech',
+    description:
+      'Test the operational path from security event to product impact, ownership, 24/72-hour reporting data, remediation and audit-ready evidence.'
   }
 };
 
@@ -190,6 +196,7 @@ export default function CRAIncidentReadinessPage() {
         title="Run one scenario and find the bottlenecks while there is still time to fix them."
         text="Share the product scope, current vulnerability/incident process and the teams involved. Enki Tech will confirm whether a bounded CRA Incident Reporting Readiness Sprint is the right first step."
         buttonLabel="Discuss a CRA readiness sprint"
+        buttonHref="/contact/?area=CRA%20Incident%20Readiness&engagement=Assessment%20or%20audit"
       />
     </>
   );
