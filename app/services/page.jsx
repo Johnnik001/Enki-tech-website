@@ -73,6 +73,29 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      <section className="section sectionAlt">
+        <div className="container splitGrid">
+          <div>
+            <p className="eyebrow">Time-sensitive EU product-security readiness</p>
+            <h2>CRA Incident Reporting Readiness Sprint</h2>
+            <p>
+              A bounded technical dry run for manufacturers that need to test the operational path from vulnerability or severe-incident awareness to product impact, ownership, 24/72-hour reporting data, remediation and evidence.
+            </p>
+          </div>
+          <div className="quoteCard">
+            <p className="eyebrow">Measurable outcome</p>
+            <h2>Test one real workflow before the first real deadline.</h2>
+            <p>
+              The sprint exposes slow handoffs, missing evidence, unclear backup ownership and product-mapping gaps without turning the engagement into open-ended legal or compliance consulting.
+            </p>
+            <div className="heroActions">
+              <Link href="/cra-incident-readiness/" className="button">View the CRA readiness sprint</Link>
+              <Link href="/resources/cra-incident-dry-run-playbook/" className="button buttonGhost dark">Dry-run checklist</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <CTA />
     </>
   );

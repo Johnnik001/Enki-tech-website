@@ -81,6 +81,7 @@ const structuredData = {
       serviceType: [
         'Secure Cloud Access and Privileged Identity Assessment',
         'Continuous Secure Cloud Governance',
+        'CRA Incident Reporting Readiness',
         'Crypto Agility and Post-Quantum Readiness',
         'Microsoft 365 consulting',
         'Azure and hybrid infrastructure consulting',
