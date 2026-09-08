@@ -8,11 +8,14 @@ export function Footer() {
       <div className="container footerGrid">
         <div>
           <Logo />
-          <p className="muted footerText">{site.description}</p>
+          <p className="muted footerText">
+            Enki Tech helps European organisations turn Microsoft Cloud, identity and security risks into verified remediation, operational evidence and repeatable controls.
+          </p>
         </div>
         <div>
           <h3>Company</h3>
           <ul>
+            <li><Link href="/security-assurance/">Assurance</Link></li>
             {navigation.map((item) => (
               <li key={item.href}><Link href={item.href}>{item.label}</Link></li>
             ))}

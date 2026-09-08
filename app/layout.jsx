@@ -8,10 +8,11 @@ import { Analytics } from '@vercel/analytics/next';
 export const metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: 'Enki Tech | Secure Microsoft Cloud Governance',
+    default: 'Enki Tech | Secure Cloud & Operational Assurance',
     template: '%s | Enki Tech'
   },
-  description: site.description,
+  description:
+    'Enki Tech helps European organisations turn Microsoft Cloud, identity and security risks into verified remediation, evidence and repeatable operational controls.',
   creator: site.name,
   publisher: site.legalName,
   verification: {
@@ -23,8 +24,9 @@ export const metadata = {
     apple: [{ url: '/logo/linkedin-company-logo.png', sizes: '1024x1024', type: 'image/png' }]
   },
   openGraph: {
-    title: 'Enki Tech | Secure Microsoft Cloud Governance',
-    description: site.description,
+    title: 'Enki Tech | Secure Cloud & Operational Assurance',
+    description:
+      'From security finding to verified remediation. Specialist Microsoft Cloud, identity, remediation and recurring assurance delivery for European organisations.',
     siteName: site.name,
     type: 'website',
     images: [
@@ -38,8 +40,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary',
-    title: 'Enki Tech | Secure Microsoft Cloud Governance',
-    description: site.description,
+    title: 'Enki Tech | Secure Cloud & Operational Assurance',
+    description:
+      'From security finding to verified remediation across Microsoft Cloud, identity and operational security.',
     images: ['/logo/linkedin-company-logo.png']
   },
   robots: {
@@ -58,7 +61,8 @@ const structuredData = {
       legalName: site.legalName,
       url: site.url,
       email: site.email,
-      description: site.description,
+      description:
+        'Independent European Microsoft Cloud consulting company focused on secure cloud, identity, verified remediation, operational assurance and automation-driven operations.',
       logo: `${site.url}/logo/linkedin-company-logo.png`,
       sameAs: [site.linkedin],
       address: { '@type': 'PostalAddress', addressCountry: 'BG' },
@@ -79,6 +83,9 @@ const structuredData = {
       parentOrganization: { '@id': `${site.url}/#organization` },
       areaServed: ['Bulgaria', 'Belgium', 'Europe'],
       serviceType: [
+        'Secure Cloud and Cyber Operational Assurance',
+        'Secure Cloud Remediation',
+        'Continuous Security Assurance',
         'Secure Cloud Access and Privileged Identity Assessment',
         'Continuous Secure Cloud Governance',
         'CRA Incident Reporting Readiness',

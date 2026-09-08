@@ -9,6 +9,9 @@ const formEndpoint = `https://formsubmit.co/${site.email}`;
 const formAjaxEndpoint = `https://formsubmit.co/ajax/${site.email}`;
 
 const areaOptions = [
+  'Secure Cloud & Cyber Operational Assurance',
+  'Secure Cloud Remediation',
+  'Continuous Security Assurance',
   'Microsoft Cloud Audit & Risk Review',
   'Secure Cloud Access & Privileged Identity',
   'Continuous Secure Cloud Governance',
