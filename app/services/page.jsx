@@ -6,7 +6,7 @@ import { engagements } from '../../data/site';
 
 export const metadata = {
   title: 'Services',
-  description: 'Microsoft Cloud audits, Microsoft 365, Azure, Digital Collaboration, Entra ID, Intune, Security, Automation and AI-enhanced IT Operations consulting services.',
+  description: 'Secure Cloud and Cyber Operational Assurance, CRA readiness, Microsoft Cloud remediation, Microsoft 365, Azure, Entra ID, Intune, Security, Automation and AI-enhanced IT Operations consulting services.',
   alternates: { canonical: '/services/' }
 };
 
@@ -16,10 +16,37 @@ export default function ServicesPage() {
       <section className="pageHero">
         <div className="container narrow">
           <p className="eyebrow">Services</p>
-          <h1>Focused Microsoft Cloud and IT operations consulting services.</h1>
+          <h1>Secure cloud, verified remediation and senior Microsoft delivery.</h1>
           <p>
-            Enki Tech supports European organizations and technology partners across Microsoft 365, Azure, identity, endpoint, collaboration, security and automation workstreams.
+            Enki Tech helps European organisations and technology partners move from identified Microsoft Cloud and identity risk to implemented remediation, verification, evidence and repeatable operational control.
           </p>
+          <div className="heroActions">
+            <Link href="/security-assurance/" className="button">Explore Operational Assurance</Link>
+            <Link href="/contact/" className="button buttonGhost">Discuss a technical problem</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section sectionAlt">
+        <div className="container splitGrid">
+          <div>
+            <p className="eyebrow">Flagship commercial path</p>
+            <h2>From security finding to verified closure.</h2>
+            <p>
+              Start with a bounded readiness or risk problem, move into technical remediation, then retain only the recurring assurance that protects the result over time.
+            </p>
+          </div>
+          <div className="quoteCard">
+            <p className="eyebrow">Operational assurance</p>
+            <h2>Detect → Prioritize → Assign → Remediate → Verify → Prove</h2>
+            <p>
+              This is the operating model behind Enki Tech security and cloud engagements. It is designed to reduce open risk, clarify ownership and leave the client with evidence that the technical change actually worked.
+            </p>
+            <div className="heroActions">
+              <Link href="/security-assurance/" className="button">View the assurance model</Link>
+              <Link href="/cra-incident-readiness/" className="button buttonGhost dark">CRA readiness sprint</Link>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -59,16 +86,17 @@ export default function ServicesPage() {
         <div className="container splitGrid">
           <div>
             <p className="eyebrow">Commercial focus</p>
-            <h2>Services are designed to be packaged into clear B2B offers.</h2>
+            <h2>Services are designed to become measurable B2B outcomes.</h2>
           </div>
           <div className="listPanel">
+            <div className="principle">Secure Cloud and Cyber Operational Assurance</div>
+            <div className="principle">CRA Incident Reporting Readiness Sprint</div>
+            <div className="principle">Secure Cloud Remediation Sprint</div>
+            <div className="principle">Continuous Security Assurance</div>
             <div className="principle">Microsoft Cloud audit and risk review</div>
-            <div className="principle">Microsoft 365 operational assessment</div>
-            <div className="principle">Teams and Exchange service improvement</div>
             <div className="principle">Entra ID and Conditional Access review</div>
-            <div className="principle">Intune and endpoint management improvement</div>
-            <div className="principle">Automation discovery workshop</div>
-            <div className="principle">AI-assisted documentation workflow setup</div>
+            <div className="principle">Microsoft 365, Azure and hybrid remediation</div>
+            <div className="principle">Automation and AI-assisted IT operations</div>
           </div>
         </div>
       </section>
@@ -96,7 +124,12 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <CTA />
+      <CTA
+        eyebrow="Start with the problem"
+        title="Bring the open risk, backlog or operational gap."
+        text="Enki Tech will help determine whether the right next step is assessment, remediation, recurring assurance or specialist Microsoft delivery."
+        buttonLabel="Discuss the next step"
+      />
     </>
   );
 }
