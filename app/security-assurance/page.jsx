@@ -9,7 +9,7 @@ export const metadata = {
   openGraph: {
     title: 'Secure Cloud & Cyber Operational Assurance | Enki Tech',
     description:
-      'From security finding to verified remediation. Enki Tech helps European organisations close Microsoft Cloud and identity risks with clear ownership, evidence and repeatable controls.',
+      'From security finding to verified remediation. Enki Tech helps European organisations close Microsoft Cloud and identity risks with clear ownership, technical verification and repeatable controls.',
     url: '/security-assurance/',
     type: 'website'
   }
@@ -20,7 +20,7 @@ const operatingLoop = [
   ['02', 'Prioritize', 'Connect technical severity to business context, exposure, affected services and remediation urgency.'],
   ['03', 'Assign', 'Give every material finding a named owner, target SLA, escalation path and decision authority.'],
   ['04', 'Remediate', 'Implement the technical change across Microsoft 365, Entra ID, Intune, Azure, Exchange, Teams or Defender.'],
-  ['05', 'Verify', 'Independently confirm that the risk is actually reduced and the intended control is operating.'],
+  ['05', 'Verify', 'Test the remediated state against agreed acceptance criteria and confirm that the intended control is operating.'],
   ['06', 'Prove', 'Preserve the evidence, ownership and closure record needed for governance, audit and future review.']
 ];
 
@@ -35,7 +35,7 @@ const offers = [
   {
     tag: 'Fixed-scope remediation',
     title: 'Secure Cloud Remediation Sprint',
-    text: 'Turn a bounded set of Microsoft Cloud, identity or endpoint findings into implemented fixes, independent verification and defensible closure evidence.',
+    text: 'Turn a bounded set of Microsoft Cloud, identity or endpoint findings into implemented fixes, technical verification against agreed acceptance criteria and defensible closure evidence.',
     href: '/contact/?area=Secure%20Cloud%20Remediation&engagement=Direct%20project',
     result: 'Prioritized fixes · implementation · verification · closure evidence'
   },
@@ -63,7 +63,7 @@ export default function SecurityAssurancePage() {
           <p className="eyebrow">Secure Cloud · Verified remediation · Operational resilience</p>
           <h1>From security finding to verified remediation.</h1>
           <p>
-            Enki Tech helps European organisations turn Microsoft Cloud, identity and operational security risks into controlled technical outcomes—with clear ownership, implemented remediation, independent verification and evidence that can be reused.
+            Enki Tech helps European organisations turn Microsoft Cloud, identity and operational security risks into controlled technical outcomes—with clear ownership, implemented remediation, verification against agreed acceptance criteria and evidence that can be reused.
           </p>
           <div className="heroActions">
             <Link href="/contact/?area=Secure%20Cloud%20%26%20Cyber%20Operational%20Assurance&engagement=Assessment%20or%20audit" className="button">Discuss your risk or backlog</Link>
