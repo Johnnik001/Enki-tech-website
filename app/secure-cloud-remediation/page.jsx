@@ -68,7 +68,7 @@ export default function SecureCloudRemediationPage() {
           </p>
           <div className="heroActions">
             <Link href="/contact/?area=Secure%20Cloud%20Remediation&engagement=Direct%20project" className="button">Discuss a remediation backlog</Link>
-            <Link href="/security-assurance/" className="button buttonGhost">View the assurance model</Link>
+            <Link href="/resources/secure-cloud-remediation-checklist/" className="button buttonGhost">Use the 12-point checklist</Link>
           </div>
         </div>
       </section>
