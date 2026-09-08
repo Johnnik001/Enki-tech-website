@@ -46,7 +46,7 @@ const commercialOffers = [
     title: 'Secure Cloud Remediation Sprint',
     text: 'Turn a bounded set of Microsoft Cloud, identity or endpoint findings into implemented fixes, technical verification and closure evidence.',
     result: 'Prioritized fixes · implementation · verification · evidence',
-    href: '/security-assurance/'
+    href: '/secure-cloud-remediation/'
   },
   {
     tag: 'Recurring assurance',
