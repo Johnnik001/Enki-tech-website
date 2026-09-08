@@ -3,7 +3,7 @@ import { site } from '../../data/site';
 
 export const metadata = {
   title: 'Contact',
-  description: 'Contact Enki Tech for Microsoft Cloud, Digital Collaboration, Automation and European IT consulting engagements.',
+  description: 'Contact Enki Tech for Secure Cloud and Operational Assurance, CRA readiness, Microsoft Cloud remediation, Digital Collaboration, Automation and European IT consulting engagements.',
   alternates: { canonical: '/contact/' }
 };
 
@@ -13,7 +13,7 @@ export default function ContactPage() {
       <section className="pageHero">
         <div className="container narrow">
           <p className="eyebrow">Contact</p>
-          <h1>Start a conversation about a project, partnership or subcontracting opportunity.</h1>
+          <h1>Start a conversation about a risk, remediation workstream, project or partnership.</h1>
           <p>
             Share a few practical details and receive a considered response on fit, possible engagement model and next steps.
           </p>
@@ -73,10 +73,10 @@ export default function ContactPage() {
             <h2>For faster qualification, include these details.</h2>
           </div>
           <div className="listPanel">
-            <div className="principle">Your company and country</div>
-            <div className="principle">Service area: CRA incident readiness, audit, M365, Azure, Intune, Exchange, Teams, automation or AI operations</div>
-            <div className="principle">Expected timeline and engagement model</div>
-            <div className="principle">Whether this is a direct client, partner or subcontracting opportunity</div>
+            <div className="principle">Your company, country and relevant business or technical owner</div>
+            <div className="principle">The open risk, audit finding, remediation backlog, CRA workflow or Microsoft Cloud service involved</div>
+            <div className="principle">Expected timeline, required outcome and any fixed deadline</div>
+            <div className="principle">Whether this is a direct client, partner, MSSP/integrator or subcontracting opportunity</div>
           </div>
         </div>
       </section>
