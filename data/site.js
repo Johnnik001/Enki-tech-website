@@ -10,7 +10,7 @@ export const site = {
   description:
     'Enki Tech provides secure Microsoft Cloud assessments, privileged identity review, remediation, continuous governance and senior operational delivery across Europe.',
   founder: 'Evgeniy Tsvetov',
-  founderRole: 'Founder & Lead Microsoft Cloud Consultant'
+  founderRole: 'Founder & Managing Director'
 };
 
 export const certifications = [
