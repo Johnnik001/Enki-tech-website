@@ -2,6 +2,8 @@ import Link from 'next/link';
 import { navigation, site } from '../data/site';
 import { Logo } from './Logo';
 
+const linkedInCompanyUrl = 'https://www.linkedin.com/company/144942935/';
+
 export function Footer() {
   return (
     <footer className="footer">
@@ -26,7 +28,7 @@ export function Footer() {
           <h3>Contact</h3>
           <ul>
             <li><a href={`mailto:${site.email}`}>{site.email}</a></li>
-            <li><a href={site.linkedin}>LinkedIn</a></li>
+            <li><a href={linkedInCompanyUrl} target="_blank" rel="noreferrer">LinkedIn</a></li>
             <li>{site.location}</li>
           </ul>
         </div>
