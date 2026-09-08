@@ -21,6 +21,15 @@ The LinkedIn company page should support four outcomes:
 
 ---
 
+## Launch status
+
+- [x] Post 1 — Company positioning / Operational Assurance published on 2026-09-08
+- [ ] Founder amplification on Post 1
+- [ ] Post 2 — Secure Cloud Remediation Readiness Checklist
+- [ ] Post 3 — Partner channel for MSSPs and Microsoft integrators
+
+---
+
 ## Recommended company tagline
 
 **Secure Cloud. Verified Remediation. Operational Assurance.**
