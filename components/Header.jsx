@@ -25,7 +25,8 @@ export function Header() {
           <span className="menuToggleIcon" aria-hidden="true"><i></i><i></i><i></i></span>
         </button>
         <nav id="main-navigation" className={`nav ${menuOpen ? 'navOpen' : ''}`} aria-label="Main navigation">
-          {navigation.map((item) => (
+          <Link href="/security-assurance/" onClick={closeMenu}>Assurance</Link>
+          {navigation.filter((item) => item.label !== 'Contact').map((item) => (
             <Link key={item.href} href={item.href} onClick={closeMenu}>{item.label}</Link>
           ))}
           <Link className="button navCta" href="/contact/" onClick={closeMenu}>Discuss a project</Link>
