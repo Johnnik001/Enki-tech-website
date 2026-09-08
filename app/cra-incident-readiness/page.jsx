@@ -4,12 +4,12 @@ import { CTA } from '../../components/CTA';
 export const metadata = {
   title: 'CRA Incident Reporting Readiness Sprint',
   description:
-    'A fixed-scope technical dry run for EU manufacturers to test whether vulnerability and severe-incident reporting can move from detection to 24-hour early warning, 72-hour notification, remediation and evidence.',
+    'A fixed-scope technical dry run for EU manufacturers to test whether vulnerability and severe-incident reporting can move from awareness to 24-hour early warning, 72-hour notification, remediation, SRP submission readiness and evidence.',
   alternates: { canonical: '/cra-incident-readiness/' },
   openGraph: {
     title: 'CRA Incident Reporting Readiness Sprint | Enki Tech',
     description:
-      'Test the operational path from security event to product impact, ownership, 24/72-hour reporting data, remediation and audit-ready evidence before the first real CRA reporting event.',
+      'Test the operational path from security event to product impact, ownership, independent deadline control, 24/72-hour reporting data, SRP submission readiness, remediation and audit-ready evidence.',
     url: '/cra-incident-readiness/',
     type: 'website'
   },
@@ -17,14 +17,16 @@ export const metadata = {
     card: 'summary',
     title: 'CRA Incident Reporting Readiness Sprint | Enki Tech',
     description:
-      'Test the operational path from security event to product impact, ownership, 24/72-hour reporting data, remediation and audit-ready evidence.'
+      'Test the operational path from security event to product impact, ownership, 24/72-hour reporting data, SRP submission readiness, remediation and evidence.'
   }
 };
 
 const outcomes = [
   'Timed simulation of one actively exploited vulnerability or severe-incident scenario',
+  'Independent regulatory clock anchored to the actual awareness timestamp',
   'Product, version, owner and evidence-source mapping for the selected scenario',
   '24-hour early-warning and 72-hour notification data-readiness review',
+  'SRP operational readiness covering representative ownership, backup coverage and submission handoff',
   'Escalation matrix with primary and backup owners for critical handoffs',
   'Evidence map showing what can be retrieved quickly and what remains manual',
   'Prioritized remediation backlog focused on operational bottlenecks',
@@ -32,11 +34,13 @@ const outcomes = [
 ];
 
 const workflow = [
-  ['T0', 'Detect and validate', 'Confirm that the event is credible, establish awareness time and identify the technical source of truth.'],
+  ['T0', 'Detect and validate', 'Confirm that the event is credible, establish the actual awareness time and preserve the technical source of truth.'],
+  ['Clock', 'Start the independent deadline control', 'Calculate internal 24-hour and 72-hour deadlines from the awareness timestamp rather than depending on a portal timer or individual memory.'],
   ['Impact', 'Map product and affected versions', 'Determine whether the selected product or version is affected and identify the business and security context.'],
-  ['Own', 'Assign decision authority', 'Identify the primary owner, backup owner and escalation path across Security, Engineering, Product and Legal/Compliance.'],
+  ['Own', 'Assign decision and submission authority', 'Identify the primary owner, backup owner and escalation path across Security, Engineering, Product and Legal/Compliance.'],
   ['24h', 'Prepare early-warning data', 'Test whether required technical facts can be assembled inside the first reporting window.'],
   ['72h', 'Complete notification data', 'Validate the deeper impact, mitigation, status and evidence needed for the main notification workflow.'],
+  ['SRP', 'Validate the human submission path', 'Confirm that the responsible representative, backup coverage, authentication and submission handoff are operationally understood.'],
   ['Fix', 'Track remediation', 'Connect the reporting process to corrective or mitigating action, validation and an owned backlog.'],
   ['Close', 'Preserve evidence', 'Confirm that the final reporting path and supporting evidence can be reproduced after the event.']
 ];
@@ -53,10 +57,10 @@ export default function CRAIncidentReadinessPage() {
     <>
       <section className="pageHero assuranceHero">
         <div className="container narrow">
-          <p className="eyebrow">Cyber Resilience Act · 24/72h reporting · Technical readiness</p>
+          <p className="eyebrow">Cyber Resilience Act · 24/72h reporting · SRP operational readiness</p>
           <h1>Can your team move from vulnerability awareness to defensible CRA reporting data in time?</h1>
           <p>
-            Enki Tech runs a focused technical dry run for manufacturers of products with digital elements. The sprint tests the operational path from detection and product impact to ownership, reporting data, remediation and evidence—before the first real event starts the clock.
+            Enki Tech runs a focused technical dry run for manufacturers of products with digital elements. The sprint tests the operational path from detection and product impact to independent deadline control, ownership, reporting data, SRP submission readiness, remediation and evidence—before the first real event starts the clock.
           </p>
           <div className="heroActions">
             <Link href="/contact/?area=CRA%20Incident%20Readiness&engagement=Assessment%20or%20audit" className="button">Book a CRA reporting dry run</Link>
@@ -69,10 +73,10 @@ export default function CRAIncidentReadinessPage() {
         <div className="container assuranceIntroGrid">
           <div>
             <p className="eyebrow">The buying problem</p>
-            <h2>The regulation is documented. The operational handoffs are where readiness fails.</h2>
+            <h2>The regulation may be documented. The operational handoffs still fail under time pressure.</h2>
           </div>
           <p>
-            A scanner, ticketing tool, SBOM, incident policy and legal guidance do not automatically create a working 24/72-hour response path. The sprint tests whether people, data and evidence can be mobilized quickly enough when an actively exploited vulnerability or severe product-security incident is discovered.
+            A scanner, ticketing tool, SBOM, incident policy, legal guidance and reporting portal do not automatically create a working 24/72-hour response path. The sprint tests whether people, data, deadline controls and evidence can be mobilized quickly enough when an actively exploited vulnerability or severe product-security incident is discovered.
           </p>
         </div>
       </section>
@@ -102,7 +106,7 @@ export default function CRAIncidentReadinessPage() {
           <div className="assuranceTableHeader">
             <div>
               <p className="eyebrow">Dry-run path</p>
-              <h2>From awareness time to final technical closure</h2>
+              <h2>From awareness time to verified technical closure</h2>
             </div>
             <p>Every stage is linked to an owner, source system, evidence requirement and target response time.</p>
           </div>
@@ -137,6 +141,8 @@ export default function CRAIncidentReadinessPage() {
               <div className="principle">One primary scenario: actively exploited vulnerability or severe security incident</div>
               <div className="principle">Security, Engineering/Product and compliance decision-makers represented</div>
               <div className="principle">Existing vulnerability, incident, inventory and evidence sources reviewed</div>
+              <div className="principle">Independent 24/72-hour deadline tracking and escalation path tested</div>
+              <div className="principle">SRP submission ownership and backup handoff reviewed</div>
               <div className="principle">Short management readout plus technical remediation backlog</div>
             </div>
           </div>
@@ -184,7 +190,7 @@ export default function CRAIncidentReadinessPage() {
               The highest-value follow-on work is technical: close evidence gaps, improve vulnerability-to-product mapping, automate workflow steps, strengthen identity/cloud controls and establish repeatable assurance. This keeps the relationship focused on measurable operational outcomes rather than generic compliance consulting.
             </p>
             <div className="heroActions">
-              <Link href="/privileged-identity-assurance/" className="button">Continuous Identity Assurance</Link>
+              <Link href="/security-assurance/" className="button">Secure Cloud & Operational Assurance</Link>
               <Link href="/resources/procurement-capability-sheet/" className="button buttonGhost dark">Procurement capability</Link>
             </div>
           </div>
