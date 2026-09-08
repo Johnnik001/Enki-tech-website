@@ -6,12 +6,12 @@ import { experience, services, site } from '../../data/site';
 export const metadata = {
   title: 'Microsoft Cloud Partner Delivery & Subcontracting',
   description:
-    'Senior secure Microsoft Cloud, privileged identity, assurance and delivery capacity for European consultancies, integrators and technology partners.',
+    'Senior secure Microsoft Cloud remediation, privileged identity, assurance and delivery capacity for European consultancies, integrators and technology partners.',
   alternates: { canonical: '/partners/' },
   openGraph: {
     title: 'Microsoft Cloud Partner Delivery & Subcontracting | Enki Tech',
     description:
-      'Flexible senior Microsoft Cloud delivery capacity for European IT consultancies, integrators and technology partners.',
+      'Flexible senior Microsoft Cloud remediation and delivery capacity for European IT consultancies, integrators and technology partners.',
     url: '/partners/',
     type: 'website'
   }
@@ -23,16 +23,16 @@ const partnerNeeds = [
     text: 'Add senior Microsoft 365, Azure, identity, endpoint or automation capability when the required expertise is not available internally.'
   },
   {
-    title: 'Peak project capacity',
-    text: 'Strengthen a migration, transition or improvement workstream without committing to a permanent expansion of the delivery team.'
+    title: 'A client remediation backlog',
+    text: 'Turn assessment or audit findings into a bounded Microsoft Cloud implementation work package with acceptance criteria, verification and closure evidence.'
   },
   {
     title: 'Complex technical escalation',
     text: 'Bring focused L2/L3 troubleshooting and operational experience into incidents or service issues that need deeper ownership.'
   },
   {
-    title: 'Handover and stabilization',
-    text: 'Support documentation, operational readiness, knowledge transfer and post-transition improvement before a service moves into steady state.'
+    title: 'Peak project capacity',
+    text: 'Strengthen a migration, transition or improvement workstream without committing to a permanent expansion of the delivery team.'
   }
 ];
 
@@ -75,6 +75,7 @@ const structuredData = {
       areaServed: ['Bulgaria', 'Belgium', 'Europe'],
       serviceType: [
         'Microsoft Cloud subcontracting',
+        'Microsoft Cloud security remediation',
         'Privileged identity and secure cloud assurance',
         'Microsoft 365 partner delivery',
         'Azure delivery support',
@@ -109,10 +110,10 @@ export default function PartnersPage() {
           <p className="eyebrow">Partner delivery · Europe</p>
           <h1>Senior Microsoft Cloud delivery capacity for partners and integrators.</h1>
           <p>
-            Enki Tech works with consultancies, integrators and technology partners that need dependable senior capacity across Microsoft 365, Azure, identity, endpoint, collaboration and automation workstreams.
+            Enki Tech works with consultancies, MSSPs, integrators and technology partners that need dependable senior capacity across secure cloud remediation, Microsoft 365, Azure, identity, endpoint, collaboration and automation workstreams.
           </p>
           <div className="heroActions">
-            <Link href="/contact/" className="button">Discuss partner delivery</Link>
+            <Link href="/contact/?area=Partner%20or%20subcontracting%20opportunity&engagement=Partner%20delivery" className="button">Discuss partner delivery</Link>
             <a
               href="/downloads/enki-tech-capability-statement.pdf"
               className="button buttonGhost"
@@ -129,7 +130,7 @@ export default function PartnersPage() {
           <SectionHeader
             eyebrow="When to engage"
             title="Add experienced capacity where delivery risk is highest"
-            text="Partner support is shaped around a concrete technical gap, delivery milestone or operational responsibility rather than a generic resource request."
+            text="Partner support is shaped around a concrete technical gap, remediation backlog, delivery milestone or operational responsibility rather than a generic resource request."
           />
           <div className="cardsGrid">
             {partnerNeeds.map((item) => (
@@ -148,7 +149,7 @@ export default function PartnersPage() {
             <p className="eyebrow">Engagement model</p>
             <h2>Flexible B2B support under the partner&apos;s delivery structure</h2>
             <p>
-              Cooperation can be organized around a defined project, senior consulting days, escalation ownership or recurring delivery capacity. Scope and interfaces are agreed before work begins.
+              Cooperation can be organized around a defined project, remediation work package, senior consulting days, escalation ownership or recurring delivery capacity. Scope and interfaces are agreed before work begins.
             </p>
             <div className="listPanel wide">
               {engagementModels.map((model) => <div className="principle" key={model}>{model}</div>)}
@@ -168,11 +169,11 @@ export default function PartnersPage() {
         <div className="container partnerAssuranceGrid">
           <div>
             <p className="eyebrow">Partner-ready capability</p>
-            <h2>Privileged Identity & Secure Cloud Assurance</h2>
-            <p className="partnerAssuranceLead">A bounded technical work package for integrators and cyber delivery partners that need to connect access architecture, control validation and evidence.</p>
+            <h2>Secure Cloud Assurance & Remediation</h2>
+            <p className="partnerAssuranceLead">A bounded technical work package for integrators and cyber delivery partners that need to move Microsoft Cloud findings from assessment into controlled implementation, verification and evidence-backed closure.</p>
             <div className="heroActions">
-              <Link href="/resources/high-assurance-cloud-access-architecture/" className="button">View reference architecture</Link>
-              <Link href="/contact/?area=Secure%20Cloud%20Access%20%26%20Privileged%20Identity&engagement=Partner%20delivery" className="button buttonGhost dark">Discuss subcontracting</Link>
+              <Link href="/secure-cloud-remediation/" className="button">View remediation sprint</Link>
+              <Link href="/contact/?area=Secure%20Cloud%20Remediation&engagement=Partner%20delivery" className="button buttonGhost dark">Discuss subcontracting</Link>
             </div>
           </div>
           <div className="partnerCapabilityPack">
@@ -181,6 +182,7 @@ export default function PartnersPage() {
               <li><strong>Architecture</strong><span>Critical-resource and privileged access-path model</span></li>
               <li><strong>Controls</strong><span>Threat, prevention, detection and evidence mapping</span></li>
               <li><strong>Assessment</strong><span>Findings, ownership and prioritized remediation</span></li>
+              <li><strong>Remediation</strong><span>Acceptance criteria, implementation, verification and closure evidence</span></li>
               <li><strong>Assurance</strong><span>Repeatable validation and evidence cadence</span></li>
               <li><strong>Handover</strong><span>Partner-aligned outputs, documentation and boundaries</span></li>
             </ul>
@@ -245,9 +247,10 @@ export default function PartnersPage() {
 
       <CTA
         eyebrow="Partner conversation"
-        title="Need senior Microsoft delivery capacity for an active opportunity?"
+        title="Have a Microsoft Cloud backlog that needs specialist implementation capacity?"
         text="Share the technical scope, expected timeline, engagement model and delivery challenge. Enki Tech will respond with the most relevant capability and next step."
         buttonLabel="Discuss partner delivery"
+        buttonHref="/contact/?area=Partner%20or%20subcontracting%20opportunity&engagement=Partner%20delivery"
       />
     </>
   );
