@@ -24,7 +24,7 @@ const controlJourney = [
   {
     number: '03',
     title: 'Remediate and verify',
-    text: 'Implement the fix and independently confirm that the intended control is operating as expected.'
+    text: 'Implement the fix and verify the remediated state against agreed acceptance criteria.'
   },
   {
     number: '04',
@@ -44,7 +44,7 @@ const commercialOffers = [
   {
     tag: 'Fixed-scope remediation',
     title: 'Secure Cloud Remediation Sprint',
-    text: 'Turn a bounded set of Microsoft Cloud, identity or endpoint findings into implemented fixes, independent verification and closure evidence.',
+    text: 'Turn a bounded set of Microsoft Cloud, identity or endpoint findings into implemented fixes, technical verification and closure evidence.',
     result: 'Prioritized fixes · implementation · verification · evidence',
     href: '/security-assurance/'
   },
@@ -125,7 +125,7 @@ export default function HomePage() {
             <p className="heroKicker"><span aria-hidden="true"></span> Secure cloud · verified remediation · operational resilience</p>
             <h1>Turn security and cloud risks into verified outcomes.</h1>
             <p className="heroText">
-              Enki Tech helps European organisations and delivery partners close Microsoft Cloud, identity and operational security gaps with clear ownership, implemented remediation, independent verification and reusable evidence.
+              Enki Tech helps European organisations and delivery partners close Microsoft Cloud, identity and operational security gaps with clear ownership, implemented remediation, technical verification against agreed acceptance criteria and reusable evidence.
             </p>
             <div className="heroActions">
               <Link href="/security-assurance/" className="button">Explore Operational Assurance</Link>
