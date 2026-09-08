@@ -4,66 +4,66 @@ import { SectionHeader } from '../components/SectionHeader';
 import { engagements, experience, insights } from '../data/site';
 
 export const metadata = {
-  title: 'Secure Microsoft Cloud Access, Governance & Operations',
+  title: 'Secure Cloud, Verified Remediation & Operational Assurance',
   description:
-    'Secure Microsoft Cloud assessments, privileged identity review, remediation and continuous governance for European organisations and delivery partners.',
+    'Enki Tech helps European organisations turn Microsoft Cloud, identity and security risks into verified remediation, evidence and repeatable operational controls.',
   alternates: { canonical: '/' }
 };
 
 const controlJourney = [
   {
     number: '01',
-    title: 'Map critical access',
-    text: 'Trace human, external and workload identity paths to the cloud resources that matter most.'
+    title: 'Detect the material risk',
+    text: 'Start with the security finding, privileged-access path, configuration deviation or regulatory workflow that matters.'
   },
   {
     number: '02',
-    title: 'Validate the controls',
-    text: 'Test Conditional Access, PIM, permissions, evidence and operational ownership end to end.'
+    title: 'Assign ownership and priority',
+    text: 'Connect technical severity to business context, a named owner, target SLA and decision authority.'
   },
   {
     number: '03',
-    title: 'Remediate by risk',
-    text: 'Convert findings into sequenced actions with clear owners, dependencies and evidence.'
+    title: 'Remediate and verify',
+    text: 'Implement the fix and independently confirm that the intended control is operating as expected.'
   },
   {
     number: '04',
     title: 'Keep proving it',
-    text: 'Review drift, privilege and control evidence as identities and configurations continue to change.'
+    text: 'Preserve evidence and review drift, privilege and recurring control effectiveness as the environment changes.'
   }
 ];
 
 const commercialOffers = [
   {
-    tag: 'Fixed-scope assessment',
-    title: 'Secure Cloud Access & Privileged Identity',
-    text: 'Understand who and what can reach critical Microsoft Cloud resources, which controls govern each path and where remediation is required.',
-    result: 'Trust-path map · control evidence · prioritized remediation',
-    href: '/services/secure-cloud-access-privileged-identity/'
+    tag: 'Time-sensitive EU readiness',
+    title: 'CRA Incident Reporting Readiness Sprint',
+    text: 'Test whether one product-security scenario can move from awareness to 24/72-hour reporting data, remediation and defensible evidence before a real event starts the clock.',
+    result: 'Timed dry run · owner map · evidence gaps · remediation backlog',
+    href: '/cra-incident-readiness/'
   },
   {
-    tag: 'Recurring governance',
-    title: 'Continuous Secure Cloud Governance',
-    text: 'Check whether agreed security controls remain effective as privileges, policies, workloads and exceptions change after project handover.',
-    result: 'Drift review · privileged access · monthly evidence · backlog',
+    tag: 'Fixed-scope remediation',
+    title: 'Secure Cloud Remediation Sprint',
+    text: 'Turn a bounded set of Microsoft Cloud, identity or endpoint findings into implemented fixes, independent verification and closure evidence.',
+    result: 'Prioritized fixes · implementation · verification · evidence',
+    href: '/security-assurance/'
+  },
+  {
+    tag: 'Recurring assurance',
+    title: 'Continuous Security Assurance',
+    text: 'Keep critical controls effective after remediation through recurring evidence review, privileged-access checks, drift review and an owned improvement backlog.',
+    result: 'Control review · drift · evidence · improvement backlog',
     href: '/services/continuous-secure-cloud-governance/'
-  },
-  {
-    tag: 'Specialist audit module',
-    title: 'Crypto Agility & PQC Readiness',
-    text: 'Create an initial inventory of cryptographic dependencies and identify where long-lived data, certificates, keys or legacy algorithms need earlier planning.',
-    result: 'Crypto inventory · agility score · 12–36 month roadmap',
-    href: '/services/microsoft-cloud-audit/#specialist-modules'
   }
 ];
 
-const trustPath = ['Identity', 'Device', 'Privilege', 'Workload', 'Data'];
+const assurancePath = ['Detect', 'Prioritize', 'Assign', 'Remediate', 'Verify', 'Prove'];
 
 const capabilityAreas = [
   {
     number: '01',
     title: 'Assess and secure',
-    text: 'Establish the current risk, access paths and evidence before committing delivery budget.',
+    text: 'Establish current risk, access paths, evidence and remediation priorities before committing delivery budget.',
     services: [
       { label: 'Cloud audit & risk review', href: '/services/microsoft-cloud-audit/' },
       { label: 'Secure access & privileged identity', href: '/services/secure-cloud-access-privileged-identity/' }
@@ -71,11 +71,11 @@ const capabilityAreas = [
   },
   {
     number: '02',
-    title: 'Govern and improve',
-    text: 'Keep material controls, remediation ownership and operational evidence current after handover.',
+    title: 'Remediate and assure',
+    text: 'Move material findings to verified closure and keep the critical controls working after handover.',
     services: [
-      { label: 'Continuous secure governance', href: '/services/continuous-secure-cloud-governance/' },
-      { label: 'Automation & IT operations', href: '/services/automation-it-operations/' }
+      { label: 'Operational assurance', href: '/security-assurance/' },
+      { label: 'Continuous secure governance', href: '/services/continuous-secure-cloud-governance/' }
     ]
   },
   {
@@ -90,10 +90,10 @@ const capabilityAreas = [
   {
     number: '04',
     title: 'Extend operations',
-    text: 'Add focused senior capability where internal teams or delivery partners need leverage.',
+    text: 'Add focused senior capability and automation where internal teams or delivery partners need leverage.',
     services: [
       { label: 'Identity, endpoint & security', href: '/services/identity-endpoint-security/' },
-      { label: 'AI-enhanced IT operations', href: '/services/ai-enhanced-it-operations/' }
+      { label: 'Automation & IT operations', href: '/services/automation-it-operations/' }
     ]
   }
 ];
@@ -102,17 +102,17 @@ const deliverySteps = [
   {
     number: '01',
     title: 'Share the situation',
-    text: 'Describe the environment, current problem, expected outcome, stakeholders and timing.'
+    text: 'Describe the environment, open finding or operational problem, expected outcome, stakeholders and timing.'
   },
   {
     number: '02',
-    title: 'Agree scope and outputs',
-    text: 'Enki Tech confirms fit, responsibilities, deliverables, engagement model and the next decision point.'
+    title: 'Agree scope and acceptance',
+    text: 'Enki Tech confirms fit, responsibilities, deliverables, evidence and the exact condition for successful closure.'
   },
   {
     number: '03',
-    title: 'Deliver with handover',
-    text: 'Work is completed with clear communication, technical evidence, documentation and practical next steps.'
+    title: 'Deliver and prove the result',
+    text: 'Work is completed with implementation evidence, verification, documentation, handover and practical next steps.'
   }
 ];
 
@@ -122,31 +122,31 @@ export default function HomePage() {
       <section className="hero">
         <div className="container secureHeroGrid">
           <div className="secureHeroCopy">
-            <p className="heroKicker"><span aria-hidden="true"></span> Secure Microsoft Cloud for high-trust environments</p>
-            <h1>Know who can access critical cloud resources—and prove the controls still work.</h1>
+            <p className="heroKicker"><span aria-hidden="true"></span> Secure cloud · verified remediation · operational resilience</p>
+            <h1>Turn security and cloud risks into verified outcomes.</h1>
             <p className="heroText">
-              Enki Tech helps European IT leaders and delivery partners map cloud access, govern privileged identity, remediate material risk and maintain evidence as Microsoft environments change.
+              Enki Tech helps European organisations and delivery partners close Microsoft Cloud, identity and operational security gaps with clear ownership, implemented remediation, independent verification and reusable evidence.
             </p>
             <div className="heroActions">
-              <Link href="/services/secure-cloud-access-privileged-identity/" className="button">Explore the assessment</Link>
-              <Link href="/contact/?area=Secure%20Cloud%20Access%20%26%20Privileged%20Identity&engagement=Assessment%20or%20audit" className="button buttonGhost">Discuss your environment</Link>
+              <Link href="/security-assurance/" className="button">Explore Operational Assurance</Link>
+              <Link href="/contact/?area=Secure%20Cloud%20%26%20Cyber%20Operational%20Assurance" className="button buttonGhost">Discuss your environment</Link>
             </div>
             <ul className="heroCredentials" aria-label="Delivery credentials">
-              <li>Independent senior delivery</li>
               <li>Microsoft Cloud & hybrid</li>
-              <li>Europe-based</li>
+              <li>Security remediation & evidence</li>
+              <li>Independent European B2B delivery</li>
             </ul>
           </div>
-          <aside className="trustMap" aria-label="Secure cloud trust path">
+          <aside className="trustMap" aria-label="Operational assurance path">
             <div className="trustMapHeader">
               <div>
-                <p className="trustMapLabel">Critical access path</p>
-                <h2>Control the route to the resource</h2>
+                <p className="trustMapLabel">Operational assurance loop</p>
+                <h2>Move from finding to verified closure</h2>
               </div>
               <span className="trustStatus"><i aria-hidden="true"></i> Evidence-led</span>
             </div>
             <ol className="trustPath">
-              {trustPath.map((node, index) => (
+              {assurancePath.map((node, index) => (
                 <li key={node}>
                   <span>{String(index + 1).padStart(2, '0')}</span>
                   <strong>{node}</strong>
@@ -154,20 +154,20 @@ export default function HomePage() {
               ))}
             </ol>
             <div className="trustControlGrid">
-              <div><span>Access policy</span><strong>Conditional Access</strong></div>
-              <div><span>Elevation</span><strong>PIM & role governance</strong></div>
-              <div><span>Validation</span><strong>Drift & exception review</strong></div>
-              <div><span>Assurance</span><strong>Control evidence</strong></div>
+              <div><span>Identity</span><strong>Entra ID & PIM</strong></div>
+              <div><span>Endpoint</span><strong>Intune & Defender</strong></div>
+              <div><span>Cloud</span><strong>Azure & Microsoft 365</strong></div>
+              <div><span>Assurance</span><strong>Verification & evidence</strong></div>
             </div>
             <div className="trustOutcome">
               <span>Client result</span>
-              <strong>Prioritized remediation and a repeatable governance baseline</strong>
+              <strong>Less open risk, clearer ownership and evidence that the remediation actually worked</strong>
             </div>
           </aside>
         </div>
       </section>
 
-      <section className="controlJourneyBand" aria-label="Secure cloud improvement path">
+      <section className="controlJourneyBand" aria-label="Operational assurance improvement path">
         <div className="container controlJourneyGrid">
           {controlJourney.map((step) => (
             <article className="controlJourneyStep" key={step.number}>
@@ -185,8 +185,8 @@ export default function HomePage() {
         <div className="container">
           <SectionHeader
             eyebrow="What clients can buy now"
-            title="Start with evidence, then move from remediation to recurring assurance"
-            text="Each offer produces a defined decision or operating result. Scope begins with the critical resources, access paths and controls that matter to the organisation."
+            title="Start with a bounded problem. Move from readiness to remediation to recurring assurance."
+            text="The commercial path is designed around visible outcomes: expose the gap, fix the material risk, verify closure and keep the control effective over time."
           />
           <div className="commercialOfferGrid">
             {commercialOffers.map((offer) => (
@@ -232,8 +232,8 @@ export default function HomePage() {
         <div className="container capabilityOverviewGrid">
           <div className="capabilityOverviewIntro">
             <p className="eyebrow">Technical coverage</p>
-            <h2>One senior delivery layer across the Microsoft environment</h2>
-            <p>Capabilities are grouped around the work clients need to complete, while every specialist service remains available for detailed scope and evidence.</p>
+            <h2>One senior delivery layer across security, Microsoft Cloud and operations</h2>
+            <p>Capabilities are grouped around the work clients need to complete, while specialist Microsoft services remain available for detailed scope and delivery.</p>
             <Link href="/services/" className="button buttonLight">Explore all services</Link>
           </div>
           <div className="capabilityGroupGrid">
@@ -259,8 +259,8 @@ export default function HomePage() {
         <div className="container">
           <SectionHeader
             eyebrow="Decision tools"
-            title="Use the architecture and control questions before choosing a workstream"
-            text="Two practical resources help teams clarify the target operating model and identify where evidence, ownership or control design is still incomplete."
+            title="Use architecture, control evidence and operational questions before choosing a workstream"
+            text="Practical resources help teams clarify the target operating model and identify where evidence, ownership or control design is still incomplete."
           />
           <div className="resourceSpotlightGrid">
             <article className="resourceSpotlight resourceSpotlightPrimary">
@@ -312,8 +312,8 @@ export default function HomePage() {
         <div className="container">
           <SectionHeader
             eyebrow="How an engagement starts"
-            title="A simple path from technical problem to agreed delivery"
-            text="Clients do not need to diagnose the exact service before making contact. Start with the situation, the required result and the constraints."
+            title="A simple path from open risk to agreed technical outcome"
+            text="Clients do not need to diagnose the exact service before making contact. Start with the finding, required result and constraints."
           />
           <div className="deliveryProcessGrid">
             {deliverySteps.map((step) => (
@@ -331,7 +331,7 @@ export default function HomePage() {
         <div className="container">
           <SectionHeader
             eyebrow="Experience"
-            title="Credibility based on enterprise infrastructure delivery"
+            title="Credibility based on enterprise infrastructure and operational delivery"
             text="Selected experience themes are presented in sanitized form to protect client confidentiality while showing relevant delivery capability."
           />
           <div className="homepageProofGrid">
@@ -352,10 +352,11 @@ export default function HomePage() {
       </section>
 
       <CTA
-        eyebrow="Start with the critical path"
-        title="Which identities can reach the resources you cannot afford to lose control of?"
-        text="Share the environment, the critical resource or recurring governance concern. Enki Tech will identify whether an assessment, remediation workstream or recurring control review is the most useful next step."
-        buttonLabel="Request a readiness discussion"
+        eyebrow="Start with the open risk"
+        title="Which security findings are still open because ownership, remediation or evidence is unclear?"
+        text="Share the Microsoft environment, the finding or backlog and the required outcome. Enki Tech will identify whether the right first step is readiness, remediation or recurring assurance."
+        buttonLabel="Discuss the operational gap"
+        buttonHref="/contact/?area=Secure%20Cloud%20%26%20Cyber%20Operational%20Assurance"
       />
     </>
   );
