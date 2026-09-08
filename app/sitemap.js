@@ -23,6 +23,7 @@ const routes = [
   '/resources/privileged-identity-assurance-acceptance-specification',
   '/resources/procurement-capability-sheet',
   '/resources/cra-incident-dry-run-playbook',
+  '/resources/secure-cloud-remediation-checklist',
   '/partners',
   '/about',
   '/contact',
