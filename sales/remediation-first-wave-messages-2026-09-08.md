@@ -4,6 +4,14 @@ Date: 2026-09-08
 
 Purpose: send 8 highly targeted first touches. Keep messages short, concrete and non-generic. Use the public trigger only as context; do not imply the organisation has a known problem unless they confirm it.
 
+## Activation status
+
+- [x] LinkedIn company launch post published on 2026-09-08
+- [ ] Founder amplification on launch post
+- [ ] Day 1 outreach sent: Brussels Airport Company, Elia Group, Resilient Security, Easi
+- [ ] Day 2 outreach sent: KBC, AXA Belgium, Infrabel, Orbid
+- [ ] First replies logged
+
 ## 1. Brussels Airport Company — Pieter Poelman / CIO
 
 **LinkedIn connection note**
