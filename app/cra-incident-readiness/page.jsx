@@ -190,8 +190,8 @@ export default function CRAIncidentReadinessPage() {
               The highest-value follow-on work is technical: close evidence gaps, improve vulnerability-to-product mapping, automate workflow steps, strengthen identity/cloud controls and establish repeatable assurance. This keeps the relationship focused on measurable operational outcomes rather than generic compliance consulting.
             </p>
             <div className="heroActions">
-              <Link href="/security-assurance/" className="button">Secure Cloud & Operational Assurance</Link>
-              <Link href="/resources/procurement-capability-sheet/" className="button buttonGhost dark">Procurement capability</Link>
+              <Link href="/secure-cloud-remediation/" className="button">Remediate the technical gaps</Link>
+              <Link href="/security-assurance/" className="button buttonGhost dark">View Operational Assurance</Link>
             </div>
           </div>
         </div>

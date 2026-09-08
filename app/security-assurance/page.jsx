@@ -36,7 +36,7 @@ const offers = [
     tag: 'Fixed-scope remediation',
     title: 'Secure Cloud Remediation Sprint',
     text: 'Turn a bounded set of Microsoft Cloud, identity or endpoint findings into implemented fixes, technical verification against agreed acceptance criteria and defensible closure evidence.',
-    href: '/contact/?area=Secure%20Cloud%20Remediation&engagement=Direct%20project',
+    href: '/secure-cloud-remediation/',
     result: 'Prioritized fixes · implementation · verification · closure evidence'
   },
   {

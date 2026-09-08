@@ -43,8 +43,8 @@ export default function ServicesPage() {
               This is the operating model behind Enki Tech security and cloud engagements. It is designed to reduce open risk, clarify ownership and leave the client with evidence that the technical change actually worked.
             </p>
             <div className="heroActions">
-              <Link href="/security-assurance/" className="button">View the assurance model</Link>
-              <Link href="/cra-incident-readiness/" className="button buttonGhost dark">CRA readiness sprint</Link>
+              <Link href="/secure-cloud-remediation/" className="button">View the remediation sprint</Link>
+              <Link href="/security-assurance/" className="button buttonGhost dark">View the assurance model</Link>
             </div>
           </div>
         </div>
