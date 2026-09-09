@@ -18,7 +18,8 @@ const headerContent = {
       { label: 'Services', href: '/services/' },
       { label: 'Experience', href: '/experience/' },
       { label: 'Partners', href: '/partners/' },
-      { label: 'About', href: '/about/' }
+      { label: 'About', href: '/about/' },
+      { label: 'Contact', href: '/contact/' }
     ]
   },
   fr: {
