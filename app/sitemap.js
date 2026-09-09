@@ -1,4 +1,5 @@
 import { engagements, experience, insights, services, site } from '../data/site';
+import { localizedContent, supportedLocales } from '../data/localized';
 
 export const dynamic = 'force-static';
 
@@ -31,8 +32,18 @@ const routes = [
   '/legal/privacy'
 ];
 
+const localizedRoutes = supportedLocales.flatMap((locale) => [
+  `/${locale}`,
+  `/${locale}/services`,
+  ...localizedContent[locale].services.map((service) => `/${locale}/services/${service.slug}`),
+  `/${locale}/experience`,
+  `/${locale}/about`,
+  `/${locale}/contact`,
+  `/${locale}/legal/privacy`
+]);
+
 export default function sitemap() {
-  return routes.map((route) => ({
+  return [...routes, ...localizedRoutes].map((route) => ({
     url: `${site.url}${route}/`,
     lastModified: new Date(),
     changeFrequency: route === '' || route === '/security-assurance' || route === '/secure-cloud-remediation' || route === '/insights/cra-reporting-11-september-2026' ? 'weekly' : 'monthly',

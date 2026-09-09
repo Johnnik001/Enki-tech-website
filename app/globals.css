@@ -137,6 +137,32 @@ li {
   color: var(--white);
 }
 
+.languageSwitch {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.nav .languageSwitch a {
+  min-width: 30px;
+  padding: 5px 7px;
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.72rem;
+  font-weight: 850;
+  line-height: 1;
+  text-align: center;
+}
+
+.nav .languageSwitch a[aria-current='page'] {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.16);
+}
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -2352,6 +2378,10 @@ textarea:focus-visible {
     display: grid;
     justify-items: start;
     gap: 16px;
+  }
+
+  .languageSwitch {
+    margin-top: 2px;
   }
 
   .navCta {

@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
-export function Logo() {
+export function Logo({ homeHref = '/', homeLabel = 'Enki Tech home' }) {
   return (
-    <Link href="/" className="logo" aria-label="Enki Tech home">
+    <Link href={homeHref} className="logo" aria-label={homeLabel}>
       <img
         className="logoImage"
         src="/logo/enki-tech-logo-horizontal-white-exact.png"
