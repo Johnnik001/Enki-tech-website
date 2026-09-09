@@ -4,12 +4,12 @@ import { CTA } from '../../components/CTA';
 export const metadata = {
   title: 'CRA Incident Reporting Readiness Sprint',
   description:
-    'A fixed-scope technical dry run for EU manufacturers to test whether vulnerability and severe-incident reporting can move from awareness to 24-hour early warning, 72-hour notification, remediation, SRP submission readiness and evidence.',
+    'A fixed-scope technical dry run for EU manufacturers to test whether vulnerability and severe-incident reporting can move from awareness to 24-hour early warning, 72-hour notification, SRP access and submission readiness, remediation and evidence.',
   alternates: { canonical: '/cra-incident-readiness/' },
   openGraph: {
     title: 'CRA Incident Reporting Readiness Sprint | Enki Tech',
     description:
-      'Test the operational path from security event to product impact, ownership, independent deadline control, 24/72-hour reporting data, SRP submission readiness, remediation and audit-ready evidence.',
+      'Test the operational path from security event to product impact, ownership, independent deadline control, 24/72-hour reporting data, SRP access, remediation and audit-ready evidence.',
     url: '/cra-incident-readiness/',
     type: 'website'
   },
@@ -17,7 +17,7 @@ export const metadata = {
     card: 'summary',
     title: 'CRA Incident Reporting Readiness Sprint | Enki Tech',
     description:
-      'Test the operational path from security event to product impact, ownership, 24/72-hour reporting data, SRP submission readiness, remediation and evidence.'
+      'Test the operational path from security event to product impact, ownership, 24/72-hour reporting data, SRP access, remediation and evidence.'
   }
 };
 
@@ -26,7 +26,7 @@ const outcomes = [
   'Independent regulatory clock anchored to the actual awareness timestamp',
   'Product, version, owner and evidence-source mapping for the selected scenario',
   '24-hour early-warning and 72-hour notification data-readiness review',
-  'SRP operational readiness covering representative ownership, backup coverage and submission handoff',
+  'SRP operational readiness covering intended Assigned Representative access, EU Login/MFA, backup coverage and submission handoff',
   'Escalation matrix with primary and backup owners for critical handoffs',
   'Evidence map showing what can be retrieved quickly and what remains manual',
   'Prioritized remediation backlog focused on operational bottlenecks',
@@ -38,9 +38,9 @@ const workflow = [
   ['Clock', 'Start the independent deadline control', 'Calculate internal 24-hour and 72-hour deadlines from the awareness timestamp rather than depending on a portal timer or individual memory.'],
   ['Impact', 'Map product and affected versions', 'Determine whether the selected product or version is affected and identify the business and security context.'],
   ['Own', 'Assign decision and submission authority', 'Identify the primary owner, backup owner and escalation path across Security, Engineering, Product and Legal/Compliance.'],
+  ['SRP', 'Validate submission access', 'Confirm the intended Assigned Representative users can access the Single Reporting Platform through EU Login with MFA and that backup coverage and the submission handoff are operationally understood.'],
   ['24h', 'Prepare early-warning data', 'Test whether required technical facts can be assembled inside the first reporting window.'],
   ['72h', 'Complete notification data', 'Validate the deeper impact, mitigation, status and evidence needed for the main notification workflow.'],
-  ['SRP', 'Validate the human submission path', 'Confirm that the responsible representative, backup coverage, authentication and submission handoff are operationally understood.'],
   ['Fix', 'Track remediation', 'Connect the reporting process to corrective or mitigating action, validation and an owned backlog.'],
   ['Close', 'Preserve evidence', 'Confirm that the final reporting path and supporting evidence can be reproduced after the event.']
 ];
@@ -60,7 +60,7 @@ export default function CRAIncidentReadinessPage() {
           <p className="eyebrow">Cyber Resilience Act · 24/72h reporting · SRP operational readiness</p>
           <h1>Can your team move from vulnerability awareness to defensible CRA reporting data in time?</h1>
           <p>
-            Enki Tech runs a focused technical dry run for manufacturers of products with digital elements. The sprint tests the operational path from detection and product impact to independent deadline control, ownership, reporting data, SRP submission readiness, remediation and evidence—before the first real event starts the clock.
+            Enki Tech runs a focused technical dry run for manufacturers of products with digital elements. The sprint tests the operational path from detection and product impact to independent deadline control, ownership, reporting data, SRP access and submission readiness, remediation and evidence—before the first real event starts the clock.
           </p>
           <div className="heroActions">
             <Link href="/contact/?area=CRA%20Incident%20Readiness&engagement=Assessment%20or%20audit" className="button">Book a CRA reporting dry run</Link>
@@ -76,12 +76,33 @@ export default function CRAIncidentReadinessPage() {
             <h2>The regulation may be documented. The operational handoffs still fail under time pressure.</h2>
           </div>
           <p>
-            A scanner, ticketing tool, SBOM, incident policy, legal guidance and reporting portal do not automatically create a working 24/72-hour response path. The sprint tests whether people, data, deadline controls and evidence can be mobilized quickly enough when an actively exploited vulnerability or severe product-security incident is discovered.
+            A scanner, ticketing tool, SBOM, incident policy, legal guidance and reporting portal do not automatically create a working 24/72-hour response path. The sprint tests whether people, data, access, deadline controls and evidence can be mobilized quickly enough when an actively exploited vulnerability or severe product-security incident is discovered.
           </p>
         </div>
       </section>
 
       <section className="section sectionAlt">
+        <div className="container assuranceBoundary">
+          <div>
+            <p className="eyebrow">Operational update · 9 September 2026</p>
+            <h2>Article 14 applies from 11 September—and ENISA has now published the SRP access path.</h2>
+          </div>
+          <div>
+            <p>
+              Regulation (EU) 2024/2847 states that CRA Article 14 applies from 11 September 2026. ENISA&apos;s SRP FAQ, updated on 8 September, says the Single Reporting Platform is scheduled to become operational on the same date for mandatory manufacturer notifications. ENISA&apos;s registration guidance says Assigned Representative users authenticate through EU Login and need MFA to access the platform.
+            </p>
+            <p>
+              For a dry run, that means the submission access path should be tested alongside awareness time, ownership, product mapping, 24/72-hour evidence retrieval and remediation handoffs.
+            </p>
+            <div className="heroActions">
+              <Link href="/insights/cra-reporting-11-september-2026/" className="button">Read the 11 September insight</Link>
+              <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/frequently-asked-questions" target="_blank" rel="noreferrer" className="button buttonGhost dark">ENISA SRP FAQ</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
         <div className="container">
           <div className="assuranceTableHeader">
             <div>
@@ -108,7 +129,7 @@ export default function CRAIncidentReadinessPage() {
               <p className="eyebrow">Dry-run path</p>
               <h2>From awareness time to verified technical closure</h2>
             </div>
-            <p>Every stage is linked to an owner, source system, evidence requirement and target response time.</p>
+            <p>Every stage is linked to an owner, source system, access dependency, evidence requirement and target response time.</p>
           </div>
           <div className="assuranceTable" role="table" aria-label="CRA incident dry-run workflow">
             <div className="assuranceTableRow assuranceTableLabels" role="row">
@@ -142,7 +163,7 @@ export default function CRAIncidentReadinessPage() {
               <div className="principle">Security, Engineering/Product and compliance decision-makers represented</div>
               <div className="principle">Existing vulnerability, incident, inventory and evidence sources reviewed</div>
               <div className="principle">Independent 24/72-hour deadline tracking and escalation path tested</div>
-              <div className="principle">SRP submission ownership and backup handoff reviewed</div>
+              <div className="principle">Assigned Representative SRP access, EU Login/MFA and backup handoff reviewed</div>
               <div className="principle">Short management readout plus technical remediation backlog</div>
             </div>
           </div>
