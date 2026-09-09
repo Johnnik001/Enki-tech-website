@@ -11,6 +11,14 @@ export const metadata = {
 
 const featuredItems = [
   {
+    slug: 'cra-reporting-11-september-2026',
+    label: 'Cyber Resilience Act',
+    displayDate: '9 September 2026',
+    title: 'CRA reporting starts on 11 September: what manufacturers should test before the first 24/72-hour clock',
+    intro:
+      'ENISA has published fresh operational guidance for the Single Reporting Platform. The immediate readiness test is whether awareness time, ownership, SRP access, evidence and remediation handoffs work under pressure.'
+  },
+  {
     slug: 'standing-privileged-access-microsoft-entra-id',
     label: 'Privileged identity',
     displayDate: '26 August 2026',
