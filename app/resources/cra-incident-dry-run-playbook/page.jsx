@@ -4,12 +4,12 @@ import { PrintButton } from '../../../components/PrintButton';
 export const metadata = {
   title: 'CRA 24/72h Incident Dry-Run Checklist',
   description:
-    'A practical checklist for testing the technical path from awareness of an actively exploited vulnerability or severe incident to CRA reporting data, remediation and evidence.',
+    'A practical checklist for testing the technical path from awareness of an actively exploited vulnerability or severe incident to CRA reporting data, SRP access, remediation and evidence.',
   alternates: { canonical: '/resources/cra-incident-dry-run-playbook/' },
   openGraph: {
     title: 'CRA 24/72h Incident Dry-Run Checklist | Enki Tech',
     description:
-      'Test whether product, security, engineering and compliance teams can assemble the right technical facts and evidence under a 24/72-hour reporting clock.',
+      'Test whether product, security, engineering and compliance teams can assemble the right technical facts, SRP access and evidence under a 24/72-hour reporting clock.',
     url: '/resources/cra-incident-dry-run-playbook/',
     type: 'article'
   },
@@ -17,7 +17,7 @@ export const metadata = {
     card: 'summary',
     title: 'CRA 24/72h Incident Dry-Run Checklist | Enki Tech',
     description:
-      'Test whether product, security, engineering and compliance teams can assemble the right technical facts and evidence under a 24/72-hour reporting clock.'
+      'Test whether product, security, engineering and compliance teams can assemble the right technical facts, SRP access and evidence under a 24/72-hour reporting clock.'
   }
 };
 
@@ -26,17 +26,18 @@ const checks = [
   ['02', 'Event classification', 'Determine whether the scenario is an actively exploited vulnerability, a severe product-security incident or neither.'],
   ['03', 'Product and version mapping', 'Identify affected product families, versions, components and markets using the organisation’s source of truth.'],
   ['04', 'Primary and backup ownership', 'Name the operational owner, decision authority and backup path if a key person is unavailable.'],
-  ['05', '24-hour data package', 'Test whether the minimum technical facts for an early warning can be assembled inside the first reporting window.'],
-  ['06', '72-hour data package', 'Validate deeper impact, mitigation status, affected scope and evidence for the main notification workflow.'],
-  ['07', 'Remediation ownership', 'Connect reporting to corrective or mitigating action, engineering ownership, validation and backlog tracking.'],
-  ['08', 'Final-report path', 'Define how corrective measures, closure evidence and final technical facts will be assembled after the initial reporting windows.'],
-  ['09', 'Evidence retention', 'Confirm that key decisions, timestamps, owners, technical findings and remediation evidence can be reconstructed later.'],
-  ['10', 'Timed re-test', 'Repeat the scenario after improvements and compare retrieval time, handoff quality and evidence completeness.']
+  ['05', 'SRP access readiness', 'Confirm the intended Assigned Representative users can access the ENISA Single Reporting Platform through EU Login with MFA and that backup coverage is understood.'],
+  ['06', '24-hour data package', 'Test whether the minimum technical facts for an early warning can be assembled inside the first reporting window.'],
+  ['07', '72-hour data package', 'Validate deeper impact, mitigation status, affected scope and evidence for the main notification workflow.'],
+  ['08', 'Remediation ownership', 'Connect reporting to corrective or mitigating action, engineering ownership, validation and backlog tracking.'],
+  ['09', 'Final-report path', 'Define how corrective measures, closure evidence and final technical facts will be assembled after the initial reporting windows.'],
+  ['10', 'Evidence retention', 'Confirm that key decisions, timestamps, owners, technical findings and remediation evidence can be reconstructed later.'],
+  ['11', 'Timed re-test', 'Repeat the scenario after improvements and compare retrieval time, access readiness, handoff quality and evidence completeness.']
 ];
 
 const readiness = [
-  ['Green', 'The owner, source system and evidence are known; the step can be completed within the target time without heroic effort.'],
-  ['Amber', 'The step is possible but depends on manual correlation, unclear ownership, one key person or slow evidence retrieval.'],
+  ['Green', 'The owner, source system, access path and evidence are known; the step can be completed within the target time without heroic effort.'],
+  ['Amber', 'The step is possible but depends on manual correlation, unclear ownership, one key person, fragile access or slow evidence retrieval.'],
   ['Red', 'The organisation cannot reliably complete the step inside the required workflow or cannot produce defensible evidence.']
 ];
 
@@ -48,7 +49,7 @@ export default function CRAIncidentDryRunPlaybookPage() {
           <p className="eyebrow">Enki Tech resource · CRA incident readiness</p>
           <h1>CRA 24/72h Incident Dry-Run Checklist</h1>
           <p>
-            A compact technical checklist for testing whether an organisation can move from awareness of an actively exploited vulnerability or severe product-security incident to owned decisions, reporting data, remediation and evidence.
+            A compact technical checklist for testing whether an organisation can move from awareness of an actively exploited vulnerability or severe product-security incident to owned decisions, reporting data, SRP access, remediation and evidence.
           </p>
           <div className="heroActions resourceActions">
             <PrintButton />
@@ -64,12 +65,31 @@ export default function CRAIncidentDryRunPlaybookPage() {
             <h2>Run the workflow against one realistic scenario and use a clock</h2>
           </div>
           <p>
-            The objective is not to debate legal interpretation during the exercise. The objective is to expose operational delay: missing product mapping, unclear authority, unavailable evidence, fragile handoffs and remediation steps that depend on a single person.
+            The objective is not to debate legal interpretation during the exercise. The objective is to expose operational delay: missing product mapping, unclear authority, unavailable evidence, fragile SRP access, weak handoffs and remediation steps that depend on a single person.
           </p>
         </div>
       </section>
 
       <section className="section sectionAlt">
+        <div className="container assuranceBoundary">
+          <div>
+            <p className="eyebrow">Operational update · 9 September 2026</p>
+            <h2>Include the submission access path in the dry run</h2>
+          </div>
+          <div>
+            <p>
+              ENISA&apos;s latest guidance says the CRA Single Reporting Platform is scheduled to become operational on 11 September 2026. Assigned Representative users authenticate through EU Login and need MFA to access the platform. Test that access, backup coverage and submission ownership before treating the workflow as ready.
+            </p>
+            <p>
+              <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/frequently-asked-questions" target="_blank" rel="noreferrer">ENISA SRP FAQ</a>
+              {' · '}
+              <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-ar-user-registration" target="_blank" rel="noreferrer">ENISA user-registration guidance</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
         <div className="container">
           <div className="assuranceTable" role="table" aria-label="CRA incident readiness checklist">
             <div className="assuranceTableRow assuranceTableLabels" role="row">
@@ -84,7 +104,7 @@ export default function CRAIncidentDryRunPlaybookPage() {
                 <div className="assuranceStage" role="cell"><strong>{number}</strong></div>
                 <div role="cell" data-label="Control point"><strong>{title}</strong></div>
                 <div role="cell" data-label="What to test">{text}</div>
-                <div role="cell" data-label="Evidence source">Name the authoritative system, document or decision record.</div>
+                <div role="cell" data-label="Evidence source">Name the authoritative system, access record, document or decision record.</div>
                 <div role="cell" data-label="Result">Green / Amber / Red</div>
               </div>
             ))}
@@ -107,7 +127,7 @@ export default function CRAIncidentDryRunPlaybookPage() {
             <p className="eyebrow">Evidence principle</p>
             <h2>If evidence requires a two-week audit scramble, it is not 24-hour ready.</h2>
             <p>
-              The strongest remediation opportunities usually sit between tools and teams: vulnerability intelligence that is not linked to product inventory, tickets without clear authority, evidence that lives in screenshots, or decisions that depend on one senior engineer being available.
+              The strongest remediation opportunities usually sit between tools and teams: vulnerability intelligence that is not linked to product inventory, tickets without clear authority, evidence that lives in screenshots, access that depends on one person, or decisions that depend on one senior engineer being available.
             </p>
           </div>
         </div>

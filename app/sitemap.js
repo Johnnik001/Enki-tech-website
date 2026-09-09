@@ -16,6 +16,7 @@ const routes = [
   ...experience.map((item) => `/experience/${item.slug}`),
   '/insights',
   ...insights.map((insight) => `/insights/${insight.slug}`),
+  '/insights/cra-reporting-11-september-2026',
   '/insights/standing-privileged-access-microsoft-entra-id',
   '/insights/ncia-simplified-procurement-specialist-capabilities',
   '/resources/secure-cloud-control-matrix',
@@ -34,7 +35,7 @@ export default function sitemap() {
   return routes.map((route) => ({
     url: `${site.url}${route}/`,
     lastModified: new Date(),
-    changeFrequency: route === '' || route === '/security-assurance' || route === '/secure-cloud-remediation' ? 'weekly' : 'monthly',
-    priority: route === '' ? 1 : route === '/security-assurance' || route === '/secure-cloud-remediation' || route === '/privileged-identity-assurance' || route === '/cra-incident-readiness' || route.startsWith('/services') || route.startsWith('/experience/') || route.startsWith('/resources/') || route === '/partners' ? 0.8 : 0.7
+    changeFrequency: route === '' || route === '/security-assurance' || route === '/secure-cloud-remediation' || route === '/insights/cra-reporting-11-september-2026' ? 'weekly' : 'monthly',
+    priority: route === '' ? 1 : route === '/security-assurance' || route === '/secure-cloud-remediation' || route === '/privileged-identity-assurance' || route === '/cra-incident-readiness' || route === '/insights/cra-reporting-11-september-2026' || route.startsWith('/services') || route.startsWith('/experience/') || route.startsWith('/resources/') || route === '/partners' ? 0.8 : 0.7
   }));
 }
