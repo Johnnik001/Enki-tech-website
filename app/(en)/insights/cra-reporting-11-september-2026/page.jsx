@@ -42,8 +42,10 @@ export default function CRASeptember2026InsightPage() {
             Under CRA Article 14, manufacturers must report actively exploited vulnerabilities and severe incidents affecting products with digital elements through the Single Reporting Platform. The regulation provides for an early warning without undue delay and in any event within 24 hours of awareness, followed by a fuller notification within 72 hours where the relevant information has not already been provided.
           </p>
           <p>
-            ENISA&apos;s latest SRP FAQ, updated on 8 September 2026, states that the platform is scheduled to be operational from 11 September. ENISA&apos;s user-registration guidance also states that Assigned Representative users authenticate through EU Login and need MFA to access the platform.
+            ENISA&apos;s latest SRP FAQ, updated on 9 September 2026, states that the platform is scheduled to be operational from 11 September. ENISA&apos;s user-registration guidance also states that Assigned Representative users authenticate through EU Login and need MFA to access the platform.
           </p>
+
+          <p><strong>Update · 10 September 2026:</strong> Prepare EU Login/MFA in advance. ENISA recommends SRP registration when a real notification is needed. Rehearse with offline templates; do not submit dummy notifications to the live platform.</p>
 
           <h2>Five things to test before the first real event</h2>
           <div className="listPanel wide">

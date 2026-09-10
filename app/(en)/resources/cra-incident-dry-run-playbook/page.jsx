@@ -22,15 +22,15 @@ export const metadata = {
 };
 
 const checks = [
-  ['01', 'Awareness time', 'Record the exact time the organisation becomes aware of the event and the source that established credibility.'],
+  ['01', 'Awareness time', 'Preserve the earliest relevant awareness timestamp and source. Internal triage or approval must not reset the clock.'],
   ['02', 'Event classification', 'Determine whether the scenario is an actively exploited vulnerability, a severe product-security incident or neither.'],
   ['03', 'Product and version mapping', 'Identify affected product families, versions, components and markets using the organisation’s source of truth.'],
   ['04', 'Primary and backup ownership', 'Name the operational owner, decision authority and backup path if a key person is unavailable.'],
-  ['05', 'SRP access readiness', 'Confirm the intended Assigned Representative users can access the ENISA Single Reporting Platform through EU Login with MFA and that backup coverage is understood.'],
+  ['05', 'SRP preparation', 'Check personal EU Login/MFA preparation and representative responsibilities. Use offline templates for the exercise; follow ENISA guidance on registration timing and existing access.'],
   ['06', '24-hour data package', 'Test whether the minimum technical facts for an early warning can be assembled inside the first reporting window.'],
   ['07', '72-hour data package', 'Validate deeper impact, mitigation status, affected scope and evidence for the main notification workflow.'],
   ['08', 'Remediation ownership', 'Connect reporting to corrective or mitigating action, engineering ownership, validation and backlog tracking.'],
-  ['09', 'Final-report path', 'Define how corrective measures, closure evidence and final technical facts will be assembled after the initial reporting windows.'],
+  ['09', 'Final-report path', 'Vulnerability: track 14 days from corrective-measure availability. Severe incident: track one month from the incident notification. Retain the relevant anchor timestamp and assign the final-report owner.'],
   ['10', 'Evidence retention', 'Confirm that key decisions, timestamps, owners, technical findings and remediation evidence can be reconstructed later.'],
   ['11', 'Timed re-test', 'Repeat the scenario after improvements and compare retrieval time, access readiness, handoff quality and evidence completeness.']
 ];
@@ -65,7 +65,7 @@ export default function CRAIncidentDryRunPlaybookPage() {
             <h2>Run the workflow against one realistic scenario and use a clock</h2>
           </div>
           <p>
-            The objective is not to debate legal interpretation during the exercise. The objective is to expose operational delay: missing product mapping, unclear authority, unavailable evidence, fragile SRP access, weak handoffs and remediation steps that depend on a single person.
+            Agree a simulated scenario with the client reporting owner, then expose operational delay: missing product mapping, unclear authority, unavailable evidence, fragile SRP access, weak handoffs and remediation steps that depend on a single person.
           </p>
         </div>
       </section>
@@ -73,12 +73,12 @@ export default function CRAIncidentDryRunPlaybookPage() {
       <section className="section sectionAlt">
         <div className="container assuranceBoundary">
           <div>
-            <p className="eyebrow">Operational update · 9 September 2026</p>
+            <p className="eyebrow">Operational update · 10 September 2026</p>
             <h2>Include the submission access path in the dry run</h2>
           </div>
           <div>
             <p>
-              ENISA&apos;s latest guidance says the CRA Single Reporting Platform is scheduled to become operational on 11 September 2026. Assigned Representative users authenticate through EU Login and need MFA to access the platform. Test that access, backup coverage and submission ownership before treating the workflow as ready.
+              Prepare personal EU Login accounts with MFA and a backup handoff. ENISA recommends registering on the SRP when a real notification is needed. Rehearse using offline templates, without submitting a test notification. Where representatives already have access, review the actual role permissions rather than assuming backups can see every report.
             </p>
             <p>
               <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/frequently-asked-questions" target="_blank" rel="noreferrer">ENISA SRP FAQ</a>

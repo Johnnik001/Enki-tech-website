@@ -1,15 +1,15 @@
 # CRA September 2026 — Sales Trigger Activation
 
-Date: 2026-09-09
+Date: 2026-09-10
 
 ## Trigger
 
-CRA Article 14 applies from 11 September 2026. ENISA says the Single Reporting Platform is scheduled to become operational on the same date for mandatory manufacturer notifications. ENISA guidance updated 8 September also documents Assigned Representative access through EU Login with MFA.
+CRA Article 14 applies from 11 September 2026. ENISA says the Single Reporting Platform is scheduled to become operational on the same date for mandatory manufacturer notifications. ENISA FAQ updated 9 September documents personal EU Login/MFA and recommends SRP registration when a real notification is needed. Use offline templates for exercises; do not submit dummy notifications or promise an SRP API integration.
 
 ## ICP
 
 Use only for organisations likely to be manufacturers of products with digital elements or partners serving them:
-- software and SaaS product companies
+- manufacturers of software products placed on the EU market; assess SaaS and remote data-processing scope individually
 - industrial technology / connected-device manufacturers
 - cybersecurity product vendors
 - embedded / IoT / OT product manufacturers
@@ -45,7 +45,7 @@ CTA: send the dry-run checklist first; propose a 20-minute fit check only after 
 1. Are you acting as a manufacturer of products with digital elements, or advising one?
 2. If an Article 14 event occurred now, where is the authoritative awareness time recorded?
 3. Who owns the 24/72-hour workflow and backup submission path?
-4. Can the intended Assigned Representative users access the SRP with EU Login/MFA?
+4. Are personal EU Login/MFA, representative roles and backup handoffs prepared, and is ENISA’s registration guidance understood?
 5. What evidence or product data still requires manual correlation?
 6. Who owns technical remediation after reporting?
 

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { CTA } from '../../components/CTA';
+import { AssuranceOffers } from '../../components/AssuranceOffers';
 import { SectionHeader } from '../../components/SectionHeader';
 import { engagements, experience, insights } from '../../data/site';
 
@@ -30,30 +31,6 @@ const controlJourney = [
     number: '04',
     title: 'Keep proving it',
     text: 'Preserve evidence and review drift, privilege and recurring control effectiveness as the environment changes.'
-  }
-];
-
-const commercialOffers = [
-  {
-    tag: 'Time-sensitive EU readiness',
-    title: 'CRA Incident Reporting Readiness Sprint',
-    text: 'Test whether one product-security scenario can move from awareness to 24/72-hour reporting data, remediation and defensible evidence before a real event starts the clock.',
-    result: 'Timed dry run · owner map · evidence gaps · remediation backlog',
-    href: '/cra-incident-readiness/'
-  },
-  {
-    tag: 'Fixed-scope remediation',
-    title: 'Secure Cloud Remediation Sprint',
-    text: 'Turn a bounded set of Microsoft Cloud, identity or endpoint findings into implemented fixes, technical verification and closure evidence.',
-    result: 'Prioritized fixes · implementation · verification · evidence',
-    href: '/secure-cloud-remediation/'
-  },
-  {
-    tag: 'Recurring assurance',
-    title: 'Continuous Security Assurance',
-    text: 'Keep critical controls effective after remediation through recurring evidence review, privileged-access checks, drift review and an owned improvement backlog.',
-    result: 'Control review · drift · evidence · improvement backlog',
-    href: '/services/continuous-secure-cloud-governance/'
   }
 ];
 
@@ -184,21 +161,11 @@ export default function HomePage() {
       <section className="section commercialOffersSection">
         <div className="container">
           <SectionHeader
-            eyebrow="What clients can buy now"
-            title="Start with a bounded problem. Move from readiness to remediation to recurring assurance."
-            text="The commercial path is designed around visible outcomes: expose the gap, fix the material risk, verify closure and keep the control effective over time."
+            eyebrow="Choose your starting point"
+            title="Assess the risk. Fix the gaps. Keep controls working."
+            text="Start with an identity assessment or a CRA reporting exercise for an in-scope product. If you already have a defined Microsoft backlog, move directly to remediation."
           />
-          <div className="commercialOfferGrid">
-            {commercialOffers.map((offer) => (
-              <article className="commercialOfferCard" key={offer.title}>
-                <p className="tag">{offer.tag}</p>
-                <h2>{offer.title}</h2>
-                <p>{offer.text}</p>
-                <div className="commercialOfferResult"><span>Output</span>{offer.result}</div>
-                <Link href={offer.href} className="textLink">View the offer <span aria-hidden="true">→</span></Link>
-              </article>
-            ))}
-          </div>
+          <AssuranceOffers />
         </div>
       </section>
 

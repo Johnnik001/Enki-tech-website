@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { CTA } from '../../../components/CTA';
+import { AssuranceOffers } from '../../../components/AssuranceOffers';
 import { SectionHeader } from '../../../components/SectionHeader';
 import { ServiceCards } from '../../../components/ServiceCards';
 import { engagements } from '../../../data/site';
@@ -28,31 +29,21 @@ export default function ServicesPage() {
       </section>
 
       <section className="section sectionAlt">
-        <div className="container splitGrid">
-          <div>
-            <p className="eyebrow">Flagship commercial path</p>
-            <h2>From security finding to verified closure.</h2>
-            <p>
-              Start with a bounded readiness or risk problem, move into technical remediation, then retain only the recurring assurance that protects the result over time.
-            </p>
-          </div>
-          <div className="quoteCard">
-            <p className="eyebrow">Operational assurance</p>
-            <h2>Detect → Prioritize → Assign → Remediate → Verify → Prove</h2>
-            <p>
-              This is the operating model behind Enki Tech security and cloud engagements. It is designed to reduce open risk, clarify ownership and leave the client with evidence that the technical change actually worked.
-            </p>
-            <div className="heroActions">
-              <Link href="/secure-cloud-remediation/" className="button">View the remediation sprint</Link>
-              <Link href="/security-assurance/" className="button buttonGhost dark">View the assurance model</Link>
-            </div>
-          </div>
+        <div className="container">
+          <SectionHeader
+            eyebrow="Assess · Fix · Operate"
+            title="Choose the outcome your team needs next."
+            text="Start with an assessment or a reporting exercise. Move directly to remediation when the findings are already clear, then agree recurring reviews where they protect the result."
+          />
+          <AssuranceOffers />
+          <p className="serviceContextLink">Working through CRA or NIS2 requirements? <Link href="/security-assurance/#cra-nis2">See how technical delivery supports each.</Link></p>
         </div>
       </section>
 
       <section className="section">
         <div className="container">
-          <ServiceCards headingLevel="h2" />
+          <SectionHeader eyebrow="Technical capabilities" title="Senior Microsoft delivery behind each engagement." text="Use these service lines to define the technical scope, including standalone project and operational support." />
+          <ServiceCards headingLevel="h3" />
         </div>
       </section>
 
@@ -78,48 +69,6 @@ export default function ServicesPage() {
                 </Link>
               </article>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container splitGrid">
-          <div>
-            <p className="eyebrow">Commercial focus</p>
-            <h2>Services are designed to become measurable B2B outcomes.</h2>
-          </div>
-          <div className="listPanel">
-            <div className="principle">Secure Cloud and Cyber Operational Assurance</div>
-            <div className="principle">CRA Incident Reporting Readiness Sprint</div>
-            <div className="principle">Secure Cloud Remediation Sprint</div>
-            <div className="principle">Continuous Security Assurance</div>
-            <div className="principle">Microsoft Cloud audit and risk review</div>
-            <div className="principle">Entra ID and Conditional Access review</div>
-            <div className="principle">Microsoft 365, Azure and hybrid remediation</div>
-            <div className="principle">Automation and AI-assisted IT operations</div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section sectionAlt">
-        <div className="container splitGrid">
-          <div>
-            <p className="eyebrow">Time-sensitive EU product-security readiness</p>
-            <h2>CRA Incident Reporting Readiness Sprint</h2>
-            <p>
-              A bounded technical dry run for manufacturers that need to test the operational path from vulnerability or severe-incident awareness to product impact, ownership, 24/72-hour reporting data, remediation and evidence.
-            </p>
-          </div>
-          <div className="quoteCard">
-            <p className="eyebrow">Measurable outcome</p>
-            <h2>Test one real workflow before the first real deadline.</h2>
-            <p>
-              The sprint exposes slow handoffs, missing evidence, unclear backup ownership and product-mapping gaps without turning the engagement into open-ended legal or compliance consulting.
-            </p>
-            <div className="heroActions">
-              <Link href="/cra-incident-readiness/" className="button">View the CRA readiness sprint</Link>
-              <Link href="/resources/cra-incident-dry-run-playbook/" className="button buttonGhost dark">Dry-run checklist</Link>
-            </div>
           </div>
         </div>
       </section>

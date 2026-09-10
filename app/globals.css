@@ -2800,3 +2800,13 @@ textarea:focus-visible {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Shared assessment, remediation and governance choices. */
+.assuranceOfferGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.assuranceOfferGrid h3 { margin: 0 0 14px; font-size: 1.35rem; line-height: 1.3; }
+.assuranceOfferGrid .commercialOfferResult { font-size: 1rem; }
+.assuranceOfferGrid .commercialOfferResult span { font-size: 0.875rem; }
+.serviceContextLink { margin-top: 24px; }
+@media (max-width: 760px) {
+  .assuranceOfferGrid { grid-template-columns: minmax(0, 1fr); }
+}

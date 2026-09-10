@@ -26,7 +26,7 @@ const outcomes = [
   'Independent regulatory clock anchored to the actual awareness timestamp',
   'Product, version, owner and evidence-source mapping for the selected scenario',
   '24-hour early-warning and 72-hour notification data-readiness review',
-  'SRP operational readiness covering intended Assigned Representative access, EU Login/MFA, backup coverage and submission handoff',
+  'SRP readiness plan covering personal EU Login/MFA, representative responsibilities and a documented backup handoff',
   'Escalation matrix with primary and backup owners for critical handoffs',
   'Evidence map showing what can be retrieved quickly and what remains manual',
   'Prioritized remediation backlog focused on operational bottlenecks',
@@ -34,15 +34,15 @@ const outcomes = [
 ];
 
 const workflow = [
-  ['T0', 'Detect and validate', 'Confirm that the event is credible, establish the actual awareness time and preserve the technical source of truth.'],
+  ['T0', 'Preserve awareness time', 'Record the earliest relevant awareness timestamp and source. Escalate classification promptly; internal validation must not reset or postpone the reporting clock.'],
   ['Clock', 'Start the independent deadline control', 'Calculate internal 24-hour and 72-hour deadlines from the awareness timestamp rather than depending on a portal timer or individual memory.'],
   ['Impact', 'Map product and affected versions', 'Determine whether the selected product or version is affected and identify the business and security context.'],
   ['Own', 'Assign decision and submission authority', 'Identify the primary owner, backup owner and escalation path across Security, Engineering, Product and Legal/Compliance.'],
-  ['SRP', 'Validate submission access', 'Confirm the intended Assigned Representative users can access the Single Reporting Platform through EU Login with MFA and that backup coverage and the submission handoff are operationally understood.'],
+  ['SRP', 'Prepare the submission handoff', 'Review personal EU Login/MFA readiness and representative roles. Rehearse with offline reporting templates; follow current ENISA guidance on when to register.'],
   ['24h', 'Prepare early-warning data', 'Test whether required technical facts can be assembled inside the first reporting window.'],
   ['72h', 'Complete notification data', 'Validate the deeper impact, mitigation, status and evidence needed for the main notification workflow.'],
   ['Fix', 'Track remediation', 'Connect the reporting process to corrective or mitigating action, validation and an owned backlog.'],
-  ['Close', 'Preserve evidence', 'Confirm that the final reporting path and supporting evidence can be reproduced after the event.']
+  ['Close', 'Track the final report', 'Use the correct final-report trigger for the scenario and preserve corrective-action, validation and notification evidence.']
 ];
 
 const buyers = [
@@ -84,16 +84,17 @@ export default function CRAIncidentReadinessPage() {
       <section className="section sectionAlt">
         <div className="container assuranceBoundary">
           <div>
-            <p className="eyebrow">Operational update · 9 September 2026</p>
-            <h2>Article 14 applies from 11 September—and ENISA has now published the SRP access path.</h2>
+            <p className="eyebrow">Regulatory context · reviewed 10 September 2026</p>
+            <h2>Reporting applies from 11 September 2026. Prepare the people, data and handoffs.</h2>
           </div>
           <div>
             <p>
-              Regulation (EU) 2024/2847 states that CRA Article 14 applies from 11 September 2026. ENISA&apos;s SRP FAQ, updated on 8 September, says the Single Reporting Platform is scheduled to become operational on the same date for mandatory manufacturer notifications. ENISA&apos;s registration guidance says Assigned Representative users authenticate through EU Login and need MFA to access the platform.
+              Article 14 covers actively exploited vulnerabilities and severe incidents affecting in-scope products. Both require reporting without undue delay, with a 24-hour early-warning limit and a 72-hour notification limit from awareness. The dry run also tests the later final-report path.
             </p>
             <p>
-              For a dry run, that means the submission access path should be tested alongside awareness time, ownership, product mapping, 24/72-hour evidence retrieval and remediation handoffs.
+              ENISA recommends preparing personal EU Login accounts with MFA, and registering on the SRP when a notification is needed. We rehearse offline and review existing access where appropriate. No test notification is submitted to the live platform. Internal evidence collection can be automated; ENISA says the initial SRP release has no submission API.
             </p>
+            <p><a href="https://digital-strategy.ec.europa.eu/en/policies/cra-reporting">European Commission reporting guidance</a></p>
             <div className="heroActions">
               <Link href="/insights/cra-reporting-11-september-2026/" className="button">Read the 11 September insight</Link>
               <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/frequently-asked-questions" target="_blank" rel="noreferrer" className="button buttonGhost dark">ENISA SRP FAQ</a>
@@ -153,28 +154,59 @@ export default function CRAIncidentReadinessPage() {
       </section>
 
       <section className="section sectionAlt">
+        <div className="container">
+          <div className="assuranceTableHeader">
+            <div><p className="eyebrow">Final-report deadlines</p><h2>Keep the two reporting tracks separate.</h2></div>
+            <p>The initial 24/72-hour windows do not close the reporting process.</p>
+          </div>
+          <div className="cardsGrid two">
+            <article className="card"><h3>Actively exploited vulnerability</h3><p>Final report no later than 14 days after a corrective measure becomes available. Record that availability timestamp separately from awareness and deployment.</p></article>
+            <article className="card"><h3>Severe incident</h3><p>Final report within one month after the incident notification. Track the notification timestamp as the deadline anchor.</p></article>
+          </div>
+          <p className="serviceContextLink">Confirm the scenario and any applicable follow-up requirements with your reporting owner. <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/frequently-asked-questions">ENISA SRP FAQ and deadlines</a>.</p>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container splitGrid">
+          <div>
+            <p className="eyebrow">Delivery and acceptance</p>
+            <h2>A five-working-day sprint once inputs and stakeholders are available.</h2>
+            <p>Day 1: confirm scope and collect inputs. Day 2: map owners, products and evidence. Day 3: run the timed exercise. Day 4: prepare the runbook and action plan. Day 5: review results and agree the retest priorities.</p>
+            <p>Before starting, provide a product/version list, an example vulnerability or incident record, the current process and named technical and reporting owners. We confirm the schedule and fixed fee after a short fit call.</p>
+          </div>
+          <div className="quoteCard">
+            <p className="eyebrow">What completion means</p>
+            <h2>You can see what worked, what failed and who acts next.</h2>
+            <p>You receive the timestamped exercise record, primary and backup responsibility matrix, draft reporting-data templates, evidence index and a prioritized 30/60/90-day action plan. Each tested step is marked demonstrated, constrained or not demonstrated, with an owner for every unresolved gap.</p>
+            <p>Completion means delivery of this agreed evidence package and readout. It does not mean every gap has been fixed or that the organisation is certified.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section sectionAlt">
         <div className="container splitGrid">
           <div>
             <p className="eyebrow">Typical scope</p>
-            <h2>Designed for a fast commercial start</h2>
+            <h2>A defined exercise with a practical handover</h2>
             <div className="listPanel wide">
               <div className="principle">One selected product family or clearly bounded product scope</div>
               <div className="principle">One primary scenario: actively exploited vulnerability or severe security incident</div>
               <div className="principle">Security, Engineering/Product and compliance decision-makers represented</div>
               <div className="principle">Existing vulnerability, incident, inventory and evidence sources reviewed</div>
               <div className="principle">Independent 24/72-hour deadline tracking and escalation path tested</div>
-              <div className="principle">Assigned Representative SRP access, EU Login/MFA and backup handoff reviewed</div>
+              <div className="principle">EU Login/MFA preparation, representative roles and backup handoff reviewed</div>
               <div className="principle">Short management readout plus technical remediation backlog</div>
             </div>
           </div>
           <div className="quoteCard">
             <p className="eyebrow">Important boundary</p>
-            <h2>Technical readiness—not legal advice and not a 24/7 IR retainer</h2>
+            <h2>Responsibilities agreed before the exercise</h2>
             <p>
               Enki Tech tests technical and operational readiness, evidence availability and engineering handoffs. The client retains responsibility for legal interpretation, reportability decisions, regulatory submissions and formal incident command unless separately agreed with appropriately authorized parties.
             </p>
             <p>
-              A guaranteed 24/7 incident-response SLA is outside the initial sprint. That capability should only be offered after delivery capacity, insurance, liability, escalation and on-call coverage are established.
+              This scheduled exercise does not include live incident response, 24/7 monitoring, product-code or firmware fixes, certification or a guarantee of regulatory compliance.
             </p>
           </div>
         </div>
@@ -184,10 +216,10 @@ export default function CRAIncidentReadinessPage() {
         <div className="container">
           <div className="assuranceTableHeader">
             <div>
-              <p className="eyebrow">Who can buy it</p>
-              <h2>One technical readiness capability, several existing budget owners</h2>
+              <p className="eyebrow">Who participates</p>
+              <h2>Bring the people who own the response.</h2>
             </div>
-            <p>The economic buyer depends on whether the immediate concern is product security, engineering readiness, regulatory evidence or partner delivery.</p>
+            <p>Include a technical owner and the person accountable for reporting decisions, plus backups for critical handoffs.</p>
           </div>
           <div className="cardsGrid two">
             {buyers.map(([title, text]) => (
@@ -203,12 +235,12 @@ export default function CRAIncidentReadinessPage() {
       <section className="section sectionAlt">
         <div className="container assuranceBoundary">
           <div>
-            <p className="eyebrow">Commercial ladder</p>
-            <h2>Use the dry run as the entry point—not the end product</h2>
+            <p className="eyebrow">After the exercise</p>
+            <h2>Turn the findings into an owned improvement plan.</h2>
           </div>
           <div>
             <p>
-              The highest-value follow-on work is technical: close evidence gaps, improve vulnerability-to-product mapping, automate workflow steps, strengthen identity/cloud controls and establish repeatable assurance. This keeps the relationship focused on measurable operational outcomes rather than generic compliance consulting.
+              You receive a prioritized backlog with owners and acceptance criteria. Enki Tech can separately scope Microsoft Cloud, identity and reporting-workflow improvements. Product-code and firmware fixes stay with your engineering team or a qualified product-security partner. Recurring governance covers only the controls and review cadence agreed with you.
             </p>
             <div className="heroActions">
               <Link href="/secure-cloud-remediation/" className="button">Remediate the technical gaps</Link>
