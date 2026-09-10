@@ -104,7 +104,7 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 18px;
 }
 
 .logo {
@@ -116,7 +116,7 @@ li {
 
 .logoImage {
   display: block;
-  width: 190px;
+  width: 180px;
   height: auto;
   object-fit: contain;
 }
@@ -124,9 +124,9 @@ li {
 .nav {
   display: flex;
   align-items: center;
-  gap: 26px;
+  gap: 14px;
   color: var(--silver);
-  font-size: 0.95rem;
+  font-size: 0.88rem;
 }
 
 .menuToggle {
@@ -187,8 +187,8 @@ li {
 
 .buttonSmall {
   min-height: 40px;
-  padding: 0 16px;
-  font-size: 0.9rem;
+  padding: 0 14px;
+  font-size: 0.86rem;
 }
 
 .navCta {
@@ -2324,8 +2324,7 @@ textarea:focus-visible {
   }
 
   .siteHeader .buttonSmall {
-    padding: 0 12px;
-    font-size: 0.82rem;
+    display: none;
   }
 }
 
