@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { CTA } from '../../../components/CTA';
+import { AssuranceOffers } from '../../../components/AssuranceOffers';
 
 export const metadata = {
   title: 'Secure Cloud & Cyber Operational Assurance',
@@ -22,30 +23,6 @@ const operatingLoop = [
   ['04', 'Remediate', 'Implement the technical change across Microsoft 365, Entra ID, Intune, Azure, Exchange, Teams or Defender.'],
   ['05', 'Verify', 'Test the remediated state against agreed acceptance criteria and confirm that the intended control is operating.'],
   ['06', 'Prove', 'Preserve the evidence, ownership and closure record needed for governance, audit and future review.']
-];
-
-const offers = [
-  {
-    tag: 'Entry point',
-    title: 'CRA Incident Reporting Readiness Sprint',
-    text: 'A timed technical dry run for EU product organisations that need to test the path from security-event awareness to 24/72-hour reporting data, remediation and evidence.',
-    href: '/cra-incident-readiness/',
-    result: 'Timed scenario · ownership map · evidence gaps · remediation backlog'
-  },
-  {
-    tag: 'Fixed-scope remediation',
-    title: 'Secure Cloud Remediation Sprint',
-    text: 'Turn a bounded set of Microsoft Cloud, identity or endpoint findings into implemented fixes, technical verification against agreed acceptance criteria and defensible closure evidence.',
-    href: '/secure-cloud-remediation/',
-    result: 'Prioritized fixes · implementation · verification · closure evidence'
-  },
-  {
-    tag: 'Recurring assurance',
-    title: 'Continuous Security Assurance',
-    text: 'Keep critical controls effective after remediation through recurring evidence review, privileged-access checks, drift review and owned improvement backlog.',
-    href: '/services/continuous-secure-cloud-governance/',
-    result: 'Recurring review · drift control · evidence · improvement backlog'
-  }
 ];
 
 const fit = [
@@ -109,26 +86,45 @@ export default function SecurityAssurancePage() {
         <div className="container">
           <div className="assuranceTableHeader">
             <div>
-              <p className="eyebrow">Commercial path</p>
+              <p className="eyebrow">Assess · Fix · Operate</p>
               <h2>Start with a bounded problem. Expand only where the evidence supports it.</h2>
             </div>
-            <p>Each offer is designed to produce a client-visible operating result and a logical next step.</p>
+            <p>Choose an entry point based on the problem. A CRA reporting exercise is for product manufacturers; Microsoft identity assurance is also available independently.</p>
           </div>
-          <div className="commercialOfferGrid">
-            {offers.map((offer) => (
-              <article className="commercialOfferCard" key={offer.title}>
-                <p className="tag">{offer.tag}</p>
-                <h2>{offer.title}</h2>
-                <p>{offer.text}</p>
-                <div className="commercialOfferResult"><span>Output</span>{offer.result}</div>
-                <Link href={offer.href} className="textLink">View the next step <span aria-hidden="true">→</span></Link>
-              </article>
-            ))}
-          </div>
+          <AssuranceOffers />
         </div>
       </section>
 
-      <section className="section sectionAlt">
+      <section className="section sectionAlt" id="cra-nis2">
+        <div className="container">
+          <div className="assuranceTableHeader">
+            <div>
+              <p className="eyebrow">CRA and NIS2</p>
+              <h2>Product reporting and organisational security need different starting points.</h2>
+            </div>
+            <p>We help your technical team deliver the agreed controls, handoffs and evidence. Your regulatory owner confirms which obligations apply.</p>
+          </div>
+          <div className="cardsGrid two">
+            <article className="card">
+              <p className="tag">CRA · Products placed on the EU market</p>
+              <h3>Can your product team assemble reporting data in time?</h3>
+              <p>The Cyber Resilience Act concerns products with digital elements. Article 14 reporting applies from 11 September 2026; the main requirements apply from 11 December 2027.</p>
+              <p>Start with one product and one reporting scenario. We test timestamps, product mapping, owners and evidence retrieval. A company using Microsoft 365 is not automatically a CRA manufacturer.</p>
+              <Link href="/cra-incident-readiness/" className="textLink">Review the CRA sprint scope →</Link>
+            </article>
+            <article className="card">
+              <p className="tag">NIS2 · Organisations within scope</p>
+              <h3>Can your platform team implement and demonstrate the controls?</h3>
+              <p>The NIS2 Directive covers cybersecurity risk management and significant-incident reporting for specified organisations. Applicability depends on factors including sector, size and national law.</p>
+              <p>Enki Tech supports the agreed Microsoft workstream: privileged access, cloud configuration, remediation ownership and control evidence. This is one part of an organisation's wider NIS2 programme.</p>
+              <Link href="/privileged-identity-assurance/" className="textLink">Explore Microsoft identity assurance →</Link>
+            </article>
+          </div>
+          <p className="serviceContextLink">The reporting triggers, responsible parties and submission routes differ. A shared evidence process does not replace either obligation. Sources: <a href="https://digital-strategy.ec.europa.eu/en/policies/cra-reporting">European Commission CRA reporting guidance</a>, <a href="https://digital-strategy.ec.europa.eu/en/library/commission-publishes-new-guidance-support-timely-cyber-resilience-act-implementation">CRA implementation guidance</a> and <a href="https://digital-strategy.ec.europa.eu/en/policies/nis2-directive">NIS2 overview</a>. Reviewed 10 September 2026.</p>
+        </div>
+      </section>
+
+      <section className="section">
         <div className="container splitGrid">
           <div>
             <p className="eyebrow">Best fit</p>
@@ -144,7 +140,7 @@ export default function SecurityAssurancePage() {
         <div className="container assuranceBoundary">
           <div>
             <p className="eyebrow">Delivery boundary</p>
-            <h2>Specialist technical assurance—not a generic SOC or legal compliance practice.</h2>
+            <h2>Technical delivery with clear responsibilities.</h2>
           </div>
           <div>
             <p>

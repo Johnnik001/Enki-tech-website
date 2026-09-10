@@ -27,6 +27,12 @@ export default async function LocalizedServicesPage({ params }) {
           {content.services.map((service) => <article className="card serviceCard" key={service.id}><p className="tag">{service.title}</p><h2>{service.metaTitle}</h2><p>{service.intro}</p><p className="caseOutcome">{page.outputs}</p><p>{service.outputs}</p><Link href={`/${locale}/services/${service.slug}/`} className="textLink serviceCardLink">{page.view} <span aria-hidden="true">→</span></Link></article>)}
         </div>
       </div></section>
+      <section className="section sectionAlt"><div className="container narrow">
+        <p className="eyebrow">CRA · NIS2</p>
+        <h2>{locale === 'fr' ? 'Préparation, remédiation et suivi des contrôles.' : 'Voorbereiding, remediatie en opvolging van controles.'}</h2>
+        <p>{locale === 'fr' ? 'Un exercice CRA concerne le processus de notification des fabricants de produits concernés. Pour NIS2, nous intervenons sur les contrôles Microsoft convenus dans votre programme de cybersécurité. Votre responsable réglementaire confirme les obligations applicables.' : 'Een CRA-oefening gaat over het meldproces van fabrikanten van producten die binnen het toepassingsgebied vallen. Voor NIS2 ondersteunen wij de afgesproken Microsoft-beheersmaatregelen binnen uw cyberbeveiligingsprogramma. Uw verantwoordelijke voor regelgeving bevestigt welke verplichtingen gelden.'}</p>
+        <Link href="/security-assurance/#cra-nis2" hrefLang="en" className="textLink">{locale === 'fr' ? 'Comparer les parcours de service (en anglais) →' : 'Vergelijk de diensten (in het Engels) →'}</Link>
+      </div></section>
       <CTA title={page.ctaTitle} text={page.ctaText} buttonLabel={page.ctaButton} buttonHref={`/${locale}/contact/`} />
     </>
   );
