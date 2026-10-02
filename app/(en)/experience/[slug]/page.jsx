@@ -92,6 +92,7 @@ export default async function ExperienceDetailPage({ params }) {
           <p className="caseProof">{caseStudy.proof}</p>
           <h1>{caseStudy.title}</h1>
           <p>{caseStudy.detail}</p>
+          <p>Selected professional experience of our founder across professional roles, not a claim that Enki Tech was the contracting supplier. No client endorsement is implied.</p>
           <div className="heroActions">
             <Link href="/contact/" className="button">Discuss a similar challenge</Link>
             <Link href="/experience/" className="button buttonGhost">View all experience</Link>

@@ -1,3 +1,5 @@
+import { cloudCopy, primaryServiceCatalog } from './cloud-services';
+
 export const supportedLocales = ['fr', 'nl'];
 
 export const localizedContent = {
@@ -268,6 +270,22 @@ export const localizedContent = {
     ]
   }
 };
+
+
+for (const locale of supportedLocales) {
+  const content = localizedContent[locale];
+  const copy = cloudCopy[locale];
+  content.siteTitle = 'Enki Tech | Azure & Microsoft 365';
+  content.siteDescription = copy.intro;
+  content.home = { ...content.home, metaTitle: copy.title, title: copy.title, intro: copy.intro, ctaTitle: copy.ctaTitle, ctaText: copy.ctaText, ctaButton: copy.primary };
+  content.servicesPage = { ...content.servicesPage, metaTitle: copy.servicesTitle, metaDescription: copy.servicesIntro };
+  content.services = [...primaryServiceCatalog[locale], ...content.services.filter(service => !primaryServiceCatalog[locale].some(primary => primary.id === service.id))];
+  content.experience.intro = copy.experienceNote;
+  content.about.intro = locale === 'fr' ? 'Enki Tech EOOD est une société de conseil indépendante basée en Bulgarie et active en Belgique et en Europe. Ses cinq services portent sur l’architecture Cloud, le support Microsoft 365 et Azure, Zero Trust, Terraform et les migrations.' : 'Enki Tech EOOD is een onafhankelijk adviesbureau gevestigd in Bulgarije en actief in België en Europa. De vijf kerndiensten zijn Cloudarchitectuur, Microsoft 365- en Azure-ondersteuning, Zero Trust, Terraform en migraties.';
+  content.about.founderText = content.about.founderText.replace('15 ans', '14 ans').replace('15 jaar', '14 jaar');
+  content.contact.title = copy.ctaTitle;
+  content.contact.context[1] = locale === 'fr' ? 'L’environnement Microsoft, le besoin de support, d’architecture, de sécurité ou de migration' : 'De Microsoft-omgeving en uw support-, architectuur-, beveiligings- of migratiebehoefte';
+}
 
 export function getLocaleContent(locale) {
   return localizedContent[locale];

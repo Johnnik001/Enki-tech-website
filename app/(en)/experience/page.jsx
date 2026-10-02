@@ -25,7 +25,7 @@ export default function ExperiencePage() {
           <p className="eyebrow">Experience</p>
           <h1>Enterprise infrastructure experience translated into practical consulting value.</h1>
           <p>
-            Enki Tech uses sanitized experience summaries to demonstrate capability while respecting confidentiality and avoiding unsupported client endorsements.
+            Selected professional experience of our founder and lead consultant across earlier roles. These are not all projects contracted by Enki Tech. Summaries respect confidentiality and do not imply client endorsement.
           </p>
         </div>
       </section>

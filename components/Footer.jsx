@@ -7,10 +7,10 @@ const linkedInCompanyUrl = 'https://www.linkedin.com/company/144942935/';
 const footerContent = {
   en: {
     homeHref: '/', homeLabel: 'Enki Tech home', company: 'Company', contact: 'Contact', privacy: 'Privacy',
-    description: 'Enki Tech helps European organisations turn Microsoft Cloud, identity and security risks into verified remediation, operational evidence and repeatable controls.',
+    description: 'Independent Microsoft Cloud consulting: architecture, secure operations, Zero Trust, Terraform and migrations.',
     links: [
-      { label: 'Assurance', href: '/security-assurance/' }, { label: 'Services', href: '/services/' },
-      { label: 'Experience', href: '/experience/' }, { label: 'Partners', href: '/partners/' }, { label: 'About', href: '/about/' }
+      { label: 'Services', href: '/services/' },
+      { label: 'Experience', href: '/experience/' }, { label: 'Partners', href: '/partners/' }, { label: 'About', href: '/about/' }, { label: 'Insights', href: '/insights/' }
     ],
     privacyHref: '/legal/privacy/',
     location: site.location,
@@ -19,7 +19,7 @@ const footerContent = {
   },
   fr: {
     homeHref: '/fr/', homeLabel: 'Accueil Enki Tech', company: 'Entreprise', contact: 'Contact', privacy: 'Confidentialité',
-    description: 'Enki Tech aide les organisations européennes à transformer les risques Microsoft Cloud, identité et sécurité en remédiations vérifiées, preuves opérationnelles et contrôles reproductibles.',
+    description: 'Conseil Microsoft Cloud indépendant : architecture, opérations sécurisées, Zero Trust, Terraform et migrations.',
     links: [
       { label: 'Accueil', href: '/fr/' }, { label: 'Services', href: '/fr/services/' },
       { label: 'Expérience', href: '/fr/experience/' }, { label: 'À propos', href: '/fr/about/' }
@@ -31,7 +31,7 @@ const footerContent = {
   },
   nl: {
     homeHref: '/nl/', homeLabel: 'Enki Tech startpagina', company: 'Bedrijf', contact: 'Contact', privacy: 'Privacy',
-    description: 'Enki Tech helpt Europese organisaties risico’s in Microsoft Cloud, identiteit en beveiliging om te zetten in geverifieerde remediatie, operationeel bewijs en herhaalbare controles.',
+    description: 'Onafhankelijk Microsoft Cloud-advies: architectuur, veilige operations, Zero Trust, Terraform en migraties.',
     links: [
       { label: 'Start', href: '/nl/' }, { label: 'Diensten', href: '/nl/services/' },
       { label: 'Ervaring', href: '/nl/experience/' }, { label: 'Over ons', href: '/nl/about/' }

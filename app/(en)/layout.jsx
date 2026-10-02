@@ -8,11 +8,11 @@ import { Analytics } from '@vercel/analytics/next';
 export const metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: 'Enki Tech | Secure Cloud & Operational Assurance',
+    default: 'Enki Tech | Azure & Microsoft 365',
     template: '%s | Enki Tech'
   },
   description:
-    'Enki Tech helps European organisations turn Microsoft Cloud, identity and security risks into verified remediation, evidence and repeatable operational controls.',
+    'Independent Microsoft Cloud consulting: architecture audits, Microsoft 365 and Azure support, Zero Trust, Terraform and migrations.',
   creator: site.name,
   publisher: site.legalName,
   verification: {
@@ -24,9 +24,9 @@ export const metadata = {
     apple: [{ url: '/logo/linkedin-company-logo.png', sizes: '1024x1024', type: 'image/png' }]
   },
   openGraph: {
-    title: 'Enki Tech | Secure Cloud & Operational Assurance',
+    title: 'Enki Tech | Azure & Microsoft 365',
     description:
-      'From security finding to verified remediation. Specialist Microsoft Cloud, identity, remediation and recurring assurance delivery for European organisations.',
+      'Architecture advice, secure operations and controlled Azure and Microsoft 365 delivery for European organisations.',
     siteName: site.name,
     type: 'website',
     images: [
@@ -40,9 +40,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary',
-    title: 'Enki Tech | Secure Cloud & Operational Assurance',
+    title: 'Enki Tech | Azure & Microsoft 365',
     description:
-      'From security finding to verified remediation across Microsoft Cloud, identity and operational security.',
+      'Cloud architecture, Microsoft 365 and Azure support, Zero Trust, Terraform and migrations.',
     images: ['/logo/linkedin-company-logo.png']
   },
   robots: {
@@ -62,7 +62,7 @@ const structuredData = {
       url: site.url,
       email: site.email,
       description:
-        'Independent European Microsoft Cloud consulting company focused on secure cloud, identity, verified remediation, operational assurance and automation-driven operations.',
+        'Independent European consultancy for cloud architecture, Microsoft 365 and Azure support, Zero Trust, Terraform automation and migrations.',
       logo: `${site.url}/logo/linkedin-company-logo.png`,
       sameAs: [site.linkedin],
       address: { '@type': 'PostalAddress', addressCountry: 'BG' },
@@ -72,7 +72,7 @@ const structuredData = {
         email: site.email,
         contactType: 'business inquiries',
         areaServed: 'Europe',
-        availableLanguage: ['English', 'French', 'Dutch']
+        availableLanguage: ['English', 'Russian', 'Bulgarian']
       }
     },
     {
@@ -82,20 +82,7 @@ const structuredData = {
       url: site.url,
       parentOrganization: { '@id': `${site.url}/#organization` },
       areaServed: ['Bulgaria', 'Belgium', 'Europe'],
-      serviceType: [
-        'Secure Cloud and Cyber Operational Assurance',
-        'Secure Cloud Remediation',
-        'Continuous Security Assurance',
-        'Secure Cloud Access and Privileged Identity Assessment',
-        'Continuous Secure Cloud Governance',
-        'CRA Incident Reporting Readiness',
-        'Crypto Agility and Post-Quantum Readiness',
-        'Microsoft 365 consulting',
-        'Azure and hybrid infrastructure consulting',
-        'Digital collaboration consulting',
-        'Identity, endpoint and security consulting',
-        'IT operations automation'
-      ]
+      serviceType: ['Cloud architecture consulting and audit', 'Microsoft 365 and Azure support', 'Zero Trust training and implementation', 'Terraform infrastructure automation', 'Azure and Microsoft 365 migrations']
     },
     {
       '@type': 'Person',

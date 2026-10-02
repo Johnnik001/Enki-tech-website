@@ -13,7 +13,7 @@ export default function ContactPage() {
       <section className="pageHero">
         <div className="container narrow">
           <p className="eyebrow">Contact</p>
-          <h1>Start a conversation about a risk, remediation workstream, project or partnership.</h1>
+          <h1>Discuss your Microsoft Cloud project or support needs.</h1>
           <p>
             Share a few practical details and receive a considered response on fit, possible engagement model and next steps.
           </p>

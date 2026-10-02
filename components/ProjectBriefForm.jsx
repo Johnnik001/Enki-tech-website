@@ -3,12 +3,14 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { site } from '../data/site';
+import { primaryServiceCatalog, primaryServices } from '../data/cloud-services';
 import { emptyInquiryAttribution, getOrCreateInquiryAttribution } from '../lib/inquiryAttribution';
 
 const formEndpoint = `https://formsubmit.co/${site.email}`;
 const formAjaxEndpoint = `https://formsubmit.co/ajax/${site.email}`;
 
 const areaOptions = [
+  ...primaryServices.map(service => service.sourceTitle),
   'Secure Cloud & Cyber Operational Assurance',
   'Secure Cloud Remediation',
   'Continuous Security Assurance',
@@ -121,13 +123,17 @@ const initialForm = {
   email: '',
   company: '',
   country: '',
-  area: 'Microsoft 365 & Digital Collaboration',
+  area: 'Cloud Architecture Consulting & Audit',
   timeline: '',
   engagement: 'Direct project',
   challenge: '',
   _honey: '',
   consent: false
 };
+
+for (const locale of ['fr', 'nl']) {
+  Object.assign(formCopy[locale].areaLabels, Object.fromEntries(primaryServiceCatalog[locale].map(service => [service.sourceTitle, service.title])));
+}
 
 export function ProjectBriefForm({ locale = 'en' }) {
   const copy = formCopy[locale] || formCopy.en;
