@@ -58,8 +58,8 @@ export default async function LocalizedLayout({ children, params }) {
     description: content.siteDescription,
     parentOrganization: { '@id': `${site.url}/#organization` },
     areaServed: ['Belgium', 'Bulgaria', 'Europe'],
-    availableLanguage: ['English', 'French', 'Dutch'],
-    serviceType: ['Microsoft Cloud audit', 'Privileged identity assessment', 'Secure cloud governance', 'Security remediation']
+    availableLanguage: ['English', 'Russian', 'Bulgarian'],
+    serviceType: ['Cloud architecture consulting', 'Microsoft 365 and Azure support', 'Zero Trust', 'Terraform', 'Cloud migrations']
   };
 
   return (

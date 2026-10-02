@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { CloudServiceDetail } from '../../../../components/CloudServiceDetail';
 import { notFound } from 'next/navigation';
 import { CTA } from '../../../../components/CTA';
 import { SectionHeader } from '../../../../components/SectionHeader';
@@ -24,6 +25,7 @@ export default async function LocalizedServicePage({ params }) {
   const content = getLocaleContent(locale);
   const service = getLocalizedService(locale, slug);
   if (!content || !service) notFound();
+  if (service.isPrimary) return <CloudServiceDetail service={service} locale={locale} />;
   const labels = content.serviceLabels;
   const contactHref = `/${locale}/contact/?area=${encodeURIComponent(service.sourceTitle)}&engagement=${encodeURIComponent(service.id === 'continuous-secure-cloud-governance' ? 'Ongoing advisory support' : 'Assessment or audit')}`;
   const serviceUrl = `${site.url}/${locale}/services/${service.slug}/`;

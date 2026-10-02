@@ -1,3 +1,5 @@
+import { primaryServices } from './cloud-services';
+
 export const site = {
   name: 'Enki Tech',
   legalName: 'Enki Tech EOOD',
@@ -6,9 +8,9 @@ export const site = {
   linkedin: 'https://www.linkedin.com/company/enki-tech-eood/',
   founderLinkedin: 'https://www.linkedin.com/in/eugene-tsvetov-93741a142/',
   location: 'Bulgaria · Belgium · Europe',
-  tagline: 'Secure Microsoft Cloud access, privileged identity, continuous governance and automation-driven operations.',
+  tagline: 'Cloud architecture, secure Microsoft 365 and Azure support, Zero Trust, Terraform and migrations.',
   description:
-    'Enki Tech provides secure Microsoft Cloud assessments, privileged identity review, remediation, continuous governance and senior operational delivery across Europe.',
+    'Enki Tech provides cloud architecture consulting, secure Microsoft 365 and Azure support, Zero Trust implementation, Terraform automation and cloud migrations across Europe.',
   founder: 'Evgeniy Tsvetov',
   founderRole: 'Founder & Managing Director'
 };
@@ -267,7 +269,7 @@ export const engagements = [
   }
 ];
 
-export const services = [
+const specialistServices = [
   {
     slug: 'microsoft-cloud-audit',
     title: 'Microsoft Cloud Audit & Risk Review',
@@ -630,6 +632,8 @@ export const services = [
     }
   }
 ];
+
+export const services = [...primaryServices, ...specialistServices.filter(service => !primaryServices.some(primary => primary.slug === service.slug))];
 
 export const insights = [
   {

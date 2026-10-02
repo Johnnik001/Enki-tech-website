@@ -14,14 +14,10 @@ const headerContent = {
     cta: 'Discuss a project',
     ctaHref: '/contact/',
     navigation: [
-      { label: 'Assurance', href: '/security-assurance/' },
       { label: 'Services', href: '/services/' },
-      { label: 'Engagements', href: '/engagements/' },
       { label: 'Experience', href: '/experience/' },
-      { label: 'Insights', href: '/insights/' },
       { label: 'Partners', href: '/partners/' },
       { label: 'About', href: '/about/' },
-      { label: 'Contact', href: '/contact/' }
     ]
   },
   fr: {

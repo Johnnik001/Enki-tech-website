@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { CloudServiceDetail } from '../../../../components/CloudServiceDetail';
 import { notFound } from 'next/navigation';
 import { CTA } from '../../../../components/CTA';
 import { SectionHeader } from '../../../../components/SectionHeader';
@@ -30,7 +31,7 @@ export async function generateMetadata({ params }) {
     description: service.metaDescription,
     alternates: {
       canonical,
-      ...(service.slug === 'microsoft-cloud-audit' || service.slug === 'secure-cloud-access-privileged-identity' || service.slug === 'continuous-secure-cloud-governance'
+      ...(service.isPrimary || service.slug === 'microsoft-cloud-audit' || service.slug === 'secure-cloud-access-privileged-identity' || service.slug === 'continuous-secure-cloud-governance'
         ? { languages: getServiceAlternates(service.slug) }
         : {})
     },
@@ -50,6 +51,8 @@ export default async function ServiceDetailPage({ params }) {
   if (!service) {
     notFound();
   }
+
+  if (service.isPrimary) return <CloudServiceDetail service={service} />;
 
   const serviceUrl = `${site.url}/services/${service.slug}/`;
   const engagementByService = {

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { CTA } from '../../../components/CTA';
-import { certifications, principles, site } from '../../../data/site';
+import { CompanyMission } from '../../../components/CompanyMission';
+import { certifications, site } from '../../../data/site';
 
 export const metadata = {
   title: 'About',
@@ -16,7 +17,7 @@ export default function AboutPage() {
           <p className="eyebrow">About Enki Tech</p>
           <h1>Independent European IT consulting with senior Microsoft Cloud expertise.</h1>
           <p>
-            {site.legalName} is an independent IT consulting company based in Bulgaria and operating across Europe. The company focuses on Microsoft Cloud, Digital Collaboration, secure operations and automation.
+            {site.legalName} is an independent IT consulting company based in Bulgaria and operating across Europe. Our five core services are cloud architecture consulting, Microsoft 365 and Azure support, Zero Trust, Terraform automation and cloud migrations.
           </p>
         </div>
       </section>
@@ -46,7 +47,7 @@ export default function AboutPage() {
             <p className="eyebrow">Founder-led delivery</p>
             <h2>Senior Microsoft Cloud delivery with direct founder accountability.</h2>
             <p>
-              Enki Tech is led by {site.founder} and built on 15+ years of hands-on experience across workplace services, hybrid infrastructure, Microsoft 365, Azure, identity, endpoint management, service improvement and enterprise support.
+              Enki Tech is led by {site.founder} and built on 14+ years of hands-on experience across workplace services, hybrid infrastructure, Microsoft 365, Azure, identity, endpoint management, service improvement and enterprise support.
             </p>
             <p>
               The company is designed as a long-term consulting asset: reliable delivery, clear documentation, client trust and repeatable processes rather than one-off contracting only.
@@ -61,15 +62,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section sectionAlt">
-        <div className="container">
-          <p className="eyebrow">Principles</p>
-          <h2>How Enki Tech works</h2>
-          <div className="listPanel wide">
-            {principles.map((principle) => <div className="principle" key={principle}>{principle}</div>)}
-          </div>
-        </div>
-      </section>
+      <CompanyMission />
 
       <section className="section">
         <div className="container splitGrid">
