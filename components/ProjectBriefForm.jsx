@@ -9,8 +9,13 @@ import { emptyInquiryAttribution, getOrCreateInquiryAttribution } from '../lib/i
 const formEndpoint = `https://formsubmit.co/${site.email}`;
 const formAjaxEndpoint = `https://formsubmit.co/ajax/${site.email}`;
 
-const areaOptions = [
+const primaryAreaOptions = [
   ...primaryServices.map(service => service.sourceTitle),
+  'Partner or subcontracting opportunity'
+];
+
+const areaOptions = [
+  ...primaryAreaOptions,
   'Secure Cloud & Cyber Operational Assurance',
   'Secure Cloud Remediation',
   'Continuous Security Assurance',
@@ -23,8 +28,7 @@ const areaOptions = [
   'Azure & Hybrid Infrastructure',
   'Identity, Endpoint & Security',
   'Automation & IT Operations',
-  'AI-enhanced IT Operations',
-  'Partner or subcontracting opportunity'
+  'AI-enhanced IT Operations'
 ];
 
 const engagementOptions = [
@@ -125,7 +129,7 @@ const initialForm = {
   country: '',
   area: 'Cloud Architecture Consulting & Audit',
   timeline: '',
-  engagement: 'Direct project',
+  engagement: 'Assessment or audit',
   challenge: '',
   _honey: '',
   consent: false
@@ -144,6 +148,9 @@ export function ProjectBriefForm({ locale = 'en' }) {
   const [status, setStatus] = useState('');
   const [statusType, setStatusType] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const visibleAreaOptions = primaryAreaOptions.includes(form.area)
+    ? primaryAreaOptions
+    : [...primaryAreaOptions, form.area];
 
   useEffect(() => {
     setAttribution(getOrCreateInquiryAttribution());
@@ -260,7 +267,7 @@ export function ProjectBriefForm({ locale = 'en' }) {
         <label>
           {copy.area}
           <select name="area" value={form.area} onChange={updateField}>
-            {areaOptions.map((option) => <option key={option} value={option}>{copy.areaLabels[option] || option}</option>)}
+            {visibleAreaOptions.map((option) => <option key={option} value={option}>{copy.areaLabels[option] || option}</option>)}
           </select>
         </label>
         <label>
