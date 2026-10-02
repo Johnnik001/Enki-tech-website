@@ -3,7 +3,7 @@ import { site } from '../../../data/site';
 
 export const metadata = {
   title: 'Contact',
-  description: 'Contact Enki Tech for Secure Cloud and Operational Assurance, CRA readiness, Microsoft Cloud remediation, Digital Collaboration, Automation and European IT consulting engagements.',
+  description: 'Contact Enki Tech for cloud architecture audits, Microsoft 365 and Azure support, Zero Trust, Terraform automation and cloud migration projects.',
   alternates: { canonical: '/contact/', languages: { en: '/contact/', fr: '/fr/contact/', nl: '/nl/contact/', 'x-default': '/contact/' } }
 };
 
@@ -38,11 +38,11 @@ export default function ContactPage() {
             <h2>Email</h2>
             <p>Use your preferred email service for project inquiries and partner introductions.</p>
             <a className="textLink" href={`mailto:${site.email}`}>{site.email} <span aria-hidden="true">→</span></a>
-            <p className="contactDetail">Domain-based business contact</p>
+            <p className="contactDetail">Direct project inquiries</p>
           </div>
           <div className="contactCard">
-            <h2>Capability statement</h2>
-            <p>Download a concise two-page overview of Enki Tech capabilities, delivery models and selected experience.</p>
+            <h2>Service sheet</h2>
+            <p>Download a one-page overview of our five Microsoft Cloud services and selected professional experience.</p>
             <a
               className="button buttonGhost dark"
               href="/downloads/enki-tech-capability-statement.pdf"
@@ -50,7 +50,7 @@ export default function ContactPage() {
             >
               Download PDF
             </a>
-            <p className="contactDetail">PDF · 2 pages · English</p>
+            <p className="contactDetail">PDF · 1 page · English</p>
           </div>
           <div className="contactCard">
             <h2>LinkedIn</h2>
@@ -74,9 +74,9 @@ export default function ContactPage() {
           </div>
           <div className="listPanel">
             <div className="principle">Your company, country and relevant business or technical owner</div>
-            <div className="principle">The open risk, audit finding, remediation backlog, CRA workflow or Microsoft Cloud service involved</div>
+            <div className="principle">Your architecture, support, Zero Trust, automation or migration need</div>
             <div className="principle">Expected timeline, required outcome and any fixed deadline</div>
-            <div className="principle">Whether this is a direct client, partner, MSSP/integrator or subcontracting opportunity</div>
+            <div className="principle">Whether this is a direct client, partner, MSP/integrator or subcontracting opportunity</div>
           </div>
         </div>
       </section>
